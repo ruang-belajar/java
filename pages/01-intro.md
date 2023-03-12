@@ -1,5 +1,7 @@
 # Mengenal Java
 
+
+
 ```mermaid
 flowchart TD
 subgraph Z[" "]
@@ -9,3 +11,7 @@ subgraph Z[" "]
     C --> |Execute| D[Operating System]
 end
 ```
+
+Referensi:
+- [Petani Kode: Pengenalan Java untuk Pemula](https://www.petanikode.com/java-untuk-pemula/)
+- [Petani Kode: Konsep Pemrograman Java yang perlu dipahami](https://www.petanikode.com/java-konsep/)

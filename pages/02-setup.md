@@ -51,7 +51,3 @@ Hello, World!
 
 ```
 
-
-
-
-### Menggunakan _Command line Interface (CLI)_
