@@ -7,6 +7,7 @@ Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 3. [Syntax Dasar](03-syntax.md)
 4. [Standard Input & Output](04-input-output.md)
 5. [Tipe Data](05-tipe-data.md)
+6. [Operator](06-operator.md)
 
 ---
 

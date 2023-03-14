@@ -1,4 +1,4 @@
-# 1. Operator
+# Operator
 
 Operator dalam pemrograman digunakan untuk melakukan operasi tertentu.
 
@@ -100,40 +100,55 @@ public class OperatorAritmatika {
 }
 ```
 
-Silahkan jalankan programnya:
+Output program:
 
-Hasil output program java operator
-Mudah bukan…?
+![](images/06-operator-contoh1.png)
 
+Mari kita coba contoh kasus lain: _Program menghitung keliling persegi panjang_.
 
-Mau laithan lagi?
-Semakin banyak latihan, semakin mantap.
+```java
+public class KelilingPersegiPanjang {
+    public static void main(String[] args) {
+        //deklarasi
+        double keliling, p, l;
 
-Sekarang coba contoh kasus: Program menghitung keliling persegi panjang.
+        //input
+        p = 6.0;
+        l = 3.0;
 
-Program Operator aritmatika
-2. Operator Penugasan
-Operator penugasan (Assignment Operator) fungsinya untuk meberikan tugas pada variabel tertentu. Biasanya untuk mengisi nilai.
+        //proses
+        keliling = (2*p) + (2*l);
+
+        //output
+        System.out.println(keliling);
+    }
+}
+```
+
+## 2. Operator Penugasan
+Operator penugasan (Assignment Operator) fungsinya untuk memberikan tugas pada variabel tertentu. Biasanya untuk mengisi nilai.
 
 Contoh:
-
+```java
 int a = 10;
+```
+
 Variabel a ditugaskan untuk menyimpan nilai 10.
 
 Operator Penugasan terdiri dari:
 
-Nama Operator	Sombol
-Pengisian Nilai	=
-Pengisian dan Penambahan	+=
-Pengisian dan Pengurangan	-=
-Pengisian dan Perkalian	*=
-Pengisian dan Pembagian	/=
-Pengisian dan Sisa bagi	%=
-Mari Kita Coba…
-Sekarang, buatlah sebuah kelas baru beranama OperatorPenugasan.
+| Nama Operator | Symbol |
+| --- | --- |
+| Pengisian Nilai   | `=` |
+| Pengisian dan Penambahan  | `+=` |
+| Pengisian dan Pengurangan	| `-=` |
+| Pengisian dan Perkalian	| `*=` |
+| Pengisian dan Pembagian	| `/=` |
+| Pengisian dan Sisa bagi	| `%=` |
 
-Kemudian ikuti kode berikut:
+Pelajari penggunaan operator penugasan pada contoh program berikut.
 
+```java
 public class OperatorPenugasan {
 
     public static void main(String[] args) {
@@ -167,40 +182,50 @@ public class OperatorPenugasan {
         // Sisa bagi
         b %= a;
         // sekarang b=0
-        System.out.println("Sisa Bagi: " + b);
+        System.out.println("Sisa Bagi : " + b);
 
     }
 
 }
+```
+
 Hasil outputnya:
 
-Hasil output operator penugasan
-3. Operator Pambanding
-Sepeti namanya, tugas oprator ini untuk membandingkan.
+```
+Penambahan : 15
+Pengurangan : 10
+Perkalian : 50
+Pembagian : 10
+Sisa Bagi : 0
+```
 
-Operator ini juga dikenal dengan opeartor relasi.
-
-Nilai yang dihasilkan dari operator ini berupa boolean, yaitu: true dan false.
+## 3. Operator Pambanding
+Seperti namanya, tugas operator ini untuk membandingkan. Operator ini juga dikenal dengan _operator relasi_. Nilai yang dihasilkan dari operator ini berupa boolean, yaitu: `true` dan `false`.
 
 Operator ini terdiri dari:
 
-Nama	Simbol
-Lebih Besar	>
-Lebih Kecil	<
-Sama Dengan	==
-Tidak Sama dengan	!=
-Lebih Besar Sama dengan	>=
-Lebih Kecil Sama dengan	<=
+| Nama	| Simbol |
+| --- | --- |
+| Lebih Besar | `>` |
+| Lebih Kecil | `<` |
+| Sama Dengan | `==` |
+| Tidak Sama dengan	| `!=` |
+| Lebih Besar Sama dengan	| `>=` |
+| Lebih Kecil Sama dengan	| `<=` |
+
 contoh:
 
+```java
 boolean x = 10 < 12
-Maka x akan bernilai true, karena 10 lebih kecil dari 12.
+```
+
+Maka x akan bernilai `true`, karena 10 lebih kecil dari 12.
 
 Untuk lebih jelasnya…
 
 Mari kita coba dalam kode
 Buatlah sebuah kelas baru bernama OperatorPembanding. Kemudian ikuti kode berikut:
-
+```java
 public class OperatorPembanding {
 
     public static void main(String[] args) {
@@ -235,16 +260,21 @@ public class OperatorPembanding {
     }
 
 }
+```
+
 Kode program di atas, akan menghasilkan output seperti ini:
 
 Hasil output operator penugasan
-4. Operator Logika
+
+## 4. Operator Logika
 Kalau kamu pernah belajar logika matematika, pasti tidak akan asing dengan operator ini.
 
-Nama	Simbol di Java
-Logika AND	&&
-Logika OR	||
-Negasi/kebalikan	!
+| Nama |	Simbol di Java |
+| --- | --- |
+| Logika AND	| `&&` |
+| Logika OR	    | `\|\|` |
+| Negasi/kebalikan	| `!` |
+
 Operator Logika digunakan untuk membuat operasi logika.
 
 Misalnya seperti ini:
