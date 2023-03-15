@@ -284,27 +284,27 @@ Operator Logika digunakan untuk membuat operasi logika.
 
 Misalnya seperti ini:
 
-* Pernyataan 1: Budi seorang programmer
-* Pernyattan 2: Budi menggunakan Linux
-Jika ditanya, apakah Budi programmer yang menggunakan Linux?
+* `Pernyataan 1`: _Budi seorang programmer_
+* `Pernyattan 2`: _Budi menggunakan Linux_
+Jika ditanya, _apakah Budi programmer yang menggunakan Linux_?
 
 Tentu kita akan cek dulu kebenarannya
 
-* _Pernyataan 1_: Budi seorang programmer = `true`.
-* _Pernyattan 2_: Budi menggunakan Linux = `true`.
+* `Pernyataan 1`: _Budi seorang programmer_ = `true`.
+* `Pernyattan 2`: _Budi menggunakan Linux_ = `true`.
   
 Apa _Budi programmer_ **dan** _menggunakan Linux_?
 
-_Pernyataan 1_ **&&** _Pernyataan 2_ = `true`
+`Pernyataan 1` **&&** `Pernyataan 2` = `true`
 
 Coba cek lagi tabel kebenaran untuk logika AND.
 
-| Pernyatan 1 |	Pernyataan 2	| Logika AND |
+| Pernyatan 1 |	Pernyataan 2 | Logika AND |
 | --- | --- | --- |
-| true |	true |	true |
-| true |	false |	false |
-| false |	true |	false |
-| false |	false |	false |
+| `true` | `true` | `true` |
+| `true` | `false` | `false` |
+| `false` | `true` | `false` |
+| `false` | `false` | `false` |
 
 Coba pelajari program berikut:
 
