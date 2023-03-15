@@ -2,8 +2,4 @@
 
 Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 
----
-
-Referensi belajar:
-
-- https://github.com/bellshade/Java
+[>> MULAI BELAJAR <<](docs/README.md)
