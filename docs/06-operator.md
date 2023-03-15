@@ -2,7 +2,7 @@
 
 Operator dalam pemrograman digunakan untuk melakukan operasi tertentu.
 
-Misalkan kita ingin menjumlahkan nilai dari variabel x dan y, maka kita bisa menggunakan operator penjumlahan (+).
+Misalkan kita ingin menjumlahkan nilai dari variabel `x` dan `y`, maka kita bisa menggunakan operator penjumlahan (`+`).
 
 ```java
 x + y
@@ -199,7 +199,7 @@ Pembagian : 10
 Sisa Bagi : 0
 ```
 
-## 3. Operator Pambanding
+## 3. Operator Pembanding
 Seperti namanya, tugas operator ini untuk membandingkan. Operator ini juga dikenal dengan _operator relasi_. Nilai yang dihasilkan dari operator ini berupa boolean, yaitu: `true` dan `false`.
 
 Operator ini terdiri dari:
@@ -219,7 +219,7 @@ contoh:
 boolean x = 10 < 12
 ```
 
-Maka x akan bernilai `true`, karena 10 lebih kecil dari 12.
+Maka `x` akan bernilai `true`, karena `10` lebih kecil dari `12`.
 
 Untuk lebih jelasnya…
 
@@ -279,89 +279,121 @@ Operator Logika digunakan untuk membuat operasi logika.
 
 Misalnya seperti ini:
 
-Pernyataan 1: Petani Kode seorang programmer
-Pernyattan 2: Petanikode menggunakan Linux
-Jika ditanya, apakah Petani Kode programmer yang menggunakan Linux?
+* Pernyataan 1: Budi seorang programmer
+* Pernyattan 2: Budi menggunakan Linux
+Jika ditanya, apakah Budi programmer yang menggunakan Linux?
 
 Tentu kita akan cek dulu kebenarannya
 
-Pernyataan 1: Petani Kode seorang programmer = true.
-Pernyattan 2: Petanikode menggunakan Linux = true.
-Apa petanikode programmer dan menggunakan Linux?
+* _Pernyataan 1_: Budi seorang programmer = `true`.
+* _Pernyattan 2_: Budi menggunakan Linux = `true`.
+  
+Apa _Budi programmer_ **dan** _menggunakan Linux_?
 
-Pertnyataan 1 && Pernyataan 2 = true
-Bingung?
+_Pernyataan 1_ **&&** _Pernyataan 2_ = `true`
 
 Coba cek lagi tabel kebenaran untuk logika AND.
 
-Pernyatan 1	Pernytaan 2	Logika AND
-true	true	true
-true	false	false
-false	true	false
-false	false	false
-Masih bingung…?
+| Pernyatan 1 |	Pernyataan 2	| Logika AND |
+| --- | --- | --- |
+| true |	true |	true |
+| true |	false |	false |
+| false |	true |	false |
+| false |	false |	false |
 
-Sepertinya kamu harus buka lagi pelajarann logika matematika 😄.
+Coba pelajari program berikut:
 
-Lalu bagaimana pengunaanya di program?
+```java
+public class OperatorLogika {
+    public static void main(String[] args) {
+        boolean a = true;
+        boolean b = false;
+        boolean c;
 
-Langsung Saja dicoba Program Berikut
-Buatlah sebuah kelas baru beranama OperatorLogika. Kemudian ikuti kode berikut ini:
+        // AND
+        c = a && b;
+        System.out.println("true && false = "+c);
 
-Kode program operator logika
-Silahkan jalankan dan perhatikan hasilnya:
+        // OR
+        c = a || c;
+        System.out.println("true || false = "+c);
+        
+        // NOT
+        System.out.println("NOT, !true"+!a);
+        
+    }
+}
+```
 
-Program operator logika di Java
-5. Operator Bitwise
+output:
+```
+true && false = false
+true && false = true
+NOT, !true = false
+```
+
+## 5. Operator Bitwise
+
 Operator bitwise merupkan operator yang digunakan untuk operasi bit (biner). Operator bitwise terdiri dari:
 
-Nama	Simbol di Java
-AND	&
-OR	|
-XOR	^
-Negasi/kebalikan	~
-Left Shift	<<
-Right Shift	>>
-Left Shift (unsigned)	<<<
-Right Shift (unsigned)	>>>
-Operator ini berlaku untuk tipe data int, long, short, char, dan byte.
+| Nama | 	Simbol di Java |
+| --- | --- |
+| AND	| `&` |
+| OR	| `\|` |
+| XOR	| `^` |
+| Negasi/kebalikan |	`~` |
+| Left Shift  |	`<<` |
+| Right Shift |	`>>` |
+| Left Shift (unsigned) |	`<<<` |
+| Right Shift (unsigned) |	`>>>` |
+
+Operator ini berlaku untuk tipe data `int`, `long`, `short`, `char`, dan `byte`.
 
 Operator ini akan menghitung dari bit-ke-bit.
 
-Misalnya, kita punya variabel a = 60 dan b = 13.
+Misalnya, kita punya variabel `a = 60` dan `b = 13`.
 
 Bila dibuat dalam bentuk biner, akan menjadi seperti ini:
 
+```
 a = 00111100
 b = 00001101
-Kemudian, dilakukan operasi bitwise
+```
+
+Jika digambarkan, operasi bitwise adalah sebagai berikut:
 
 Operasi AND
-
+```
 a = 00111100
 b = 00001101
 a & b = 00001100
-Operasi OR
+```
 
+Operasi OR
+```
 a = 00111100
 b = 00001101
 a | b = 00111101
-Operasi XOR
+```
 
+Operasi XOR
+```
 a = 00111100
 b = 00001101
 a ^ b = 00110001
-Opearsi NOT (Negasi/kebalikan)
+```
 
+Opearsi NOT (Negasi/kebalikan)
+```
 a = 00111100
 ~a  = 11000011
+```
+
 Konsepnya memang hampir sama dengan opeartor Logika. Bedanya, Bitwise digunakan untuk biner.
 
-Untuk lebih jelasnya…
+Untuk lebih jelasny pelajari program berikut:
 
-Mari kita coba dalam program
-Buat kelas baru dengan nama OperatorBitwise, kemudian ikuti isinya sebagai berikut.
-
+```java
 public class OperatorBitwise {
 
     public static void main(String[] args) {
@@ -392,25 +424,35 @@ public class OperatorBitwise {
     }
 
 }
+```
 Perhatikanlah hasil outputnya:
+```
+a & b = 112
+a | b = 1
+a & b = 49
+~a = -61
+a << 2 240
+a >> 2 = 15
+a >>> 2 = 15
+```
 
 
+## . Operator Ternary
 
-6. Operator Ternary
 Opertor ini unik, seperti membuat pertanyaan.
 
-Simbolnya menggunakan tanda tanya (?) dan titik-dua (:) untuk memisah jawabannya.
+Simbolnya menggunakan tanda tanya (`?`) dan titik-dua (`:`) untuk memisah jawabannya.
 
-Operator ternary di Java
-Pada contoh di atas, “Kamu suka aku” adalah pertanyaan atau kondisi yang akan diperiksa.
+![](images/06-operator-ternary.png)
 
-Kalau jawabannya benar, maka iya. Sebaliknya akan tidak.
 
-Lebih jelasnya, mari kita coba…
+Pada contoh di atas, "Kamu suka aku" adalah pertanyaan atau kondisi yang akan diperiksa.
 
-Program dengan Operator Ternary
-Buatlah sebuah kelas baru dengan nama OperatorTernary, kemudian ikuti kode berikut.
+Kalau jawabannya benar, maka _ya_. Sebaliknya akan _tidak_.
 
+Lebih jelasnya, pelajari program berikut:
+
+```java
 public class OperatorTernary {
     public static void main(String[] args) {
 
@@ -425,19 +467,24 @@ public class OperatorTernary {
 
     }
 }
+```
 Hasil outputnya:
-
+```
 iya
-Sekarang coba ganti nilai variabel suka menjadi false, lalu dijalankan lagi.
+```
 
-Pasti akan menghasilkan tidak.
+Sekarang coba ganti nilai variabel `suka` menjadi `false`, lalu dijalankan lagi.
+
+Pasti akan menghasilkan `tidak`.
 
 Cara lain, dapat juga membuat kondisi seperti ini:
 
+```java
 int suka = 8;
 
 String jawaban = (suka > 5) ? "iya" : "tidak";
+```
 
 ---
 Referensi:
-- https://www.petanikode.com/java-operator/
+- [https://www.petanikode.com/java-operator/](https://www.petanikode.com/java-operator/)

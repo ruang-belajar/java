@@ -13,5 +13,5 @@ Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 
 Referensi belajar:
 
-- https://github.com/bellshade/Java
-- https://petanikode.com
+- [https://github.com/bellshade/Java](https://github.com/bellshade/Java)
+- [https://petanikode.com](https://petanikode.com)
