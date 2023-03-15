@@ -262,9 +262,14 @@ public class OperatorPembanding {
 }
 ```
 
-Kode program di atas, akan menghasilkan output seperti ini:
-
-Hasil output operator penugasan
+output:
+```
+false
+true
+false
+false
+true
+```
 
 ## 4. Operator Logika
 Kalau kamu pernah belajar logika matematika, pasti tidak akan asing dengan operator ini.
