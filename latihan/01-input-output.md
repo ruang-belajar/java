@@ -2,7 +2,7 @@
 
 Buat program kalkulator sederhana untuk menghitung penjualan.
 
-Program akan menanyakan _quantity_ dan _harga_ barang, kemudian menampilkan totalnya dengan rumus:
+Program akan menanyakan (meminta input dari user) _quantity_ dan _harga_ barang, kemudian menampilkan totalnya dengan rumus:
 ```
 total = harga x total
 ```
@@ -31,3 +31,4 @@ Total : 800000
 ## Petunjuk
 Pelajari penggunaan `if` pada link berikut:
 - https://www.petanikode.com/java-percabangan/
+- https://www.duniailkom.com/tutorial-belajar-java-percabangan-kondisi-if-else-if-bahasa-java/
