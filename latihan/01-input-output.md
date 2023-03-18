@@ -16,16 +16,16 @@ Jika program dijalankan, maka akan memberikan contoh output sebagai berikut:
 
 **Contoh 1**
 ```
-Qty : 30
-Harga : 5000
-Total : 150000 
+Qty? 30
+Harga? 5000
+Total= 150000 
 ```
 
 **Contoh 2**
 ```
-Qty : 200
-Harga : 5000
-Total : 800000 
+Qty? 200
+Harga? 5000
+Total= 800000 
 ```
 
 ## Petunjuk
