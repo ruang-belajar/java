@@ -491,5 +491,5 @@ String jawaban = (suka > 5) ? "iya" : "tidak";
 ```
 
 ---
-Referensi:
+**Referensi:**
 - [https://www.petanikode.com/java-operator/](https://www.petanikode.com/java-operator/)

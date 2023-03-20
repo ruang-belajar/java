@@ -330,5 +330,5 @@ Misal untuk nama class menggunakan ALL UPPER?
 Boleh-boleh saja, programnya tidak akan error. Tetapi kode program yang kamu tulis akan terlihat kotor dan keluar dari garis pandu yang sudah ditetapkan.
 
 ---
-Referensi:
+**Referensi:**
 - https://www.petanikode.com/java-sintaks/

@@ -5,6 +5,7 @@ Apa yang akan kita lakukan bila ingin menyuruh komputer mengerjakan perintah yan
 Misalkan kita ingin menyuruh komputer menampilkan teks _Belajar Java_ sebanyak 5x.
 
 Maka kita bisa menyuruhnya seperti ini:
+
 ```java
 System.out.println("Belajar Java");
 System.out.println("Belajar Java");
@@ -36,7 +37,7 @@ Perulangan dalam pemrograman dibagi manjadi dua jenis:
 ## 1. Counted Loop
 Seperti yang sudah dijelaskan, perulangan ini memiliki jumlah pengulangan yang tentu dan terhitung.
 
-Perulangan ini terdiri dari perulangan For dan For each.
+Perulangan ini terdiri dari perulangan _For_ dan _For each_.
 
 Mari kita bahas satu per satu…
 
@@ -383,5 +384,5 @@ Perulangan [x=5, y=3]
 ```
 ---
 
-Referensi:
+**Referensi:**
 - https://www.petanikode.com/java-perulangan/

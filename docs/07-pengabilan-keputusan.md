@@ -1,33 +1,17 @@
 # Pengambilan Keputusan
 
-Kalau kita perhatikan, alur pengeksekusian sebuah kode program dikerjakan satu per satu dari atas sampai ke bawah.
-
-Baris demi baris dibaca, kemudian komputer mengerjakan apa yang diperintahkan.
+Komputer akan menjalankan/eksekusi instruksi program yang kita buat secara berurut.
 
 Misalnya seperti ini:
 ![](images/07-alur1.png)
 
-
-Alur porgram tanpa percabangan
-Alur programnya satu, tidak ada belokan atau percabangan.
-
-Ngomong-ngomong apa itu percabangan?
-
-Percabangan hanyalah sebuah istilah yang digunakan untuk menyebut alur program yang bercabang.
-
-Percabangan juga dikenal dengan “Control Flow”, “Struktur Kondisi”, “Struktur IF”, “Decision”, dsb. Semuanya itu sama.
-
-Pada diagram alur (Flow Chart) seperti di atas, alurnya memang satu.
-
-Tapi setelah kita menggunakan percabangan, alurnya akan bertambah menjadi seperti ini.
+Kepada komputer kita juga bisa memberikan instruksi kepada komputer untuk mengambil keputusan berdasarkan suatu kondisi. Jika digambarkan dalam bentuk flowchart, pengambilan keputusan ini akan membuat percabangan. Untuk _pengambilan keputusan_ ini, kadang juga digunakan istilah _Control Flow_, _Percabangan_, _IF_, atau _decision_. Istilah-istilah ini mengacu pada hal yang sama.
 
 ![](images/07-alur2.png)
 
-Lalu bagaimana cara menulis kode percabangan dalam Java?
+Di _Java_, _pengambilan keputusan_ ini dilakukan dengan menggunakan _statement_ `if`, `else`, `switch`, dan `case`, dan operator ternary.
 
-Caranya: menggunakan kata kunci `if`, `else`, `switch`, dan `case`, dan operator ternary.
-
-Contoh format stuktur IF seperti ini:
+Contoh format stuktur _IF_ seperti ini:
 ```java
 if( suatu_kondisi ) {
     // lakukan sesuatu kalau kondisi benar
@@ -38,7 +22,7 @@ if( suatu_kondisi ) {
 
 Untuk lebih jelasnya, nanti akan kita bahas.
 
-Sebelumnya, kamu perlu tahu dulu tiga bentuk percabangan pada Java:
+Sebelumnya, kamu perlu tahu dulu tiga bentuk percabangan pada _Java_:
 
 1. Percabangan IF
 2. Percabangan IF/ELSE
@@ -181,7 +165,7 @@ public class OperatorTernary {
 ```
 
 ## 3. Percabangan IF/ELSE/IF dan SWITCH/CASE
-Jika percabangan IF/ESLE hanya memiliki dua pilihan saja. Maka percahangan IF/ELSE/IF memiliki lebih dari dua pilihan.
+Jika percabangan IF/else hanya memiliki dua pilihan saja. Maka percahangan IF/ELSE/IF memiliki lebih dari dua pilihan.
 
 Formatnya seperti ini:
 ```java
@@ -197,7 +181,7 @@ if (suatu kondisi) {
     // kerjakan perintah ini
     // kerjakan ini juga
     // …
-} esle {
+} else {
     // kerjakan ini kalau
     // semua kondisi di atas
     // tidak ada yang benar
@@ -500,3 +484,7 @@ public class Tilang {
 Pada kode di atas, kita menggunakan operator AND (`&&`).
 
 Karena logikanya: Si pengendara tidak akan ditilang kalau punya SIM dan STNK.
+
+---
+**Referensi:**
+- https://www.petanikode.com/java-percabangan/
