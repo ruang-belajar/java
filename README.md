@@ -3,5 +3,5 @@
 Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 
 <p align="center">
-[📚 **MULAI BELAJAR**](docs/README.md)
+  <a href="docs/README.md"><b>📚  MULAI BELAJAR 📚 </b></a>
 </p>
