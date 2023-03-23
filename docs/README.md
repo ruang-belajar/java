@@ -23,3 +23,7 @@ Referensi belajar:
 - [https://petanikode.com](https://petanikode.com)
 - [https://softscients.com/2022/03/26/database-sqlite-java/](https://softscients.com/2022/03/26/database-sqlite-java/)
 - [https://99ridho.gitbooks.io/java-basic-tutorial/](https://99ridho.gitbooks.io/java-basic-tutorial/)
+- [https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-1/](https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-1/)
+- [https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-2/](https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-2/)
+- [https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-3/](https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-3/)
+- [https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-4/](https://www.kodingindonesia.com/belajar-pemrograman-visual-java-menggunakan-netbeans-bagian-4/)
