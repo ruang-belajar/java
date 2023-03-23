@@ -13,11 +13,7 @@ System.out.println("Belajar Java");
 System.out.println("Belajar Java");
 System.out.println("Belajar Java");
 ```
-Tapi… bagaimana kalau sebanyak 1000x, apa kita akan mampu mengetik kode sebanyak itu?
-
-Tentunya tidak.
-
-Karena itu, kita harus pakai perulangan.
+Tapi… bagaimana kalau sebanyak 1000x? Tentu adalah sesuatu yang sangat buruk jika kita harus menuliskan 1000 baris kode program yang sama. Untuk keperluan seperti ini kita bisa menggunakan perintah pengulangan.
 
 ![](images/08-alur1.png)
 
@@ -127,17 +123,9 @@ Maksudnya, nilai `i` akan ditambah dua (+2) di setiap pengulangan.
 **Perulangan _For Each_**
 Perulangan ini sebenarnya digunakan untuk menampilkan isi dari array.
 
-Apa itu array?
+Apa itu array? Singkatnya, array itu variabel yang menyimpan lebih dari satu nilai dan memiliki indeks. Selengkapnya, nanti bisa di pelajari pada materi: [Mengenal Array di Java](10-array.md).
 
-Singkatnya, array itu variabel yang menyimpan lebih dari satu nilai dan memiliki indeks.
-
-Selengkapnya, nanti bisa di pelajari pada materi: _Mengenal Array di Java_.
-
-Lanjut…
-
-Perulangan _For Each_ pada Java, dilakukan juga dengan kata kunci For.
-
-Contohnya seperti ini:
+Pada bagian ini, kita akan sekilas mempelajari perulangan _For Each_ pada Java. Untuk melakukan, kita menggunakan kata kunci _For_. Perhatikan contohnya berikut:
 
 ```java
 for ( int item : dataArray ) {

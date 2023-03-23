@@ -3,6 +3,7 @@
 Komputer akan menjalankan/eksekusi instruksi program yang kita buat secara berurut.
 
 Misalnya seperti ini:
+
 ![](images/07-alur1.png)
 
 Kepada komputer kita juga bisa memberikan instruksi kepada komputer untuk mengambil keputusan berdasarkan suatu kondisi. Jika digambarkan dalam bentuk flowchart, pengambilan keputusan ini akan membuat percabangan. Untuk _pengambilan keputusan_ ini, kadang juga digunakan istilah _Control Flow_, _Percabangan_, _IF_, atau _decision_. Istilah-istilah ini mengacu pada hal yang sama.
@@ -95,6 +96,7 @@ Begitulah perbedaan IF dengan IF/ELSE.
 Sekarang mari kita coba dalam kode program…
 
 **Contoh: Program Cek Kelulusan**
+
 Misalkan, kalau nilai siswa lebih besar dari 70, maka ia dinyatakan lulus. Kalau tidak, maka dia gagal.
 
 Programnya bisa kita buat seperti ini:
@@ -338,19 +340,11 @@ Lampu hijau, silahkan jalan!
 Cobalah untuk menghilangkan `break` di salah satu case dan perhatikanlah hasilnya.
 
 ## 5. Percabangan dalam Percabangan (Nested)
-Kita sudah tahu tiga bentuk dasar percabanganan di Java. Selanjutnya, kita coba bahas percabangan yang ada di dalam perbangan (perabangan bersarang).
+Kita sudah tahu tiga bentuk dasar percabanganan di Java. Selanjutnya, kita coba bahas percabangan yang ada di dalam perbangan (percabangan bersarang).
 
-Sebenarnya pembahasan ini saya ingin pisahkan. Namun, baiknya digabungkan di sini aja.
+**Contoh kasus:**
 
-Anggap saja pembahasan bonus 😄.
-
-Baiklah…
-
-Jadi, percabangan itu bisa dibuat di dalam percabangan. Kadang teknik ini disebut juga nested if.
-
-Contoh kasus:
-
-Misalnya ada model bisinis seperti ini di sebuah toko. Ketika orang membayar di kasir, biasanya ditanya ada kartu member untuk mendapatkan diskon dan sebagainya.
+Misalnya ada model bisnis seperti ini di sebuah toko. Ketika orang membayar di kasir, biasanya ditanya ada kartu member untuk mendapatkan diskon dan sebagainya.
 
 ```
 Apakah anda punya kartu member?
@@ -366,13 +360,9 @@ Apakah anda punya kartu member?
            # ya : mendapatkan diskon 10rb
            # tidak: tidak mendapatkan diskon
 ```
-Paham?
-
-Kalau tidak, coba perhatikan flow chart-nya:
+Jika digambarkan ke dalam bentuk flowcart akan menjadi seperti berikut:
 
 ![](images/07-alur5.png)
-
-Masih belum paham?
 
 Kalau begitu mari kita coba dalam program.
 
