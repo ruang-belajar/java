@@ -236,11 +236,7 @@ Jawab [ya/tidak]> ya
 Anda sudah melakukan perulangan sebanyak 4 kali
 ```
 
-
-Hasil output contoh program menggunakan perulangan while
-Di sana telah dilakukan perulangan sebanyak 4 kali. Bisa saja terjadi 10 kali.
-
-Itu targantung dari kondisinya.
+Program di atas akan melakukan pengulangan menanyakan _Apakah anda ingin keluar?_. Selama user menjawab selain jawaban _ya_, maka program akan terus memberikan pertanyaan. Setiap pengulangan, program juga menambahkan variabel `counter` +1 sehingga pada bagian akhir kita bisa mengetahui berapa kali program melakungan pengulangan.
 
 Kalau nilai variabel `running` bernilai `false`, maka perulangan berhenti.
 
@@ -286,14 +282,15 @@ Bedanya, _Do/While_ melakukan satu kali perulangan dulu. Kemudian mengecek kondi
 
 
 Struktur penulisannya seperti ini:
-```
+```java
 do {
     // blok kode yang akan diulang
 } while (kondisi);
 ```
 Jadi kerjakan dulu (`do`), baru di cek kondisinya `while( kondisi )`. Kalau kondisi bernilai `true`, maka lanjutkan perulangan.
 
-Contoh Program dengan Perulangan Do/While
+**Contoh Program dengan Perulangan _Do/While_**
+```java
 public class PerulanganDoWhile {
     public static void main(String[] args) {
 
@@ -307,6 +304,8 @@ public class PerulanganDoWhile {
 
     }
 }
+```
+
 Hasil outputnya:
 ```
 perulangan ke-0
@@ -321,13 +320,16 @@ perulangan ke-8
 perulangan ke-9
 perulangan ke-10
 ```
-Parulangan Bersarang (Nested Loop)
+
+## Perulangan Bersarang (Nested Loop)
 Perulangan juga dapat bersarang. Perulangan bersarang maksudnya, perulangan dalam perulangan atau disebut juga nested loop.
 
 Contoh bentuk flow chart-nya seperti ini:
 
-Flow Chart Perulangan Bersarang
-Contoh Program Perulangan Bersarang
+![](images/08-alur4.png)
+
+**Contoh Program Perulangan Bersarang**
+```java
 public class PerulanganBersarang {
     public static void main(String[] args) {
 
@@ -342,6 +344,7 @@ public class PerulanganBersarang {
         }
     }
 }
+```
 
 Hasil output:
 ```
