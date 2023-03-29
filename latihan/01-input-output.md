@@ -4,12 +4,12 @@ Buat program kalkulator sederhana untuk menghitung penjualan.
 
 Program akan menanyakan (meminta input dari user) _quantity_ dan _harga_ barang, kemudian menampilkan totalnya dengan rumus:
 ```
-total = harga x total
+total = harga x qty
 ```
 
 Tapi jika _quantity_ pembelian lebih dari 100, maka harga setiap barang akan dikurang Rp. 1000. Dengan demikian, rumus _total_ untuk pembelian lebih dari 100:
 ```
-total = (harga - 1000) x total
+total = (harga - 1000) x qty
 ```
 
 Jika program dijalankan, maka akan memberikan contoh output sebagai berikut:
