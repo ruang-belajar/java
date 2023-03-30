@@ -7,19 +7,12 @@ Ketika program kita semakin bertambah besar, kita tidak mungkin menulis semua ko
 
 ## Pengertian Prosedur, Fungsi, dan Method
 
-Jangan bingung…karena ketiga-tiganya sama.
+Sederhananya, prosedur, Fungsi, dan Method adalah sama, ia hanya dibedakan oleh beberapa hal:
+* _Prosedur_ adalah sebutan untuk fungsi yang tidak mengembalikan nilai. Prosedur biasanya ditandai dengan kata kunci void.
+* _Fungsi_ adalah sebutan untuk fungsi yang mengembalikan nilai.
+* _Method_ adalah fungsi yang berada di dalam Class. Sebutan ini, biasanya digunakan pada OOP.
 
-Prosedur, Fungsi, dan Method itu sama.
-
-Prosedur adalah sebutan untuk fungsi yang tidak mengembalikan nilai. Prosedur biasanya ditandai dengan kata kunci void.
-
-Fungsi adalah sebutan untuk fungsi yang mengembalikan nilai.
-
-Method adalah fungsi yang berada di dalam Class. Sebutan ini, biasanya digunakan pada OOP.
-
-Untuk memudahkan, mari kita sebut semuanya fungsi.
-
-Cara Membuat Fungsi di Java
+## Cara Membuat Fungsi di Java
 Fungsi harus dibuat atau ditulis di dalam class.
 
 Struktur dasarnya seperti ini:
@@ -39,27 +32,26 @@ Bingung? Nanti saya jelaskan.
 * `namaFungsi()` adalah nama fungsinya. Biasanya ditulis dengan huruf kecil di awalnya. Lalu, kalau terdapat lebih dari satu suku kata, huruf awal di kata kedua ditulis kapital.
 
 Contoh:
-
+```java
 static void ucapSalam(){
     System.out.println("Selamat Pagi");
 }
+```
 Tipe data void artinya kosong, fungsi tersebut tidak mengebalikan nilai apa-apa.
 
-Cara Memanggil/Eksekusi Fungsi
+## Cara Memanggil/Eksekusi Fungsi
 Setelah kita membuat fungsi, selanjutnya kita akan mengeksekusi fungsinya.
 
-Fungsi dapat dipanggil dari fungsi main atau dari fungsi yang lainnya.
-
-Contoh pemanggilan fungsi dalam dalam funsgi main:
-
+**Contoh pemanggilan fungsi dalam dalam funsgi main:**
+```java
 public static void main(String[] args){
     ucapSalam();
 }
-Maka akan menghasilkan output:
+```
 
-Selamat Pagi
 Kode lengkapnya, silahkan dicoba sendiri:
 
+```java
 class BelajarFungsi {
     
     // membuat fungsi ucapSalam()
@@ -73,58 +65,78 @@ class BelajarFungsi {
         ucapSalam();
     }
 }
-Fungsi dengan Parameter
+```
+
+output:
+```
+Selamat Pagi
+```
+
+## Fungsi dengan Parameter
 Parameter adalah variabel yang menampung nilai untuk diproses di dalam fungsi. Parameter berperan sebagai input untuk fungsi.
 
 Struktur dasarnya seperti ini:
-
+```java
 static TipeData namaFungsi(TipeData namaParameter, TipeData namaParameterLain){
     // kode fungsi
 }
+```
 Penjelasan:
 
-Parameter ditulis di antara tanda kurung (...);
-Parameter harus diberikan tipe data;
-Bila terdapat lebih dari satu parameter, maka dipisah dengan tanda koma.
+* Parameter ditulis di antara tanda kurung (...);
+* Parameter harus diberikan tipe data;
+* Bila terdapat lebih dari satu parameter, maka dipisah dengan tanda koma.
 Contoh fungsi yang memiliki parameter:
 
+```java
 static void ucapin(String ucapan){
     System.out.println(ucapan);
 }
+```
+
 Pada contoh tersebut, kita membuat parameter bernama ucapan dengan tipe String. Sehingga kita bisa menggunakan variabel ucapan di dalam fungsi.
 
 Cara pemanggilan fungsi yang memiliki parameter:
-
+```java
 ucapin("Hallo!");
 ucapin("Selamat datang di pemrograman Java");
 ucapin("Saya kira ini bagian terakhir");
 ucapin("Sampai jumpa lagi, ya!");
-Hasil outputnya:
+```
 
+Hasil outputnya:
+```
 Hallo!
 Selamat datang di pemrograman Java
 Saya kira ini bagian terakhir
 Sampai jumpa lagi, ya!
-Fungsi yang Mengembalikan Nilai
+```
+
+## Fungsi yang Mengembalikan Nilai
 Setelah fungsi memproses data yang diinputkan melalui parameter, selanjutnya fungsi harus mengembalikan nilai agar dapat diolah pada proses berikutnya.
 
 Pengembalian nilai pada fungsi menggunakan kata kunci return.
 
 Contoh:
-
+```java
 static int luasPersegi(int sisi){
     int luas = sisi * sisi;
     return luas;
 }
+```
 Pada contoh tersebut, kita membuat sebuah parameter bernama sisi. Kemudian fungsi akan mengembalikan nilai dengan tipe int (integer) dari variabel luas.
 
 Contoh pemanggilanya:
-
+```java
 System.out.println("Luas Persegi dengan panjang sisi 5 adalah " + luasPersegi(5));
-Hasil Output:
+```
 
+Hasil Output:
+```
 Luas Persegi dengan panjang sisi 5 adalah 25
-Pemanggilan Fungsi di Fungsi Lain
+```
+
+## Pemanggilan Fungsi di Fungsi Lain
 Fungsi-fungsi dapat saling memanggil untuk memproses data.
 
 Contoh, sebuah program Kalkulator Bangun Ruang memiliki fungsi-fungsi: luasPersegi(), luasPersegiPanjang(), luasSegitiga(), luasBalok(), luasKubus() dsb.
@@ -132,11 +144,13 @@ Contoh, sebuah program Kalkulator Bangun Ruang memiliki fungsi-fungsi: luasPerse
 Fungsi-fungsi tersebut dapat saling membantu, contoh fungsi luasKubus() membutuhkan fungsi luasPersegi().
 
 Rumus:
-
+```
 Luas Kubus = 6 *  luasPersegi;
 Luas Persegi = sisi * sisi;
-Maka programnya bisa dibuat seperti ini:
+```
 
+Maka programnya bisa dibuat seperti ini:
+```java
 public class BangunRuang {
 
     public static void main(String[] args) {
@@ -159,17 +173,19 @@ public class BangunRuang {
     }
 
 }
+```
 Hasil output
-
+```
 864
+```
 
-Fungsi Static dan Non-Static
+## Fungsi Static dan Non-Static
 Pada contoh-contoh diatas, kita menggunakan kata kunci static sebelum membuat fungsi.
 
 Kata kunci static akan membuat fungsi dapat dieksekusi langsung, tanpa harus membuat instansiasi objek dari class.
 
 Contoh:
-
+```java
 public class FungsiStatic {
     
     // Fungsi non-static
@@ -198,13 +214,16 @@ public class FungsiStatic {
     }
     
 }
+```
 Pada contoh tersebut, fungsi makan() adalah fungsi non-static. Sedangkan fungsi minum() adalah fungsi static.
 
 Hasil output dari program di atas:
-
+```
 Saya sedang minum Kopi
 Hi!
 Saya sedang makan Nasi Goreng
+```
+
 Apabila kita tidak membuat objek untuk memanggil fungsi non-static, maka akan terjadi error.
 
 Variabel Global dan Variabel Lokal pada Java
@@ -213,7 +232,7 @@ Variabel global adalah variabel yang bisa diakses dari semua fungsi. Sedangkan v
 Bingung?
 
 Mari kita lihat contohnya:
-
+```java
 class ProgramKu{
 
     // ini variabel global
@@ -223,7 +242,7 @@ class ProgramKu{
     static void help(){
 
         // ini variabel lokal
-        String nama = "Petani Kode";
+        String nama = "Belajar Java";
 
         // mengakses variabel global di dalam fungso help()
         System.out.println("Nama: " + nama);
@@ -241,30 +260,33 @@ class ProgramKu{
     }
 
 }
+```
 Hasil outputnya:
-
-Nama: Petani Kode
+```
+Nama: Belajar Java
 Versi: 1.0.0
 Nama: Programku
 Versi: 1.0.0
-Saat pemanggilan fungsi help() kita membuat ulang variabel nama. Sehingga variabel nama menjadi variabel lokal pada fungsi help() dan nilainya berubah menjadi "Petani Kode".
+```
+Saat pemanggilan fungsi help() kita membuat ulang variabel nama. Sehingga variabel nama menjadi variabel lokal pada fungsi help() dan nilainya berubah menjadi "Belajar Java".
 
 Sedangkan, saat kita akases lagi variabel nama melalui fungsi main() nilainya tetap sama seperti yang didefinisikan.
 
 Contoh Program dengan Fungsi dan Prosedur
 Program ini adalah program sederhana dengan fitur sebagai berikut:
 
-Baca data dari ArrayList
-Simpan data ke ArrayList
-Ubah data
-Hapus Data
-Keluar
+1. Baca data dari ArrayList
+2. Simpan data ke ArrayList
+3. Ubah data
+4. Hapus Data
+5. Keluar
+6. 
 Belum tahu tentang ArrayList?
 
 Silahkan baca meteri: Mengenal Array di Java
 
 Baiklah, silahkan buat class baru bernama FungsiProsedur. Lalu impor class-class yang dibutuhkan.
-
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -318,6 +340,7 @@ static void showMenu() throws IOException {
     }
         
 }
+```
 Fungsi tersebut bertugas untuk menampilkan menu dan menentukan fungsi mana yang akan dipanggil berdasarkan nomer menu yang diinputkan.
 
 Apa itu throws IOException?
@@ -325,7 +348,7 @@ Apa itu throws IOException?
 Nanti saya akan bahas di kesempatan berikutnya. Untuk saat ini diabaikan saja dulu. Ini karena kita menggunakan Buffereader, jadi throws IOException wajib ditulis.
 
 Fungsi untuk menampilkan data:
-
+```java
 static void showAllBuah(){
     if(listBuah.isEmpty()){
        System.out.println("Belum ada data");
@@ -336,19 +359,21 @@ static void showAllBuah(){
         }
     }
 }
+```
 Fungsi tersebut bertugas menampilkan isi dari listBuah. Kalau listBuah kosong, maka akan ditampilkan pesan "Belum ada data".
 
 Fungsi untuk menambah data buah:
-
+```java
 static void insertBuah() throws IOException{
     System.out.print("Nama buah: ");
     String namaBuah = input.readLine();
     listBuah.add(namaBuah);
 }
+```
 Pada fungsi tersebut, kita menggunakan method listBuah.add(namaBuah); untuk menambah data ke dalam listBuah berdasarkan namaBuah yang diberikan.
 
 Fungsi untuk mengubah data buah:
-
+```java
 static void editBuah() throws IOException{
     showAllBuah();
     System.out.print("Pilih nomer buah: ");
@@ -360,12 +385,13 @@ static void editBuah() throws IOException{
     // ubah nama buah
     listBuah.set(indexBuah, namaBaru);
 }
+```
 Pertama kita perlu tampilkan dulu daftar buahnya, lalu kita minta user untuk memilih buah mana yang akan diedit.
 
 Setelah itu, kita update buahnya dengan method listBuah.set(indexBuah, namaBaru);.
 
 Fungsi untuk menghapus buah:
-
+```java
 static void deleteBuah() throws IOException{
     showAllBuah();
     System.out.print("Pilih nomer buah: ");
@@ -373,12 +399,13 @@ static void deleteBuah() throws IOException{
     // hapus buah
     listBuah.remove(indexBuah);
 }
+```
 Hampir sama seperti edit buah, untuk menghapus buah kita juga butuh nomer indeks buah yang akan dihapus.
 
 Lalu mengapusnya dengan method listBuah.remove(indexBuah);.
 
 Fungsi main:
-
+```java
 public static void main(String[] args) throws IOException {
         
     do {
@@ -386,8 +413,9 @@ public static void main(String[] args) throws IOException {
     } while (isRunning);
     
 }
+```
 Lengkap sudah, berikut ini bentuk kode lengkapnya.
-
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -482,8 +510,9 @@ public class FungsiProsedur {
     }
     
 }
+```
 Setelah itu, silahkan dijalankan dan perhatikanlah hasilnya.
-
+```
 ========= MENU ========
 [1] Show All Buah
 [2] Insert Buah
@@ -515,6 +544,7 @@ PILIH MENU> 1
 [4] Delete Buah
 [5] Exit
 PILIH MENU> 
+```
 Silahkan coba untuk melakukan insert, edit, dan delete.
 
 ---

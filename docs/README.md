@@ -10,9 +10,9 @@ Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 6. [Operator](06-operator.md)
 7. [Pengambilan Keputusan](07-pengabilan-keputusan.md)
 8. [Pengulangan (Loop)](08-pengulangan.md)
-9.  [Prosedur dan Fungsi](https://www.petanikode.com/java-prosedur-dan-fungsi/)
-10. [Java Standard Class](https://www.javaguides.net/2019/07/top-25-useful-java-classes.html)
-11. [Array](https://www.petanikode.com/java-array/)
+9.  [Prosedur dan Fungsi](09-fungsi.md)
+10. [Array](10-array.md)
+11. [Java Standard Class](https://www.javaguides.net/2019/07/top-25-useful-java-classes.html)
 12. [Hash Map](https://www.petanikode.com/java-hashmap/)
 
 ---
