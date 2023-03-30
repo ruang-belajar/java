@@ -1,6 +1,10 @@
+![](images/cover.gif)
+
 # Ruang Belajar Java
 
-Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
+Repositori ini berisikan materi perkuliahan _Pemrograman Java_ di STMIK Mardira Indonesia. Disusun oleh [En Tay, M.Kom](https://pujangga123.github.io), dan materi yang digunakan sebagai referensi penyusunan repositori ini terlampir pada bagian [referensi](#referensi)
+
+Alur pembahasan akan mengikuti susunan sebagai berikut:
 
 1. [Mengenal Java](01-intro.md)
 2. [Instalasi dan Setup Lingkungan Kerja](02-setup.md)
@@ -21,7 +25,7 @@ Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 
 ---
 
-Referensi belajar:
+<a name="referensi"></a>**Referensi:**
 
 - [https://github.com/bellshade/Java](https://github.com/bellshade/Java)
 - [https://petanikode.com](https://petanikode.com)
