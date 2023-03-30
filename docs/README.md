@@ -16,6 +16,10 @@ Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 12. [Hash Map](https://www.petanikode.com/java-hashmap/)
 
 ---
+**Latihan:**
+* [Folder latihan @ Github](https://github.com/pujangga123/ruang-belajar-java/tree/main/latihan)
+
+---
 
 Referensi belajar:
 
