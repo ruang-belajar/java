@@ -12,104 +12,167 @@ Sederhananya, prosedur, Fungsi, dan Method adalah sama, ia hanya dibedakan oleh 
 * _Fungsi_ adalah sebutan untuk fungsi yang mengembalikan nilai.
 * _Method_ adalah fungsi yang berada di dalam Class. Sebutan ini, biasanya digunakan pada OOP.
 
-## Cara Membuat Fungsi di Java
-Fungsi harus dibuat atau ditulis di dalam class.
+## Procedure
 
-Struktur dasarnya seperti ini:
+Perhatikan program berikut:
 ```java
-static TypeDataKembalian namaFungsi(){
-    // statemen atau kode fungsi
-}
-```
-Penjelasan:
+public class LoopBintang1 {
+    public static void main(String[] args) {
+        // BAGIAN 1
+        for(int baris=1; baris<=5; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
-Kata kunci `static`, artinya kita membuat fungsi yang dapat dipanggil tanpa harus membuat instansiasi objek.
+        // BAGIAN 2
+        for(int baris=1; baris<=5; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
-Bingung? Nanti saya jelaskan.
+        // BAGIAN 3
+        for(int baris=1; baris<=3; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
-* `TypeDataKembalian` adalah tipe data dari nilai yang dikembalikan setelah fungsi dieksekusi.
+        // BAGIAN 4
+        for(int baris=1; baris<=3; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("X");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
-* `namaFungsi()` adalah nama fungsinya. Biasanya ditulis dengan huruf kecil di awalnya. Lalu, kalau terdapat lebih dari satu suku kata, huruf awal di kata kedua ditulis kapital.
-
-Contoh:
-```java
-static void ucapSalam(){
-    System.out.println("Selamat Pagi");
-}
-```
-Tipe data void artinya kosong, fungsi tersebut tidak mengebalikan nilai apa-apa.
-
-## Cara Memanggil/Eksekusi Fungsi
-Setelah kita membuat fungsi, selanjutnya kita akan mengeksekusi fungsinya.
-
-**Contoh pemanggilan fungsi dalam dalam funsgi main:**
-```java
-public static void main(String[] args){
-    ucapSalam();
-}
-```
-
-Kode lengkapnya, silahkan dicoba sendiri:
-
-```java
-class BelajarFungsi {
-    
-    // membuat fungsi ucapSalam()
-    static void ucapSalam(){
-        System.out.println("Selamat Pagi");
-    }
-
-    // membuat fungsi main()
-    public static void main(String[] args){
-        // memanggil/eksekusi fungsi ucapSalam()
-        ucapSalam();
     }
 }
 ```
 
-output:
-```
-Selamat Pagi
-```
+Program diatas, terdiri empat bagian. Masing-masing bagiannya memiliki kemiripan, bahkan bagian 1 dan 2 merupakan bagian yang sama persis. Redundansi/pengulangan penulisan sekumpulan kode program merupakan sesuatu yang dihindari dalam penyusunan program, karena jika memang bagian program itu mengerjakan hal yang sama, modifikasi pada satu bagian program berarti juga perubahan pada bagian lain. Jika bagian program yang merupakan pengulangan ini tersebar di berbagai tempat pada program, maka ini tentu akan menjadi sesuatu yang merepotkan. Oleh sebab itu kita akan _membungkus_ bagian program yang sama ini menjadi prosedur. Sekarang perhatikan program `LoopBintang2`:
 
-## Fungsi dengan Parameter
-Parameter adalah variabel yang menampung nilai untuk diproses di dalam fungsi. Parameter berperan sebagai input untuk fungsi.
-
-Struktur dasarnya seperti ini:
 ```java
-static TipeData namaFungsi(TipeData namaParameter, TipeData namaParameterLain){
-    // kode fungsi
+public class LoopBintang2 {
+    static void bintang() {
+        for(int baris=1; baris<=5; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        // BAGIAN 1
+        bintang();
+
+        // BAGIAN 2
+        bintang();
+
+        // BAGIAN 3
+        for(int baris=1; baris<=3; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        // BAGIAN 4
+        for(int baris=1; baris<=3; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("X");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+    }
 }
 ```
-Penjelasan:
 
-* Parameter ditulis di antara tanda kurung (...);
-* Parameter harus diberikan tipe data;
-* Bila terdapat lebih dari satu parameter, maka dipisah dengan tanda koma.
-Contoh fungsi yang memiliki parameter:
+Karena bagian 1 & 2 sama persis, maka kode program pada bagian tersebut _dibungkus_ ke dalam prosedur `bintang()`. Dengan demikian, jika kita perlu mencetak bintang, yang kita perlunya hanyalah memanggil prosedur tersebut. Ini membuat program utama kita menjadi lebih ringkas dan mudah dibaca.
+
+## Parameter
+Pada program `LoopBintang2` kita bisa perhatikan bahwa bagian 3 pun sebenarnya memiliki banyak kemiripan dengan bagian 1 dan 2, perbedaannya hanya pada angka `3` pada kode `baris<=3`. Untuk ini kita bisa menambahkan parameter pada prosedur `bintang()` kita. Perhatikan program `LoopBintang3`:
 
 ```java
-static void ucapin(String ucapan){
-    System.out.println(ucapan);
+public class LoopBintang3 {
+    static void bintang(int banyak) {
+        for(int baris=1; baris<=banyak; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        // BAGIAN 1
+        bintang(5);
+
+        // BAGIAN 2
+        bintang(5);
+
+        // BAGIAN 3
+        bintang(3);
+
+        // BAGIAN 4
+        for(int baris=1; baris<=3; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print("X");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+    }
 }
 ```
 
-Pada contoh tersebut, kita membuat parameter bernama ucapan dengan tipe String. Sehingga kita bisa menggunakan variabel ucapan di dalam fungsi.
+Dengan menambahkan parameter `int banyak`, kita bisa membuat sebuah prosedur melakukan sekumpulan kode, tapi setiap eksekusinya tidak sama persis, sesuai dengan parameter yang diberikan kepadanya.
 
-Cara pemanggilan fungsi yang memiliki parameter:
+Pada contoh diatas, angka `5` pada pemanggilan `bintang(5)` akan diteruskan kepada fungsi `bintang` sebagai parameter `banyak`, dan parameter `banyak` ini diperlakukan sebagai variabel lokal yang diolah di dalam prosedur.
+
+Kata kunci `int` merupakan deklarasi yang menyatakan bahwa parameter `banyak` harus merupakan data bertipe _integer_
+
+Kita juga bisa menambahkahkan lebih dari satu parameter. Misal, pada bagian 4, karakter yang dicetak berbeda dengan bagian 1,2, dan 3. Untuk ini kita bisa menggunakan parameter.
+
 ```java
-ucapin("Hallo!");
-ucapin("Selamat datang di pemrograman Java");
-ucapin("Saya kira ini bagian terakhir");
-ucapin("Sampai jumpa lagi, ya!");
-```
+public class LoopBintang4 {
+    static void bintang(int banyak, String simbol) {
+        for(int baris=1; baris<=banyak; baris++) {
+            for(int kolom=1; kolom<=baris; kolom++) {
+                System.out.print(simbol);
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        // BAGIAN 1
+        bintang(5, "*");
 
-Hasil outputnya:
-```
-Hallo!
-Selamat datang di pemrograman Java
-Saya kira ini bagian terakhir
-Sampai jumpa lagi, ya!
+        // BAGIAN 2
+        bintang(5, "*");
+
+        // BAGIAN 3
+        bintang(3, "*");
+
+        // BAGIAN 4
+        bintang(4, "X")
+
+    }
+}
 ```
 
 ## Fungsi yang Mengembalikan Nilai

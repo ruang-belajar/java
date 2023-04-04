@@ -173,9 +173,7 @@ Perulangan _uncounted loop_ terdirid dari perulangan _While_ dan _Do/While_.
 Mari kita bahas satu per satu…
 
 ### Perulangan While
-While bisa kita artikan selama.
-
-Cara kerja perulangan ini seperti percabangan, ia akan melakukan perulangan selama kondisinya bernilai `true`.
+_While_ bisa kita artikan _selama_. Cara kerja perulangan ini seperti percabangan, ia akan melakukan perulangan _selama_ kondisinya bernilai `true`.
 
 Struktur penulisan perulangan while:
 ```
@@ -187,11 +185,8 @@ while ( kondisi ) {
 Penjelasan:
 * kondisi bisa kita isi dengan perbandingan maupun variabel boolean. Kondisi ini hanya memiliki nilai `true` dan `flase`.
 * Perulangan `while` akan berhenti sampai kondisi bernilai `false`.
-Untuk lebih jelasnya, mari kita coba membuat program…
 
-**Contoh Program dengan Perulangan While**
-
-Program ini akan melakukan perulangan selama jawabannya tidak.
+Untuk lebih jelasnya, perhatikan program berikut. Program ini akan melakukan perulangan selama jawabannya bukan _ya_.
 ```java
 import java.util.Scanner;
 
@@ -336,7 +331,7 @@ public class PerulanganBersarang {
         // membuat variabel
         int x, y;
 
-        // melakukan parulang sebnayan x dan y kali
+        // melakukan perulangan sebanyak x dan y kali
         for (x = 0; x <= 5; x++){
             for( y = 0; y <= 3; y++){
                 System.out.format("Perulangan [x=%d, y=%d] %n", x, y);
