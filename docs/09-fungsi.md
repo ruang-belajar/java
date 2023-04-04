@@ -4,9 +4,6 @@ Pada contoh program di pembahasan sebelumnya, kita hanya menulis kode intruksi p
 
 Ketika program kita semakin bertambah besar, kita tidak mungkin menulis semua kode program di dalam fungsi `main()`. Hal itu akan menyebabkan penambahan program dan pencarian kesalahan semakin sulit. Untuk mengatasi masalah ini, kita akan membagi-bagi program menjadi _potongan-potongan_ kecil, membungkusnya sesuai dengan fungsi masing-masing sebagai sub program. Sub program inilah yang kita sebut _fungsi_, _prosedur_ dan _method_.
 
-
-## Pengertian Prosedur, Fungsi, dan Method
-
 Sederhananya, prosedur, Fungsi, dan Method adalah sama, ia hanya dibedakan oleh beberapa hal:
 * _Prosedur_ adalah sebutan untuk fungsi yang tidak mengembalikan nilai. Prosedur biasanya ditandai dengan kata kunci void.
 * _Fungsi_ adalah sebutan untuk fungsi yang mengembalikan nilai.
@@ -354,12 +351,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+```
+
 Setelah itu buat variabel global di dalam class FungsiProsedur:
 
+```java
 static ArrayList listBuah = new ArrayList();
 static boolean isRunning = true;
 static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 static BufferedReader input = new BufferedReader(inputStreamReader);
+```
 Penjelasan:
 
 Variabel listBuah adalah variabel global untuk menyimpan nama-nama buah.
@@ -368,7 +369,7 @@ Kemudian inputStreamReader dan input adalah objek yang kita butuhkan untuk menga
 Setelah itu, buat masing-masing fungsi.
 
 Fungsi untuk menampilkan menu:
-
+```java
 static void showMenu() throws IOException {
         
     System.out.println("========= MENU ========");
