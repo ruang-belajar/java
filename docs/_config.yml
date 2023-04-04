@@ -1,0 +1,10 @@
+title: Ruang Belajar - Java
+description: Repositori pembelajaran mata kuliah pemrograman Java
+domain: pujangga123.github.io
+url: http://pujangga123.github.io
+github_username:  pujangga123
+
+remote_theme: pages-themes/modernist
+plugins:
+- jekyll-remote-theme
+- jekyll-feed
