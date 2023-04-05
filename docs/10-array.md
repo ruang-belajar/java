@@ -1,10 +1,7 @@
 # Array
 
-Apa yang akan kita lakukan bila memiliki banyak data yang akan disimpan dalam vairabel?
+Misal kita memiliki beberapa nama. Tentu kita bisa menyimpannya masing-masing dalam variabel, tapi tentu ini akan sulit dalam pengolahannya terutama jika datanya banyak.
 
-Misalkan kita ingin menyimpan nama-nama teman dalam variabel.
-
-Maka mungkin kita akan melakukannya seperti ini:
 ```
 String namaTeman1 = "Linda";
 String namaTeman2 = "Santi";
@@ -13,19 +10,7 @@ String namaTeman4 = "Mila";
 String namaTeman5 = "Ayu";
 ```
 
-Hal ini sah-sah saja.
-
-Akan tetapi…
-
-Masalahnya bagaimana kala datanya banyak, misalkan ada 100 data, pastinya capek donk membuat variabel sebanyak itu.
-
-Karena itu, kita bisa menyimpan itu semua dalam Array.
-
-Apa itu Array?
-
-Array adalah sebuah variabel yang bisa menyimpan banyak data dalam satu variabel.
-
-Array menggunakan indeks untuk memudahkan akses terhadap data yang disimpannya.
+Untuk keperluan ini bisa menggunakan struktur data Array. **Array adalah struktur data yang digunakan untuk menyimpan kumpulan data yang sejenis**. Array menggunakan indeks untuk memudahkan akses terhadap data yang disimpannya.
 
 Contoh Array
 Indeks array selalu dimulai dari 0…
