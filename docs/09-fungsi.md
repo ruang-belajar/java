@@ -5,7 +5,7 @@ Pada contoh program di pembahasan sebelumnya, kita hanya menulis kode intruksi p
 Ketika program kita semakin bertambah besar, kita tidak mungkin menulis semua kode program di dalam fungsi `main()`. Hal itu akan menyebabkan penambahan program dan pencarian kesalahan semakin sulit. Untuk mengatasi masalah ini, kita akan membagi-bagi program menjadi _potongan-potongan_ kecil, membungkusnya sesuai dengan fungsi masing-masing sebagai sub program. Sub program inilah yang kita sebut _fungsi_, _prosedur_ dan _method_.
 
 Sederhananya, prosedur, Fungsi, dan Method adalah sama, ia hanya dibedakan oleh beberapa hal:
-* _Prosedur_ adalah sebutan untuk fungsi yang tidak mengembalikan nilai. Prosedur biasanya ditandai dengan kata kunci void.
+* _Prosedur_ adalah sebutan untuk fungsi yang tidak mengembalikan nilai. Prosedur biasanya ditandai dengan kata kunci `void`.
 * _Fungsi_ adalah sebutan untuk fungsi yang mengembalikan nilai.
 * _Method_ adalah fungsi yang berada di dalam Class. Sebutan ini, biasanya digunakan pada OOP.
 
@@ -67,7 +67,8 @@ public class LoopBintang2 {
             System.out.println();
         }
         System.out.println();
-    }
+    } // akhir fungsi bintang()
+
     public static void main(String[] args) {
         // BAGIAN 1
         bintang();
@@ -98,6 +99,8 @@ public class LoopBintang2 {
 ```
 
 Karena bagian 1 & 2 sama persis, maka kode program pada bagian tersebut _dibungkus_ ke dalam prosedur `bintang()`. Dengan demikian, jika kita perlu mencetak bintang, yang kita perlunya hanyalah memanggil prosedur tersebut. Ini membuat program utama kita menjadi lebih ringkas dan mudah dibaca.
+
+Pembuatan prosedur dimulai dengan deklarasi dengan kata kunci `static void` yang diikut nama fungsi (contoh `bintang()`), diikuti dengan kode program yang akan dijalankan dengan diapit sepasang `{...}`.
 
 ## Parameter
 Pada program `LoopBintang2` kita bisa perhatikan bahwa bagian 3 pun sebenarnya memiliki banyak kemiripan dengan bagian 1 dan 2, perbedaannya hanya pada angka `3` pada kode `baris<=3`. Untuk ini kita bisa menambahkan parameter pada prosedur `bintang()` kita. Perhatikan program `LoopBintang3`:
@@ -172,8 +175,8 @@ public class LoopBintang4 {
 }
 ```
 
-## Fungsi yang Mengembalikan Nilai
-Setelah fungsi memproses data yang diinputkan melalui parameter, selanjutnya fungsi harus mengembalikan nilai agar dapat diolah pada proses berikutnya.
+## Fungsi
+Fungsi mirip dengan prosedur, fungsi membungkus sekumpulan kode, hanya saja bedanya fungsi mengembalikan suatu nilai.
 
 Pengembalian nilai pada fungsi menggunakan kata kunci return.
 
@@ -225,7 +228,7 @@ public class BangunRuang {
         return sisi * sisi;
     }
 
-    // membuat fungsi luasKubus()
+    // membuat fungsi luasKubus(), menghitung luas permukaan kubus
     static int luasKubus(int sisi){
         
         // memanggil fungsi luasPersegi
@@ -240,9 +243,9 @@ Hasil output
 ```
 
 ## Fungsi Static dan Non-Static
-Pada contoh-contoh diatas, kita menggunakan kata kunci static sebelum membuat fungsi.
+Pada contoh-contoh diatas, kita menggunakan kata kunci `static` sebelum membuat fungsi.
 
-Kata kunci static akan membuat fungsi dapat dieksekusi langsung, tanpa harus membuat instansiasi objek dari class.
+Kata kunci `static` akan membuat fungsi dapat dieksekusi langsung, tanpa harus membuat instansiasi objek dari class.
 
 Contoh:
 ```java
@@ -275,7 +278,7 @@ public class FungsiStatic {
     
 }
 ```
-Pada contoh tersebut, fungsi makan() adalah fungsi non-static. Sedangkan fungsi minum() adalah fungsi static.
+Pada contoh tersebut, fungsi `makan()` adalah fungsi non-static. Sedangkan fungsi `minum()` adalah fungsi static.
 
 Hasil output dari program di atas:
 ```
@@ -286,12 +289,11 @@ Saya sedang makan Nasi Goreng
 
 Apabila kita tidak membuat objek untuk memanggil fungsi non-static, maka akan terjadi error.
 
-Variabel Global dan Variabel Lokal pada Java
+## Variabel Global dan Variabel Lokal pada Java
 Variabel global adalah variabel yang bisa diakses dari semua fungsi. Sedangkan variabel lokal adalah variabel yang hanya bisa diakses dari dalam fungsi tempat variabel itu berada.
 
-Bingung?
 
-Mari kita lihat contohnya:
+Perhatikan program berikut contohnya:
 ```java
 class ProgramKu{
 
@@ -328,288 +330,9 @@ Versi: 1.0.0
 Nama: Programku
 Versi: 1.0.0
 ```
-Saat pemanggilan fungsi help() kita membuat ulang variabel nama. Sehingga variabel nama menjadi variabel lokal pada fungsi help() dan nilainya berubah menjadi "Belajar Java".
+Saat pemanggilan fungsi `help()` kita membuat ulang variabel nama. Sehingga variabel nama menjadi variabel lokal pada fungsi `help()` dan nilainya berubah menjadi "Belajar Java".
 
-Sedangkan, saat kita akases lagi variabel nama melalui fungsi main() nilainya tetap sama seperti yang didefinisikan.
-
-Contoh Program dengan Fungsi dan Prosedur
-Program ini adalah program sederhana dengan fitur sebagai berikut:
-
-1. Baca data dari ArrayList
-2. Simpan data ke ArrayList
-3. Ubah data
-4. Hapus Data
-5. Keluar
-6. 
-Belum tahu tentang ArrayList?
-
-Silahkan baca meteri: Mengenal Array di Java
-
-Baiklah, silahkan buat class baru bernama FungsiProsedur. Lalu impor class-class yang dibutuhkan.
-```java
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-```
-
-Setelah itu buat variabel global di dalam class FungsiProsedur:
-
-```java
-static ArrayList listBuah = new ArrayList();
-static boolean isRunning = true;
-static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-static BufferedReader input = new BufferedReader(inputStreamReader);
-```
-Penjelasan:
-
-Variabel listBuah adalah variabel global untuk menyimpan nama-nama buah.
-Variabel isRunning adalah variabel global untuk membuat loop.
-Kemudian inputStreamReader dan input adalah objek yang kita butuhkan untuk mengambil input dari keyboard.
-Setelah itu, buat masing-masing fungsi.
-
-Fungsi untuk menampilkan menu:
-```java
-static void showMenu() throws IOException {
-        
-    System.out.println("========= MENU ========");
-    System.out.println("[1] Show All Buah");
-    System.out.println("[2] Insert Buah");
-    System.out.println("[3] Edit Buah");
-    System.out.println("[4] Delete Buah");
-    System.out.println("[5] Exit");
-    System.out.print("PILIH MENU> ");
-    
-    int selectedMenu = Integer.valueOf(input.readLine());
-    
-    switch(selectedMenu){
-        case 1:
-            showAllBuah();
-            break;
-        case 2:
-            insertBuah();
-            break;
-        case 3:
-            editBuah();
-            break;
-        case 4:
-            deleteBuah();
-            break;
-        case 5:
-            System.exit(0);
-            break;
-        default:
-            System.out.println("Pilihan salah!");
-                 
-    }
-        
-}
-```
-Fungsi tersebut bertugas untuk menampilkan menu dan menentukan fungsi mana yang akan dipanggil berdasarkan nomer menu yang diinputkan.
-
-Apa itu throws IOException?
-
-Nanti saya akan bahas di kesempatan berikutnya. Untuk saat ini diabaikan saja dulu. Ini karena kita menggunakan Buffereader, jadi throws IOException wajib ditulis.
-
-Fungsi untuk menampilkan data:
-```java
-static void showAllBuah(){
-    if(listBuah.isEmpty()){
-       System.out.println("Belum ada data");
-    } else {
-         // tampilkan semua buah
-        for(int i = 0; i < listBuah.size(); i++){
-            System.out.println(String.format("[%d] %s",i, listBuah.get(i)));
-        }
-    }
-}
-```
-Fungsi tersebut bertugas menampilkan isi dari listBuah. Kalau listBuah kosong, maka akan ditampilkan pesan "Belum ada data".
-
-Fungsi untuk menambah data buah:
-```java
-static void insertBuah() throws IOException{
-    System.out.print("Nama buah: ");
-    String namaBuah = input.readLine();
-    listBuah.add(namaBuah);
-}
-```
-Pada fungsi tersebut, kita menggunakan method listBuah.add(namaBuah); untuk menambah data ke dalam listBuah berdasarkan namaBuah yang diberikan.
-
-Fungsi untuk mengubah data buah:
-```java
-static void editBuah() throws IOException{
-    showAllBuah();
-    System.out.print("Pilih nomer buah: ");
-    int indexBuah = Integer.valueOf(input.readLine());
-    
-    System.out.print("Nama Baru: ");
-    String namaBaru = input.readLine();
-    
-    // ubah nama buah
-    listBuah.set(indexBuah, namaBaru);
-}
-```
-Pertama kita perlu tampilkan dulu daftar buahnya, lalu kita minta user untuk memilih buah mana yang akan diedit.
-
-Setelah itu, kita update buahnya dengan method listBuah.set(indexBuah, namaBaru);.
-
-Fungsi untuk menghapus buah:
-```java
-static void deleteBuah() throws IOException{
-    showAllBuah();
-    System.out.print("Pilih nomer buah: ");
-    int indexBuah = Integer.valueOf(input.readLine());
-    // hapus buah
-    listBuah.remove(indexBuah);
-}
-```
-Hampir sama seperti edit buah, untuk menghapus buah kita juga butuh nomer indeks buah yang akan dihapus.
-
-Lalu mengapusnya dengan method listBuah.remove(indexBuah);.
-
-Fungsi main:
-```java
-public static void main(String[] args) throws IOException {
-        
-    do {
-        showMenu();
-    } while (isRunning);
-    
-}
-```
-Lengkap sudah, berikut ini bentuk kode lengkapnya.
-```java
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
-public class FungsiProsedur {
-    
-    static ArrayList listBuah = new ArrayList();
-    static boolean isRunning = true;
-    static InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-    static BufferedReader input = new BufferedReader(inputStreamReader);
-    
-    static void showMenu() throws IOException{
-        
-        System.out.println("========= MENU ========");
-        System.out.println("[1] Show All Buah");
-        System.out.println("[2] Insert Buah");
-        System.out.println("[3] Edit Buah");
-        System.out.println("[4] Delete Buah");
-        System.out.println("[5] Exit");
-        System.out.print("PILIH MENU> ");
-        
-        int selectedMenu = Integer.valueOf(input.readLine());
-        
-        switch(selectedMenu){
-            case 1:
-                showAllBuah();
-                break;
-            case 2:
-                insertBuah();
-                break;
-            case 3:
-                editBuah();
-                break;
-            case 4:
-                deleteBuah();
-                break;
-            case 5:
-                System.exit(0);
-                break;
-            default:
-                System.out.println("Pilihan salah!");
-                     
-        }
-        
-        
-    }
-
-    static void showAllBuah(){
-        if(listBuah.isEmpty()){
-           System.out.println("Belum ada data");
-        } else {
-             // tampilkan semua buah
-            for(int i = 0; i < listBuah.size(); i++){
-                System.out.println(String.format("[%d] %s",i, listBuah.get(i)));
-            }
-        }
-    }
-    
-    static void insertBuah() throws IOException{
-        System.out.print("Nama buah: ");
-        String namaBuah = input.readLine();
-        listBuah.add(namaBuah);
-    }
-    
-    static void editBuah() throws IOException{
-        showAllBuah();
-        System.out.print("Pilih nomer buah: ");
-        int indexBuah = Integer.valueOf(input.readLine());
-        
-        System.out.print("Nama Baru: ");
-        String namaBaru = input.readLine();
-        
-        // ubah nama buah
-        listBuah.set(indexBuah, namaBaru);
-    }
-    
-    static void deleteBuah() throws IOException{
-        showAllBuah();
-        System.out.print("Pilih nomer buah: ");
-        int indexBuah = Integer.valueOf(input.readLine());
-        // hapus buah
-        listBuah.remove(indexBuah);
-    }
-    
-    public static void main(String[] args) throws IOException {
-        
-        do {
-            showMenu();
-        } while (isRunning);
-        
-    }
-    
-}
-```
-Setelah itu, silahkan dijalankan dan perhatikanlah hasilnya.
-```
-========= MENU ========
-[1] Show All Buah
-[2] Insert Buah
-[3] Edit Buah
-[4] Delete Buah
-[5] Exit
-PILIH MENU> 1
-Belum ada data
-========= MENU ========
-[1] Show All Buah
-[2] Insert Buah
-[3] Edit Buah
-[4] Delete Buah
-[5] Exit
-PILIH MENU> 2
-Nama buah: Apel
-========= MENU ========
-[1] Show All Buah
-[2] Insert Buah
-[3] Edit Buah
-[4] Delete Buah
-[5] Exit
-PILIH MENU> 1
-[0] Apel
-========= MENU ========
-[1] Show All Buah
-[2] Insert Buah
-[3] Edit Buah
-[4] Delete Buah
-[5] Exit
-PILIH MENU> 
-```
-Silahkan coba untuk melakukan insert, edit, dan delete.
+Sedangkan, saat kita akases lagi variabel nama melalui fungsi `main()` nilainya tetap sama seperti yang didefinisikan.
 
 ---
 **Referensi:**

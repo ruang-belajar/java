@@ -1,10 +1,7 @@
 # Array
 
-Apa yang akan kita lakukan bila memiliki banyak data yang akan disimpan dalam vairabel?
+Misal kita memiliki beberapa nama. Tentu kita bisa menyimpannya masing-masing dalam variabel, tapi tentu ini akan sulit dalam pengolahannya terutama jika datanya banyak.
 
-Misalkan kita ingin menyimpan nama-nama teman dalam variabel.
-
-Maka mungkin kita akan melakukannya seperti ini:
 ```
 String namaTeman1 = "Linda";
 String namaTeman2 = "Santi";
