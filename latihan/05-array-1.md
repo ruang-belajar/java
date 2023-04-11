@@ -37,3 +37,6 @@ Nama 5: Gilang
 ```
 
 ===
+Referensi:
+* [Array](../docs/10-array.md)
+* [Pengulangan (Loop)](../docs/07-pengabilan-keputusan.md)
