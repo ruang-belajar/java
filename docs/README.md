@@ -16,7 +16,7 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 8. [Pengulangan (Loop)](08-pengulangan.md)
 9.  [Prosedur dan Fungsi](09-fungsi.md)
 10. [Array](10-array.md)
-11. [Java Standard Class](https://www.javaguides.net/2019/07/top-25-useful-java-classes.html)
+11. [Java Standard Class](11-standard-class.md)
 12. [Hash Map](https://www.petanikode.com/java-hashmap/)
 
 ---
