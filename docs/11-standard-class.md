@@ -3,7 +3,7 @@
 Java memiliki berbagai fungsi untuk melakukan banyak hal. Fungsi-fungsi ini dibungkus dalam class, dan class ini disimpan dalam bentuk _package_. Beberapa _package_ bisa langsung digunakan, beberapa memerlukan perintah `import` untuk class ini bisa digunakan. Daftar lengkap dari _package_ yang bisa digunakan Anda bisa check di [Java Platform SE 8 - All Classes](https://docs.oracle.com/javase/8/docs/api/allclasses-frame.html). Dalam bab ini, ita akan coba mempelajari beberapa _package_ standard yang umum dipakai.
 
 ## Membaca Dokumentasi dan Menggunakan Fungsi, Contoh: _Math_
-Membaca dokumentasi adalah hal penting yang perlu dibiasakan bagi seseorang yang belajar pemrograman. Mari kita check dokumentasi _package Math_, dari sumber resmi developer Java, [Java Platform SE 8 - Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html). 
+Membaca dokumentasi adalah hal penting yang perlu dibiasakan bagi seseorang yang belajar pemrograman. Dokumentasi yang baik memiliki standar penulisan yang konsisten, sehingga memudahkan kita untuk mempelajarinya. Tapi, meskipun demikian perlu latihan dan pembiasaan diri untuk kita bisa membaca dokumentasi secara efektif. Mari kita check dokumentasi _package Math_, dari sumber resmi developer Java, [Java Platform SE 8 - Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html). 
 
 ![](images/11-doc-1.jpg)
 
@@ -38,6 +38,15 @@ public class Test {
 ```
 **Penjelasan:**
 * Perhatikan pemanggilan konstanta _pi_ menggunakan `Math.PI`, tanpa menggunakan `()`.
+
+Di internet Anda akan menemukan banyak website yang menyediakan tutorial dan referensi perintah Java. Tentu tidak semuanya memiliki format penulisan yang sama persis seperti yang kita lihat di situs resmi developer Java dan  tidak semua dari website yang Anda temui memberikan cara penulisan yang baik. Website yang baik ditandai dengan cara penulisan yang terstruktur dan konsisten.
+
+Beberapa website berikut Anda bisa pakai untuk menjadi referensi untuk mempelajari tutorial dan referensi perintah Java:
+* [w3schools - Java](https://www.w3schools.com/java/)
+* [Programiz - Java](https://www.programiz.com/java-programming)
+* [GeeksForGeeks - Java](https://www.geeksforgeeks.org/java/)
+* [javaTpoint](https://www.javatpoint.com/java-tutorial)
+
 
 
 **Latihan:**
@@ -77,23 +86,38 @@ public class Test {
 **Latihan:**
 * [Soal Latihan (Random)](../latihan/06-class-1.md). 
 
+## Objek Sebagai Struktur Data Kompleks, Contoh: _LocalDate_
+Java merupakan bahasa pemrograman yang sangat kental dengan penerapan paradigram Object Oriented Programming (OOP). Mustahil menguasai Java tanpa kita mempelajari konsep OOP. Lebih banyak tentang OOP, kita akan pelajari pada bagian khusus (check [Ruang Belajar OOP](https://pujangga123.github.io/ruang-belajar-oop/)). Untuk kesederhanaan pembahasan bagian ini, sementara kita akan melihat objek sebagai _struktur data kompleks/non-tradisional_.
 
-## String
-Sumber: [Java Platform SE 8 - String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
-_Package Random_ berisi berbagai fungsi untuk memanipulasi _string_.
+Struktur data tradisional adalah struktur data mendasar yang menyimpan nilai _sedernaha_, seperti: _int_, _float_, _double_, _char_, _boolean_. Struktur data kopleks adalah struktur data yang biasanya terdiri dari beberapa elemen. Contohnya: _LocalDate_ (tanggal). Satu data yang berupa _LocalDate_, akan memiliki elemen _tanggal_, _bulan_, _tahun_. Terkait dengan objek _LocalDate_, kita terdapat juga menggunakan bisa fungsi untuk mengolah tanggal. Untuk dokumentasi, check [Java Platform SE 8 - LocalDate](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html)
 
+Perhatikan contoh program berikut.
 
-## Date
-Sumber: [Java Platform SE 8 - Date](https://docs.oracle.com/javase/8/docs/api/java/sql/Date.html)
-_Package Date_ berisi berbagai fungsi yang digunakan untuk mengolah data berupa tanggal.
+```java
+import java.time.LocalDate;    
 
-## Membaca Dokumentasi
-Membaca dokumentasi program adalah hal penting yang perlu dibiasakan dalam kita mempelajari program. Dokumentasi yang baik memiliki standar penulisan yang konsisten, sehingga memudahkan kita untuk mempelajarinya. Tapi, meskipun demikian perlu latihan dan pembiasaan diri untuk kita bisa membaca dokumentasi secara efektif.
+public class LocalDateExample2 {    
+    public static void main(String[] args) {    
+        LocalDate sekarang = LocalDate.now();
+        LocalDate tanggal = LocalDate.of(2000, 10, 13);    
+               
+        System.out.println("Tanggal sekarang "+sekarang);    
+        System.out.println("Bulan: "+sekarang.getMonth());
+        System.out.println("Bulan: "+sekarang.getMonthValue());
+        System.out.println("Tahun Kabisat: "+sekarang.isLeapYear());
 
+        System.out.println();
+        LocalDate kemarin = sekarang.plusDays(-1);
+        System.out.println("Kemarin: "+kemarin);
+        System.out.println("Hari Kemarin: "+kemarin.getDayOfWeek());
 
+        System.out.println();
+        LocalDate lahir = LocalDate.of(2016, 9, 23);    
+        System.out.println("Tanggal Lahir "+lahir);    
+        System.out.println("Hari Lahir: "+lahir.getDayOfWeek());
 
+    }    
+}    
+```
 
-===
-
-**Referensi:**
-* [Java Platform SE 8 - All Classes](https://docs.oracle.com/javase/8/docs/api/allclasses-frame.html)
+Struktur data komplek lain yang cukup umum digunakan dan Anda bisa pelajari untuk belajar: [_LocalTime_](https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html), [_ArrayList_](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html), [_String_](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), [_Duration_](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html), [_Queue_](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html), [_Stack_](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html).
