@@ -1,14 +1,10 @@
-# Soal Latihan (Math)
+# Soal Latihan (LocalDate)
 
 # Soal 1
-Buat program meminta input nilai `a`, `b `. Kemudian munculkan hasil `c` dengan rumus sebagai berikut:
-$$ c = \sqrt{a^2+b^2} $$
+Buat program menampilkan tanggal hari ini dan menampilkan harinya
 
-# Soal 2
-Untuk menghitung rumus berikut:
-$$ A = \pi r^2 $$
+```
+Sekarang hari Rabu, 23/4/2024
 
-# Soal 3
-Untuk menghitung rumus berikut:
-$$ x = {1 \over \sqrt{a}}r \sin \theta \cos \tau $$
+```
 
