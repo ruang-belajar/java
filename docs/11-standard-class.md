@@ -5,6 +5,8 @@ Java memiliki berbagai fungsi untuk melakukan banyak hal. Fungsi-fungsi ini dibu
 ## Membaca Dokumentasi dan Menggunakan Fungsi, Contoh: _Math_
 Membaca dokumentasi adalah hal penting yang perlu dibiasakan bagi seseorang yang belajar pemrograman. Dokumentasi yang baik memiliki standar penulisan yang konsisten, sehingga memudahkan kita untuk mempelajarinya. Tapi, meskipun demikian perlu latihan dan pembiasaan diri untuk kita bisa membaca dokumentasi secara efektif. Mari kita check dokumentasi _package Math_, dari sumber resmi developer Java, [Java Platform SE 8 - Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html). 
 
+**Contoh tampilan dokumentasi Java:**
+
 ![](images/11-doc-1.jpg)
 
 Pada halaman ini kita bisa menemukan banyak penjelasan, tapi pada bagian ini kita akan fokuskan pada 2 bagian: 1. _Field Summary_; 2. _Method Summary_

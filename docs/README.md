@@ -17,7 +17,8 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 9.  [Prosedur dan Fungsi](09-fungsi.md)
 10. [Array](10-array.md)
 11. [Java Standard Class](11-standard-class.md)
-12. [Hash Map](https://www.petanikode.com/java-hashmap/)
+12. [Class & Object](12-class.md)
+13. [Hash Map](https://www.petanikode.com/java-hashmap/)
 
 ---
 **Latihan:**

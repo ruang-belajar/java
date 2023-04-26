@@ -1,11 +1,9 @@
-# Class
-
-
+# Class & Object
 
 ## Membuat Class Sederhana
-Bahasa pemrograman Java sangat kental dalam menerapkan paradigma Object Oriented Programming (OOP). Dalam pengertian sederhana: Dalam pemrograman OOP, variabel dan fungsi/prosedur dikelompokan dalam struktur data Class.\
+Bahasa pemrograman Java sangat kental dalam menerapkan paradigma _Object Oriented Programming_ (OOP). Dalam pengertian sederhana: Dalam pemrograman OOP, variabel dan fungsi/prosedur dikelompokan dalam struktur data Class.
 
-Misalnya, kita mau menyimpan data mahasiswa. Data mahasiswa ini terdiri dari `nama` dan `jurusan`. Kita bisa membuatnya seperti program berikut:
+Misalnya, kita mau menyimpan data mahasiswa. Data mahasiswa ini terdiri dari `nama` dan `jurusan`. Tanpa OOP, kita membuatnya seperti program berikut:
 
 ```java
 public class Class0 {
