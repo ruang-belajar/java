@@ -1,10 +1,10 @@
 # Soal Latihan (LocalDate)
 
 # Soal 1
-Buat program menampilkan tanggal hari ini dan menampilkan harinya
+Buat program menampilkan tanggal dan hariini dalam bahasa Indonesia.
 
 ```
-Sekarang hari Rabu, 23/4/2024
+Sekarang hari Rabu, 23 April 2024
 
 ```
 
