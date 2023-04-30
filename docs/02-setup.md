@@ -51,3 +51,40 @@ Hello, World!
 
 ```
 
+## Menjalankan Program Java 
+
+Beberapa project Java yang dibuat menggunakan editor seperti Netbean atau Eclipse (misalnya) menggunakan folder untuk mengelompokkan file-filenya. Tentu project ini lebih mudah untuk dijalankan menggunakan IDE sesuai yang digunakan oleh programmer, tapi ada kalanya kita juga perlu melakukan kompilasi lewat CLI.
+
+Sebagai contoh, download dan extract project berikut: https://github.com/hexadeciman/Snake/archive/refs/heads/master.zip
+
+Setelah Anda extract file tersebut, Anda akan mendapati bahwa file _.java_ pada project tersebut terdiri lebih dari berapa file dan disimpan dalam folder _src_, dan bagian program utamanya (file yang menyimpan `void main`), adalah `Main.java`.
+
+```
+DataOfSquare.java
+KeyboardListener.java
+Main.java
+SquarePanel.java
+ThreadsController.java
+Tuple.java
+Window.java
+```
+
+Dengan demikian untuk menjalankan program tersebut, langkap pertama: Compile semua file _.java_ dan menyimpan hasil _compile_ nya ke folder terpisah. Untuk melakukan ini, pastikan pada CLI/CMD, pastikan posisi folder aktif berada pada folder _Snake_. Eksekusi perintah berikut:
+
+```
+C:\latihan\Snake> javac -sourcepath src -d out src/Main.java
+```
+
+**Penjelasan:**
+* `src` pada `-sourcepath src` menunjuk pada lokasi file _.java_ disimpan
+* `out` pada `-d out` menunjuk pada lokasi folder dimana file hasil kompilasi (file _.class) akan disimpan. Setelah proses kompilasi selesai, maka folder `out` akan berikut file _.class_ hasil kompilasi.
+* `src/Main.java` menunjuk pada file program utama pada project.
+
+Setelah proses kompilasi selesai, untuk mengeksekusi program, gunakan perintah berikut:
+
+```
+C:\latihan\Snake> java -classpath out Main
+```
+
+Referensi:
+* https://www.baeldung.com/javac-compile-classes-directory
