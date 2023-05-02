@@ -51,9 +51,9 @@ Hello, World!
 
 ```
 
-## Menjalankan Program Java 
+## Menjalankan _Java Project_
 
-Beberapa project Java yang dibuat menggunakan editor seperti Netbean atau Eclipse (misalnya) menggunakan folder untuk mengelompokkan file-filenya. Tentu project ini lebih mudah untuk dijalankan menggunakan IDE sesuai yang digunakan oleh programmer, tapi ada kalanya kita juga perlu melakukan kompilasi lewat CLI.
+Beberapa project Java yang dibuat menggunakan editor seperti (misalnya) _Netbean_ atau _Eclipse_ menggunakan folder untuk mengelompokan file-filenya. Tentu project ini lebih mudah untuk dijalankan menggunakan IDE sesuai yang digunakan oleh programmer, tapi ada kalanya kita juga perlu melakukan kompilasi lewat CLI.
 
 Sebagai contoh, download dan extract project berikut: https://github.com/hexadeciman/Snake/archive/refs/heads/master.zip
 
