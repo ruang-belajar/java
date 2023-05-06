@@ -19,14 +19,15 @@ _generate_ bilangan acak  antara 1-6, sebanyak 30x. Setelah itu, tampilkan perhi
 Contoh:
 ```
 Bilangan acak:
-4 6 2 3 3 2 1 5 1 5
+2 6 4 4 5 1 6 4 4 4 5 2 3 5 2 1 5 3 2 4 6 2 5 2 4 5 6 2 6 5 
 
 Frekuensi:
-angka 1 muncul 2x
-angka 2 muncul 2x
-angka 3 muncul 2x
-angka 4 muncul 1x
-angka 5 muncul 2x
-angka 6 muncul 1x
+Angka 1 muncul 2x
+Angka 2 muncul 7x
+Angka 3 muncul 2x
+Angka 4 muncul 7x
+Angka 5 muncul 7x
+Angka 6 muncul 5x
 
+Dibuat oleh En Tay
 ```

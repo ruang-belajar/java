@@ -78,11 +78,13 @@ public class Test {
     }
 }
 ```
+
 **Penjelasan**
 * Sama seperti penggunaan **Scanner**, beberapa fungsi dalam _package_ _dibungkus_ dalam bentuk class. Sehingga, untuk bisa menggunakannya kita perlu membuat objeknya terlebih dahulu. Dalam contoh di atas: `Random rnd = new Random()`.
 * `rnd` adalah objek yang dibuat dari class `Random`. `scan` adalah objek yang dibuat dari class `Scanner`.
-* Beberapa class memiliki _constructor_. _Construktor_ ini adalah fungsi yang dijalankan pada saat objek dibuat. Definisi mengenai _contructor_ ini Anda bisa lihat pada bagian dokumentasi.
+* Beberapa class memiliki _constructor_. _Constructor_ ini adalah fungsi yang dijalankan pada saat objek dibuat. Definisi mengenai _contructor_ ini Anda bisa lihat pada bagian dokumentasi.
 * Beberapa class memiliki _constructor_ dengan parameter. Anda bila melihat contohnya pada perintah `Scanner scan = new Scanner(System.in)`. Class _Scanner_ memiliki _constructor_ yang minta 1 parameter. Anda bisa check definisinya di [Java Platform SE 8 - Scanner](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
+* `rnd.nextInt(max)` adalah fungsi untuk menghasilkan bilangan acak _integer_ dari `0` sampai `max-1`. Pada saat program dijalankan, ketika user input `6` pada pertanyaan _Nilai Max_, maka `rnd.nextInt(max)` akan menghasilkan bilagan acak antara `0` sampai `5`.
 
 
 **Latihan:**
