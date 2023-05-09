@@ -18,7 +18,8 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 10. [Array](10-array.md)
 11. [Java Standard Class](11-standard-class.md)
 12. [Class & Object](12-class.md)
-13. [Hash Map](https://www.petanikode.com/java-hashmap/)
+13. [Exception - Try ... Catch](13-exception.md)
+14. [Hash Map](https://www.petanikode.com/java-hashmap/)
 
 ---
 **Latihan:**
