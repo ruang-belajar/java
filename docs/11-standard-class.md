@@ -52,8 +52,8 @@ Beberapa website berikut Anda bisa pakai untuk menjadi referensi untuk mempelaja
 
 
 **Latihan:**
-* [Soal Latihan (Math)](../latihan/06-class-3.md). 
-* [Soal Latihan (String)](../latihan/06-class-2.md). 
+* [Soal Latihan (Math)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-3.md). 
+* [Soal Latihan (String)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-2.md). 
 
 ## Import Package dan Membuat Objek, Contoh: _Random_
 Java menyediakan banyak _package_ yang bisa digunakan.  _Package Math_ adalah salah satu _package_ yang secara default di load dalam setiap eksekusi program. Tapi, tidak semua _package_ di load ke memory untuk setiap program yang kita buat.Untuk efisiensi, _package_ yang di-load ke memory hanyalah _package_ yang akan digunakan. Oleh sebab itu, sebagian besar _package_ perlu _dipanggil_ terlebih dahulu menggunakan perintah `import`.
@@ -88,7 +88,7 @@ public class Test {
 
 
 **Latihan:**
-* [Soal Latihan (Random)](../latihan/06-class-1.md). 
+* [Soal Latihan (Random)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-1.md). 
 
 ## Objek Sebagai Struktur Data Kompleks, Contoh: _LocalDate_
 Java merupakan bahasa pemrograman yang sangat kental dengan penerapan paradigram Object Oriented Programming (OOP). Mustahil menguasai Java tanpa kita mempelajari konsep OOP. Lebih banyak tentang OOP, kita akan pelajari pada bagian khusus (check [Ruang Belajar OOP](https://pujangga123.github.io/ruang-belajar-oop/)). Untuk kesederhanaan pembahasan bagian ini, sementara kita akan melihat objek sebagai _struktur data kompleks/non-tradisional_.
