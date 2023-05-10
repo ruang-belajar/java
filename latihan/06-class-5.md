@@ -24,6 +24,7 @@ Buat text file text berisi bernama `text2.txt` dengan isi sebagai berikut:
 ```
 
 Buat buat program untuk menampilkan isi dari file `text2.txt`, jumlahkan setiap angka di dalamnya dan tampilkan.
+Tampilkan pesan error jika pada `text2.txt` terdapat data yang bukan _integer_. Anda bisa mencobanya dengan menambahkan sembarang huruf pada `text2.txt`
 
 ## Soal 3
 Lanjutkan soal **Soal 2**. Hitung dan tampilkan banyak data, nilai rata-rata, nilai maksimal, nilai minimal.

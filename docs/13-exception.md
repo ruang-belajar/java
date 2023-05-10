@@ -35,7 +35,7 @@ Exception in thread "main" java.util.InputMismatchException
         at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
         at Bilangan1.main(Bilangan1.java:10)
 ```
-Menampilkan _runtime error_ pada user adalah sesuatu yang buruk, karena itu menandakan bawa ada bagian proses yang tidak ditangani dengan baik oleh program. Untuk itu, kita bisa mengantisipasinya dengan menggunakan blok perintah `try` ... `catch` pada bagian-bagian program yang mungkin terjadi _runtime error_.
+Menampilkan _runtime error_ pada user adalah sesuatu yang buruk, karena itu menandakan bahwa ada kesalahan yang tidak ditangani oleh program. Untuk mengantisipasi kesalahan yang mungkin muncul, kita bisa menggunakan blok perintah `try` ... `catch` pada bagian-bagian program yang mungkin terjadi _runtime error_.
 
 Contoh program dengan `try`...`catch`:
 ```java
@@ -57,6 +57,7 @@ public class Bilangan2 {
             System.out.print("A x B = "+(n1*n2));
         } catch (Exception e) {
             System.out.println("Anda memasukan input yang salah");
+            System.out.println("Pesan error"+e.getMessage());
         }
 
         scan.close();
@@ -64,6 +65,43 @@ public class Bilangan2 {
 }
 
 ```
+
+**Latihan:**
+* [Soal Latihan (File)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-5.md)
+
+## `finally`
+
+Kata kunci `finally` digunakan berpasangan dengan `try` ... `catch`, di dalamnya kita bisa menuliskan kode program yang harus dijalankan dalam keadaan program error ataupun tidak. Contoh, pada program dibawah ini, kita menuliskan `scan.close()` di dalam blok `finally` untuk memastikan objek `scan` ditutup/dibersikan dari memori sebelum akhirnya program ditutup.
+
+```java
+import java.util.Scanner;
+
+public class Bilangan2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n1 = 0;
+        int n2 = 0;
+
+        try {
+            System.out.print("A? ");
+            n1 = scan.nextInt();
+
+            System.out.print("B? ");
+            n2 = scan.nextInt();
+
+            System.out.print("A x B = "+(n1*n2));
+        } catch (Exception e) {
+            System.out.println("Anda memasukan input yang salah");
+            System.out.println("Pesan error"+e.getMessage());
+        } finally {
+            scan.close();
+        }
+
+    }
+}
+
+```
+
 
 **Latihan:**
 * Pelajari [Java Exception - Try...Catch](https://www.w3schools.com/java/java_try_catch.asp) dan file [Hitung1.java](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/src/Hitung1.java), kemudian kerjakan [Soal Latihan (File)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-5.md)
