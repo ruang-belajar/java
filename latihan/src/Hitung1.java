@@ -18,8 +18,7 @@ public class Hitung1 {
             }
             myReader.close();
         } catch (Exception e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            System.out.println("Terdapat kesalahan");
         }
     }
 }

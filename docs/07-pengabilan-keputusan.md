@@ -121,7 +121,7 @@ public class CekKelulusan {
 
         // cek apakah dia lulus atau tidak
         if( nilai >= 70 ) {
-            System.out.println("Selemat " + nama + ", Anda lulus!");
+            System.out.println("Selamat " + nama + ", Anda lulus!");
         } else {
             System.out.println("Maaf " + nama + ", Anda gagal");
         }
