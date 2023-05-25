@@ -20,6 +20,7 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 12. [Class & Object](12-class.md)
 13. [Exception - Try ... Catch](13-exception.md)
 14. [Hash Map](https://www.petanikode.com/java-hashmap/)
+15. [Java untuk GUI](20-gui.md)
 
 ---
 **Latihan:**
