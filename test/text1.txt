@@ -1,4 +1,0 @@
-Ini contoh file text
-Belajar pemrograman Java
-
-Membaca file text
