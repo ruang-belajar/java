@@ -52,8 +52,8 @@ Beberapa website berikut Anda bisa pakai untuk menjadi referensi untuk mempelaja
 
 
 **Latihan:**
-* [Soal Latihan (Math)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-3.md). 
-* [Soal Latihan (String)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-2.md). 
+* [Soal Latihan (Math)](https://github.com/pujangga123/ruang-belajar-java/blob/main/docs/latihan/06-class-3.md). 
+* [Soal Latihan (String)](https://github.com/pujangga123/ruang-belajar-java/blob/main/docs/latihan/06-class-2.md). 
 
 ## Import Package dan Membuat Objek, Contoh: _Random_
 Java menyediakan banyak _package_ yang bisa digunakan.  _Package Math_ adalah salah satu _package_ yang secara default di load dalam setiap eksekusi program. Tapi, tidak semua _package_ di load ke memory untuk setiap program yang kita buat.Untuk efisiensi, _package_ yang di-load ke memory hanyalah _package_ yang akan digunakan. Oleh sebab itu, sebagian besar _package_ perlu _dipanggil_ terlebih dahulu menggunakan perintah `import`.

@@ -67,7 +67,7 @@ public class Bilangan2 {
 ```
 
 **Latihan:**
-* [Soal Latihan (File)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-5.md)
+* [Soal Latihan (File)](latihan/06-class-5.md)
 
 ## `finally`
 
@@ -104,7 +104,7 @@ public class Bilangan2 {
 
 
 **Latihan:**
-* Pelajari [Java Exception - Try...Catch](https://www.w3schools.com/java/java_try_catch.asp) dan file [Hitung1.java](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/src/Hitung1.java), kemudian kerjakan [Soal Latihan (File)](https://github.com/pujangga123/ruang-belajar-java/blob/main/latihan/06-class-5.md)
+* Pelajari [Java Exception - Try...Catch](https://www.w3schools.com/java/java_try_catch.asp) dan file [Hitung1.java](https://github.com/pujangga123/ruang-belajar-java/blob/main/src/Hitung1.java), kemudian kerjakan [Soal Latihan (File)](latihan/06-class-5.md)
 
 
 Referensi:
