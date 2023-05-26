@@ -24,7 +24,7 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 
 ---
 **Latihan:**
-* [Folder latihan @ Github](https://github.com/pujangga123/ruang-belajar-java/tree/main/latihan)
+* [Folder latihan @ Github](https://github.com/pujangga123/ruang-belajar-java/tree/main/docs/latihan)
 
 ---
 
