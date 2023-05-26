@@ -67,6 +67,7 @@ Berikutnya, tambahkan program untuk menampilkan form, pada program utama.
 
 ### Menjalankan Program
 Untuk penjalankan program yang kita buat di atas, klik tombol "play" pada toolbar atau tekan _F6_
+
 ![](images/20-form-6.jpg)
 
 _Catatan:_
