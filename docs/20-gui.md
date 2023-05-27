@@ -7,9 +7,10 @@ Pada bagian ini kita akan berkenalan dengan membuat GUI menggunakan Java. IDE ya
    ![](images/20-new-1.jpg)
 
    _Catatan:_ Jika ini adalah pertama kalinya Anda membuat project di Netbeans, biasanya setelah _next_ ada proses _Activating IDE_ yang memakan waktu beberapa menit. Silahkan tunggu sampai proses selesai.
-2. ![](images/20-new-3.jpg)
+2. Berikutnya Anda bisa menentukan _Project Name_ dan _Project Location_.
    
-   Berikutnya Anda bisa menentukan _Project Name_ dan _Project Location_.
+   ![](images/20-new-3.jpg)
+      
    Aturan penulisan _Project Name_ sesuai dengan aturan penamaan variabel, yaitu _tidak mengandung spasi, tidak diawali angka, tidak menggunakan karakter spesial_.
    Klik _Finish_ untuk menyimpan project yang baru ini.
 
