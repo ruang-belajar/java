@@ -21,7 +21,7 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 13. [Exception - Try ... Catch](13-exception.md)
 14. [Hash Map](https://www.petanikode.com/java-hashmap/)
 15. [Membuat GUI](20-gui.md)
-16. [Java Swing](21-swing.md)
+16. [Java GUI Referensi](21-gui-referensi.md)
 
 ---
 **Latihan:**
