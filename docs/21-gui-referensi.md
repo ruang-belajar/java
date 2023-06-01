@@ -32,9 +32,21 @@ Referensi:
 
 
 ## Menampilkan form/JFrame
+**Cara 1:**
 ```java
 new NewJFrame().setVisibility(true);
 ```
+
+**Cara 2:**
+```java
+NewJFrame f = new NewJFrame();
+
+// Anda bisa menambahkan beberapa setup opsional di sini sebelum form ditampilkan
+f.setLocationRelativeTo(null); // set posisi form ke tengah
+
+f.setVisible(true);
+```
+
 Referensi:
 - http://bahtiarimran.blogspot.com/2015/09/cara-pemanggilan-form-dan-hide-form.html
 

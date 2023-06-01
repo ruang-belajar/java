@@ -27,8 +27,12 @@ public class MasterBarang extends javax.swing.JFrame {
     private void initComponents() {
 
         tombolSelesai = new javax.swing.JButton();
+        tombolTambah = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Master Barang");
 
         tombolSelesai.setText("Selesai");
         tombolSelesai.addActionListener(new java.awt.event.ActionListener() {
@@ -37,20 +41,37 @@ public class MasterBarang extends javax.swing.JFrame {
             }
         });
 
+        tombolTambah.setText("Tambah");
+        tombolTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolTambahActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(321, Short.MAX_VALUE)
-                .addComponent(tombolSelesai)
-                .addGap(14, 14, 14))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tombolTambah)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                        .addComponent(tombolSelesai)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(272, Short.MAX_VALUE)
-                .addComponent(tombolSelesai)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tombolSelesai)
+                    .addComponent(tombolTambah))
                 .addContainerGap())
         );
 
@@ -61,6 +82,10 @@ public class MasterBarang extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_tombolSelesaiActionPerformed
+
+    private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTambahActionPerformed
+        new DetailBarang().setVisible(true);
+    }//GEN-LAST:event_tombolTambahActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,6 +123,9 @@ public class MasterBarang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JButton tombolSelesai;
+    private javax.swing.JButton tombolTambah;
     // End of variables declaration//GEN-END:variables
 }

@@ -14,7 +14,10 @@ public class JavaApplication2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new FormUtama().setVisible(true);
+        // Menampilkan Form: Cara #2
+        FormUtama f1 = new FormUtama();
+        f1.setLocationRelativeTo(null); // set posisi form ke tengah, sebelum ditampilkan
+        f1.setVisible(true);
     }
     
 }

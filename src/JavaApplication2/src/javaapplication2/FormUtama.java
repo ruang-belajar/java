@@ -4,6 +4,7 @@
  */
 package javaapplication2;
 
+import java.awt.Color;
 import javax.swing.*;  
 /**
  *
@@ -16,6 +17,9 @@ public class FormUtama extends javax.swing.JFrame {
      */
     public FormUtama() {
         initComponents();
+        
+        getContentPane().setBackground(Color.white);
+        
     }
 
     /**
@@ -27,20 +31,30 @@ public class FormUtama extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        imageBg = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        menuFile = new javax.swing.JMenu();
+        menuFileMaster = new javax.swing.JMenu();
         menuFileMasterBarang = new javax.swing.JMenuItem();
         menuFileExit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuHelp = new javax.swing.JMenu();
         menuAbout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
-        jMenu1.setMnemonic('f');
-        jMenu1.setText("File");
+        imageBg.setBackground(new java.awt.Color(255, 255, 255));
+        imageBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication2/logo.png"))); // NOI18N
 
-        jMenu3.setText("Master");
+        menuFile.setMnemonic('f');
+        menuFile.setText("File");
+
+        menuFileMaster.setText("Master");
 
         menuFileMasterBarang.setText("Barang");
         menuFileMasterBarang.addActionListener(new java.awt.event.ActionListener() {
@@ -48,9 +62,9 @@ public class FormUtama extends javax.swing.JFrame {
                 menuFileMasterBarangActionPerformed(evt);
             }
         });
-        jMenu3.add(menuFileMasterBarang);
+        menuFileMaster.add(menuFileMasterBarang);
 
-        jMenu1.add(jMenu3);
+        menuFile.add(menuFileMaster);
 
         menuFileExit.setMnemonic('x');
         menuFileExit.setText("Exit");
@@ -59,11 +73,11 @@ public class FormUtama extends javax.swing.JFrame {
                 menuFileExitActionPerformed(evt);
             }
         });
-        jMenu1.add(menuFileExit);
+        menuFile.add(menuFileExit);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(menuFile);
 
-        jMenu2.setText("Help");
+        menuHelp.setText("Help");
 
         menuAbout.setMnemonic('a');
         menuAbout.setText("About");
@@ -72,9 +86,9 @@ public class FormUtama extends javax.swing.JFrame {
                 menuAboutActionPerformed(evt);
             }
         });
-        jMenu2.add(menuAbout);
+        menuHelp.add(menuAbout);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(menuHelp);
 
         setJMenuBar(jMenuBar1);
 
@@ -82,11 +96,17 @@ public class FormUtama extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(imageBg)
+                .addContainerGap(350, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(imageBg)
+                .addContainerGap(286, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,6 +123,10 @@ public class FormUtama extends javax.swing.JFrame {
     private void menuFileMasterBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileMasterBarangActionPerformed
         new MasterBarang().setVisible(true);
     }//GEN-LAST:event_menuFileMasterBarangActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -140,12 +164,13 @@ public class FormUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
+    private javax.swing.JLabel imageBg;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem menuAbout;
+    private javax.swing.JMenu menuFile;
     private javax.swing.JMenuItem menuFileExit;
+    private javax.swing.JMenu menuFileMaster;
     private javax.swing.JMenuItem menuFileMasterBarang;
+    private javax.swing.JMenu menuHelp;
     // End of variables declaration//GEN-END:variables
 }
