@@ -4,6 +4,10 @@
  */
 package javaapplication2;
 
+import java.awt.Point;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author En Tay
@@ -29,7 +33,9 @@ public class MasterBarang extends javax.swing.JFrame {
         tombolSelesai = new javax.swing.JButton();
         tombolTambah = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabelBarang = new javax.swing.JTable();
+        tombolReload = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Master Barang");
@@ -48,7 +54,52 @@ public class MasterBarang extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane1.setViewportView(jTable1);
+        tabelBarang.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Kode", "Nama"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tabelBarang.setColumnSelectionAllowed(true);
+        tabelBarang.getTableHeader().setReorderingAllowed(false);
+        tabelBarang.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelBarangMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tabelBarang);
+        tabelBarang.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        tombolReload.setText("Reload");
+        tombolReload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolReloadActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,10 +108,14 @@ public class MasterBarang extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(tombolReload)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tombolTambah)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(tombolSelesai)))
                 .addContainerGap())
         );
@@ -71,7 +126,9 @@ public class MasterBarang extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tombolSelesai)
-                    .addComponent(tombolTambah))
+                    .addComponent(tombolTambah)
+                    .addComponent(tombolReload)
+                    .addComponent(jButton1))
                 .addContainerGap())
         );
 
@@ -86,6 +143,54 @@ public class MasterBarang extends javax.swing.JFrame {
     private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTambahActionPerformed
         new DetailBarang().setVisible(true);
     }//GEN-LAST:event_tombolTambahActionPerformed
+
+    private void tombolReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolReloadActionPerformed
+        // TODO add your handling code here:
+        Connection conn = null;
+        try {
+            // below two lines are used for connectivity.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/tokobuku",
+                "root", "");
+ 
+            Statement st;
+            st = conn.createStatement();
+            ResultSet rs;
+            rs = st.executeQuery(
+                "select * from barang");
+            String kode;
+            String nama;
+            while (rs.next()) {
+                kode = rs.getString("kode");
+                nama = rs.getString("nama");
+                String data[] = {kode,nama};
+                DefaultTableModel model = (DefaultTableModel)tabelBarang.getModel();
+                model.addRow(data);
+            }
+            rs.close();
+            st.close();
+            conn.close();
+        }
+        catch (Exception exception) {
+            JOptionPane.showMessageDialog(null,"Error");
+        }
+    }//GEN-LAST:event_tombolReloadActionPerformed
+
+    private void tabelBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelBarangMouseClicked
+        // TODO add your handling code here:
+        Point p = evt.getPoint();
+        int row = tabelBarang.rowAtPoint(p);
+        //JOptionPane.showMessageDialog(null, tabelBarang.getModel().getValueAt(row, 0));
+        DetailBarang f = new DetailBarang();
+        f.setVisible(true);
+        f.baca(tabelBarang.getModel().getValueAt(row, 0).toString());
+    }//GEN-LAST:event_tabelBarangMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,8 +228,10 @@ public class MasterBarang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabelBarang;
+    private javax.swing.JButton tombolReload;
     private javax.swing.JButton tombolSelesai;
     private javax.swing.JButton tombolTambah;
     // End of variables declaration//GEN-END:variables

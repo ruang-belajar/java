@@ -1,3 +1,10 @@
+/*
+   Contoh program sederhana membaca data dari database MySql
+
+   Untuk contoh database, check file tokobuku.sql
+   Pastikan juga Anda menambahkan library Mysql J Connector (file .jar)
+*/
+
 import java.sql.*;
  
 public class MySqlTest {
@@ -8,25 +15,22 @@ public class MySqlTest {
             // below two lines are used for connectivity.
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/redlistdb",
+                "jdbc:mysql://localhost:3306/tokobuku",
                 "root", "");
  
-            // mydb is database
-            // mydbuser is name of database
-            // mydbuser is password of database
  
             Statement statement;
             statement = connection.createStatement();
             ResultSet resultSet;
             resultSet = statement.executeQuery(
-                "select * from karyawan");
-            String code;
-            String title;
+                "select * from barang");
+            String kode;
+            String nama;
             while (resultSet.next()) {
-                code = resultSet.getString("id");
-                title = resultSet.getString("nama");
-                System.out.println("Code : " + code
-                                   + " Title : " + title);
+                kode = resultSet.getString("kode");
+                nama = resultSet.getString("nama");
+                System.out.println("kode : " + kode
+                                   + " nama : " + nama);
             }
             resultSet.close();
             statement.close();
