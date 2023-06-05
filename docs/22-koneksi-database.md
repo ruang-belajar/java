@@ -2,10 +2,11 @@
 Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk program Java kita.
 
 ## Setup _J Connector_
-1. [Download _MySQL_](https://dev.mysql.com/downloads/connector/j/)
-2. Anda bisa melakukan instalasi MySQL secara lengkap. Tapi kalau Anda sebelumnya sudah pernah install XAMPP, Anda cuma memerlukan _J Connector_. Pilih install type _custom_, pilih _Connector/J..._. Pilih _Next_, _Next/Execute_.
+1. **Cara 1:** [Download _MySQL_](https://dev.mysql.com/downloads/connector/j/)
+   Anda bisa melakukan instalasi MySQL secara lengkap. Tapi kalau Anda sebelumnya sudah pernah install XAMPP, Anda cuma memerlukan _J Connector_. Pilih install type _custom_, pilih _Connector/J..._. Pilih _Next_, _Next/Execute_.
    
    ![](images/22-jcon-install-3.png)
+2. **Cara 2:** [download langsung paket _.jar_](https://github.com/pujangga123/ruang-belajar-java/raw/main/src/mysql-connector-j-8.0.33.jar)
 
 3. Pada _project_ aktif Anda. Klik-kanan pada _Libraries - Add JAR/Folder..._. Cari file _mysql-connector-j-xxx.jar_ untuk menambahkannya ke project Anda.
    
