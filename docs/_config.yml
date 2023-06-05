@@ -9,3 +9,4 @@ remote_theme: pages-themes/modernist
 plugins:
 - jekyll-remote-theme
 - jekyll-feed1
+- jekyll-seo-tag
