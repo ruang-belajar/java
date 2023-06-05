@@ -22,31 +22,35 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
         public static void main(String arg[]) {
             Connection connection = null;
             try {
-                // below two lines are used for connectivity.
+                // buat koneksi ke server mysql.
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/tokobuku",
-                    "root", "");
+                    "jdbc:mysql://localhost:3306/tokobuku", "root", "");
     
-    
+                // siapkan objek statement untuk query
                 Statement statement;
                 statement = connection.createStatement();
                 ResultSet resultSet;
-                resultSet = statement.executeQuery(
-                    "select * from barang");
+
+                // eksekusi query
+                resultSet = statement.executeQuery("select * from barang");
+
+                // baca dan tampilkan data dari query
                 String kode;
                 String nama;
-                while (resultSet.next()) {
-                    kode = resultSet.getString("kode");
-                    nama = resultSet.getString("nama");
-                    System.out.println("kode : " + kode
-                                    + " nama : " + nama);
+                while (resultSet.next()) { // baca data & geser kursor ke record selanjutnya
+                    kode = resultSet.getString("kode"); // baca kolom "kode"
+                    nama = resultSet.getString("nama"); // baca kolom "nama"
+                    System.out.println("kode : " + kode + " nama : " + nama); // tampilkan data
                 }
+
+                // hapus objek dan koneksi
                 resultSet.close();
                 statement.close();
                 connection.close();
             }
             catch (Exception exception) {
+                // tampilkan pesan error (jika terjadi kesalahan)
                 System.out.println(exception);
             }
         } // function ends
