@@ -1,4 +1,4 @@
-# Koneksi Java ke Database
+# Java - Koneksi ke Database
 Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk program Java kita.
 
 ## Setup _J Connector_
