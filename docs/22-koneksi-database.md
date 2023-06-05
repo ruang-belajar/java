@@ -13,7 +13,7 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
    ![](images/22-jcon-install-4.png)
 
 ## Test Koneksi
-1. [Download & Restore database contoh](https://github.com/pujangga123/ruang-belajar-java/blob/main/src/MySqlTest.java) ke server _MySQL_ Anda.
+1. [Download & Restore database contoh](https://raw.githubusercontent.com/pujangga123/ruang-belajar-java/main/src/tokobuku.sql) ke server _MySQL_ Anda.
 2. Test koneksi menggunakan contoh program berikut:
     ```java
     import java.sql.*;
