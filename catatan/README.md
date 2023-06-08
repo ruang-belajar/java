@@ -1,3 +1,3 @@
 # Catatan Pertemuan
 
-1. [Kelas Pemrograman Java 2023](2023.md)
+1. [Catatan Kuliah (GUI)](catatan-gui.md)

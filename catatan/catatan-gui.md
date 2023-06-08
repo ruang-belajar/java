@@ -7,11 +7,16 @@
       * Barang
     * Exit: Menutup Program
   * Help
-    * About: Menampilkan Message Dialog dengan pesan _Dibuat oleh [nama]_. 
+    * About: Menampilkan Message Dialog dengan pesan _Dibuat oleh [nama]_.
+* Menampilkan _Message Dialog_:
+  ```java
+  JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
+  ```
 
 ## Pertemuan 7
 * Download & restore database [tokobuku.sql](https://github.com/pujangga123/ruang-belajar-java/raw/main/src/tokobuku.sql)
 * Setup _Mysql Connector J_ (lihat [Java - Koneksi ke Database](https://pujangga123.github.io/ruang-belajar-java/22-koneksi-database.html))
+* Menu _File - Master - Barang_: Menampilkan `FormBarang`
 * Buat _jFrame_: `FormBarang`
   * _jTable_: `tabelBarang`
     * Kolom: _Kode (String)_, _Nama (String)_
@@ -47,3 +52,4 @@
         JOptionPane.showMessageDialog(null,"Error");
     }
     ```
+    ![](images/7-formbarang-1.jpg)
