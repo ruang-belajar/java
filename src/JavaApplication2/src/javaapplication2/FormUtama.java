@@ -5,6 +5,8 @@
 package javaapplication2;
 
 import java.awt.Color;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.*;  
 /**
  *
@@ -37,6 +39,9 @@ public class FormUtama extends javax.swing.JFrame {
         menuFileMaster = new javax.swing.JMenu();
         menuFileMasterBarang = new javax.swing.JMenuItem();
         menuFileExit = new javax.swing.JMenuItem();
+        menuUtility = new javax.swing.JMenu();
+        menuUtilityJamPublic = new javax.swing.JMenuItem();
+        menuUtilityJamPrivate = new javax.swing.JMenuItem();
         menuHelp = new javax.swing.JMenu();
         menuAbout = new javax.swing.JMenuItem();
 
@@ -76,6 +81,26 @@ public class FormUtama extends javax.swing.JFrame {
         menuFile.add(menuFileExit);
 
         jMenuBar1.add(menuFile);
+
+        menuUtility.setText("Utility");
+
+        menuUtilityJamPublic.setText("Jam (Public)");
+        menuUtilityJamPublic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuUtilityJamPublicActionPerformed(evt);
+            }
+        });
+        menuUtility.add(menuUtilityJamPublic);
+
+        menuUtilityJamPrivate.setText("Jam (Private)");
+        menuUtilityJamPrivate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuUtilityJamPrivateActionPerformed(evt);
+            }
+        });
+        menuUtility.add(menuUtilityJamPrivate);
+
+        jMenuBar1.add(menuUtility);
 
         menuHelp.setText("Help");
 
@@ -128,6 +153,21 @@ public class FormUtama extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
 
+    private void menuUtilityJamPublicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUtilityJamPublicActionPerformed
+        FormJamPublic f = new FormJamPublic();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMM yyyy");  
+        LocalDateTime now = LocalDateTime.now();  
+        f.labelHari.setText(dtf.format(now));
+        f.labelSalam.setText("Halo, "+Global.NAMA);
+        f.setVisible(true);
+    }//GEN-LAST:event_menuUtilityJamPublicActionPerformed
+
+    private void menuUtilityJamPrivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUtilityJamPrivateActionPerformed
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMM yyyy");  
+        LocalDateTime now = LocalDateTime.now();  
+        new FormJamPrivate().tampilkan(dtf.format(now));
+    }//GEN-LAST:event_menuUtilityJamPrivateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -172,5 +212,8 @@ public class FormUtama extends javax.swing.JFrame {
     private javax.swing.JMenu menuFileMaster;
     private javax.swing.JMenuItem menuFileMasterBarang;
     private javax.swing.JMenu menuHelp;
+    private javax.swing.JMenu menuUtility;
+    private javax.swing.JMenuItem menuUtilityJamPrivate;
+    private javax.swing.JMenuItem menuUtilityJamPublic;
     // End of variables declaration//GEN-END:variables
 }

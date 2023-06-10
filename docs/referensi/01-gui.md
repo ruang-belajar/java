@@ -1,4 +1,4 @@
-# Java GUI Referensi
+# Java Referensi: GUI
 
 Berikut beberapa _referensi cepat_ yang bisa Anda gunakan dalam pemubuatan GUI di Java.
 

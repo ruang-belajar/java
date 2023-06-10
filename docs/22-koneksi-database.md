@@ -54,6 +54,3 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
     } // class ends
     ```
 
----
-**Referensi:**
-- 

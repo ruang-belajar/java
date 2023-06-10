@@ -170,13 +170,18 @@ public class MasterBarang extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolReloadActionPerformed
 
     private void tabelBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelBarangMouseClicked
-        // TODO add your handling code here:
         Point p = evt.getPoint();
         int row = tabelBarang.rowAtPoint(p);
+        
         //JOptionPane.showMessageDialog(null, tabelBarang.getModel().getValueAt(row, 0));
         DetailBarang f = new DetailBarang();
         f.setVisible(true);
-        f.baca(tabelBarang.getModel().getValueAt(row, 0).toString());
+        
+        // ambil kode barang dari baris yang di klik
+        String kode = tabelBarang.getModel().getValueAt(row, 0).toString();
+        
+        // kirim 'kode' lewat fungsi 'baca'
+        f.baca(kode);
     }//GEN-LAST:event_tabelBarangMouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

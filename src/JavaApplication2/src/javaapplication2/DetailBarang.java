@@ -122,6 +122,8 @@ public class DetailBarang extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        textKode.getAccessibleContext().setAccessibleName("");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -130,7 +132,7 @@ public class DetailBarang extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolBatalActionPerformed
 
     public void baca(String kode) {
-        Connection conn = null;
+        Connection conn;
         try {
             // below two lines are used for connectivity.
             Class.forName(Global.DBDRIVER);
@@ -148,7 +150,7 @@ public class DetailBarang extends javax.swing.JFrame {
             rs.close();
             conn.close();
         } catch(Exception e) {
-            
+            JOptionPane.showMessageDialog(null,"gagal baca");
         } 
         
         
