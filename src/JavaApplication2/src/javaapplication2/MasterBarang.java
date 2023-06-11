@@ -135,7 +135,7 @@ public class MasterBarang extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolSelesaiActionPerformed
 
     private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTambahActionPerformed
-        new DetailBarang().setVisible(true);
+        new DetailBarang().baru();
     }//GEN-LAST:event_tombolTambahActionPerformed
 
     private void tombolReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolReloadActionPerformed
@@ -165,7 +165,7 @@ public class MasterBarang extends javax.swing.JFrame {
             st.close();
             conn.close();
         } catch (Exception exception) {
-            JOptionPane.showMessageDialog(null,"Error");
+            JOptionPane.showMessageDialog(null,exception.getMessage());
         }
     }//GEN-LAST:event_tombolReloadActionPerformed
 

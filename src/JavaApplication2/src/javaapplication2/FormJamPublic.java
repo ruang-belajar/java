@@ -32,7 +32,7 @@ public class FormJamPublic extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Jam (komponen public)");
 
         labelHari.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N

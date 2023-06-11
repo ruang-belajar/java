@@ -6,6 +6,7 @@ package javaapplication2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
@@ -57,6 +58,11 @@ public class DetailBarang extends javax.swing.JFrame {
         jLabel4.setText("Kode");
 
         tombolSimpan.setText("Simpan");
+        tombolSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolSimpanActionPerformed(evt);
+            }
+        });
 
         tombolBatal.setText("Batal");
         tombolBatal.addActionListener(new java.awt.event.ActionListener() {
@@ -128,8 +134,47 @@ public class DetailBarang extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tombolBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolBatalActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
     }//GEN-LAST:event_tombolBatalActionPerformed
+
+    private void tombolSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolSimpanActionPerformed
+        Connection conn;
+        try {
+            // below two lines are used for connectivity.
+            Class.forName(Global.DBDRIVER);
+            conn = DriverManager.getConnection(Global.DBCONNECTION,Global.DBUSER, Global.DBPASS);
+            
+            // baca data
+            String kode = textKode.getText();
+            String nama = textNama.getText();
+            String jenis = comboJenis.getSelectedItem().toString();
+            int harga = Integer.parseInt(textHarga.getText());
+            
+            // SQL
+            String sql = "insert into barang (kode, nama, jenis, harga) values (?,?,?,?)";
+            
+            // siapkan statement untuk INSERT
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, kode);
+            pst.setString(2, nama);
+            pst.setString(3, jenis);
+            pst.setInt(4, harga);
+            
+            // eksekusi SQL
+            pst.execute(); 
+            
+            // hapus objek 
+            pst.close();
+            conn.close();
+            
+            // tampilkan pesan
+            JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+        } catch(Exception e) {
+            //JOptionPane.showMessageDialog(null,e.getMessage().toString());
+            JOptionPane.showMessageDialog(null,e.getMessage().toString());
+        } 
+        
+    }//GEN-LAST:event_tombolSimpanActionPerformed
 
     public void baca(String kode) {
         Connection conn;
@@ -153,8 +198,14 @@ public class DetailBarang extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"gagal baca");
         } 
         
-        
-        
+    }
+    
+    public void baru() {
+        textKode.setText("");
+        textNama.setText("");
+        comboJenis.setSelectedIndex(0);
+        textHarga.setText("0");
+        setVisible(true);
     }
     
     

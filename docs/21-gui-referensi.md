@@ -50,8 +50,13 @@ Referensi:
 
 
 ## Menutup Window
+**Cara 1:**
 ```java
 dispose();
+```
+**Cara 2:**
+```java
+setVisible(false);
 ```
 
 ## Menghentikan Program
@@ -59,10 +64,22 @@ dispose();
 System.exit(0);
 ```
 
-## Menambahkan event _on change_ pada _ComboBox_
-Referensi:
-* http://www.java2s.com/Tutorial/Java/0240__Swing/ListeningforChangestotheSelectedIteminaJComboBoxComponent.htm
 
 ## Konversi nilai _Integer_ ke _String_ (dan sebaliknya)
 Referensi:
 * https://www.freecodecamp.org/news/java-string-to-int-how-to-convert-a-string-to-an-integer/
+
+## Combobox
+### Membaca item yang dipilih
+```java
+String item = jComboBox.getSelectedItem().toString();
+```
+
+### Set item ComboBox
+```java
+jComboBox.setSelectedItem("Buku");
+```
+
+### Menambahkan event _on change_ pada _ComboBox_
+Referensi:
+* [Listening for Changes to the Selected Item in a JComboBox Component](http://www.java2s.com/Tutorial/Java/0240__Swing/ListeningforChangestotheSelectedIteminaJComboBoxComponent.htm)

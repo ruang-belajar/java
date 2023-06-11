@@ -91,3 +91,49 @@
     f.labelSalam.setText("Halo, "+Global.NAMA);
     f.setVisible(true);
     ```
+4. Buat `FormDetailBarang`
+   * _jLabel_: `textKode`
+   * _jLabel_: `textNama`
+   * _jComboBox_: `comboJenis`
+   * _jButton_: `tombolBatal`
+     ```java
+     setVisible(false);
+     ```  
+   * _jButton_: `tombolSimpan`
+    ```java
+    Connection conn;
+    try {
+        // below two lines are used for connectivity.
+        Class.forName(Global.DBDRIVER);
+        conn = DriverManager.getConnection(Global.DBCONNECTION,Global.DBUSER, Global.DBPASS);
+        
+        // baca data
+        String kode = textKode.getText();
+        String nama = textNama.getText();
+        String jenis = comboJenis.getSelectedItem().toString();
+        int harga = Integer.parseInt(textHarga.getText());
+        
+        // SQL
+        String sql = "insert into barang (kode, nama, jenis, harga) values (?,?,?,?)";
+        
+        // siapkan statement untuk INSERT
+        PreparedStatement pst = conn.prepareStatement(sql);
+        pst.setString(1, kode);
+        pst.setString(2, nama);
+        pst.setString(3, jenis);
+        pst.setInt(4, harga);
+        
+        // eksekusi SQL
+        pst.execute(); 
+        
+        // hapus objek 
+        pst.close();
+        conn.close();
+        
+        // tampilkan pesan
+        JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+    } catch(Exception e) {
+        //JOptionPane.showMessageDialog(null,e.getMessage().toString());
+        JOptionPane.showMessageDialog(null,e.getMessage().toString());
+    } 
+    ```

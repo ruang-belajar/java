@@ -29,7 +29,7 @@ public class FormJamPrivate extends javax.swing.JFrame {
         labelSalam = new javax.swing.JLabel();
         labelHari = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Jam (komponen private)");
 
         labelSalam.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
