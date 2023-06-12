@@ -21,7 +21,7 @@ Referensi:
 String nama = jTextField1.getText();
 ```
 
-### Menulis ke _jTextField_**
+### Menulis ke _jTextField_
 ```java
 jTextField1.setText("Budi");
 ```
@@ -33,7 +33,7 @@ Referensi:
 ## Menampilkan form/JFrame
 **Cara 1:**
 ```java
-new NewJFrame().setVisibility(true);
+new NewJFrame().setVisible(true);
 ```
 
 **Cara 2:**

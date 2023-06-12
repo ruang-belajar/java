@@ -56,50 +56,100 @@
 
 ## Pertemuan 8
 1. Buat `FormDetailBarang`
+   * imports:
+     ```java
+     import javax.swing.JOptionPane;
+     import java.sql.*;
+     ```
    * _jTextField_: `textKode`
    * _jTextFiled_: `textNama`
    * _jComboBox_: `comboJenis`
      * model: _ATK, Buku, Snack_
    * _jTextField_: `textHarga`
+   * Buat label untuk masing-masing objek diatas: _Kode, Nama, Jenis, Harga_
    * _jButton_: `tombolBatal`
      ```java
      setVisible(false);
      ```  
    * _jButton_: `tombolTambah`
-    ```java
-    Connection conn;
-    try {
-        // below two lines are used for connectivity.
-        Class.forName(Global.DBDRIVER);
-        conn = DriverManager.getConnection(Global.DBCONNECTION,Global.DBUSER, Global.DBPASS);
+     ```java
+     Connection conn;
+     try {
+         // below two lines are used for connectivity.
+         Class.forName("com.mysql.cj.jdbc.Driver");
+         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root", "");
+         
+         // baca data
+         String kode = textKode.getText();
+         String nama = textNama.getText();
+         String jenis = comboJenis.getSelectedItem().toString();
+         int harga = Integer.parseInt(textHarga.getText());
+         
+         // SQL
+         String sql = "insert into barang (kode, nama, jenis, harga) values (?,?,?,?)";
+         
+         // siapkan statement untuk INSERT
+         PreparedStatement pst = conn.prepareStatement(sql);
+         pst.setString(1, kode);
+         pst.setString(2, nama);
+         pst.setString(3, jenis);
+         pst.setInt(4, harga);
+         
+         // eksekusi SQL
+         pst.execute(); 
+         
+         // hapus objek 
+         pst.close();
+         conn.close();
+         
+         // tampilkan pesan
+         JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+     } catch(Exception e) {
+         //JOptionPane.showMessageDialog(null,e.getMessage().toString());
+         JOptionPane.showMessageDialog(null,e.getMessage().toString());
+     } 
+     ```
+   * tambah fungsi
+     ```java
+     Connection conn;
+     try {
+         // below two lines are used for connectivity.
+         Class.forName("com.mysql.cj.jdbc.Driver");
+         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root", ""); 
+         Statement st;
+         st = conn.createStatement();
+         ResultSet rs;
+         rs = st.executeQuery("select * from barang where kode='"+kode+"'");
+         if(rs.next()) {
+             textKode.setText(rs.getString("kode"));
+             textNama.setText(rs.getString("nama"));
+         }
+         st.close();
+         rs.close();
+         conn.close();
+     } catch(Exception e) {
+         JOptionPane.showMessageDialog(null,"gagal baca");
+     } 
+     ``` 
+2. Edit `FormBarang`
+   * _jButton_: `tombolTambah`
+     ```java
+     FormDetailBarang f = new FormDetailBarang();
+     f.setVisible(true);
+     ```
+   * _jTable_: `tabelBarang`
+     * Event: _mouseClicked_
+       ```java
+       Point p = evt.getPoint();
+       int row = tabelBarang.rowAtPoint(p);
         
-        // baca data
-        String kode = textKode.getText();
-        String nama = textNama.getText();
-        String jenis = comboJenis.getSelectedItem().toString();
-        int harga = Integer.parseInt(textHarga.getText());
+       //JOptionPane.showMessageDialog(null, tabelBarang.getModel().getValueAt(row, 0));
+       FormDetailBarang f = new FormDetailBarang();
+       f.setVisible(true);
         
-        // SQL
-        String sql = "insert into barang (kode, nama, jenis, harga) values (?,?,?,?)";
+       // ambil kode barang dari baris yang di klik
+       String kode = tabelBarang.getModel().getValueAt(row, 0).toString();
         
-        // siapkan statement untuk INSERT
-        PreparedStatement pst = conn.prepareStatement(sql);
-        pst.setString(1, kode);
-        pst.setString(2, nama);
-        pst.setString(3, jenis);
-        pst.setInt(4, harga);
-        
-        // eksekusi SQL
-        pst.execute(); 
-        
-        // hapus objek 
-        pst.close();
-        conn.close();
-        
-        // tampilkan pesan
-        JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
-    } catch(Exception e) {
-        //JOptionPane.showMessageDialog(null,e.getMessage().toString());
-        JOptionPane.showMessageDialog(null,e.getMessage().toString());
-    } 
-    ```
+       // kirim 'kode' lewat fungsi 'baca'
+       f.baca(kode);
+       ```
