@@ -123,6 +123,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="textKode">
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -133,6 +136,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Simpan"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombolSimpanActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombolBatal">
       <Properties>

@@ -35,10 +35,14 @@ public class MasterBarang extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelBarang = new javax.swing.JTable();
         tombolReload = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Master Barang");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         tombolSelesai.setText("Selesai");
         tombolSelesai.addActionListener(new java.awt.event.ActionListener() {
@@ -94,13 +98,6 @@ public class MasterBarang extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -113,8 +110,6 @@ public class MasterBarang extends javax.swing.JFrame {
                         .addComponent(tombolReload)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tombolTambah)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(tombolSelesai)))
                 .addContainerGap())
@@ -127,8 +122,7 @@ public class MasterBarang extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tombolSelesai)
                     .addComponent(tombolTambah)
-                    .addComponent(tombolReload)
-                    .addComponent(jButton1))
+                    .addComponent(tombolReload))
                 .addContainerGap())
         );
 
@@ -141,56 +135,59 @@ public class MasterBarang extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolSelesaiActionPerformed
 
     private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTambahActionPerformed
-        new DetailBarang().setVisible(true);
+        new DetailBarang().baru();
     }//GEN-LAST:event_tombolTambahActionPerformed
 
     private void tombolReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolReloadActionPerformed
         // TODO add your handling code here:
-        Connection conn = null;
+        Connection conn;
         try {
             // below two lines are used for connectivity.
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/tokobuku",
-                "root", "");
+            Class.forName(Global.DBDRIVER);
+            conn = DriverManager.getConnection(Global.DBCONNECTION,Global.DBUSER,Global.DBPASS);
  
             Statement st;
             st = conn.createStatement();
             ResultSet rs;
-            rs = st.executeQuery(
-                "select * from barang");
+            rs = st.executeQuery("select * from barang");
+            
+            DefaultTableModel model = (DefaultTableModel)tabelBarang.getModel();
+            while(model.getRowCount()>0) { model.removeRow(0); }
+            
             String kode;
             String nama;
             while (rs.next()) {
                 kode = rs.getString("kode");
                 nama = rs.getString("nama");
-                String data[] = {kode,nama};
-                DefaultTableModel model = (DefaultTableModel)tabelBarang.getModel();
-                model.addRow(data);
+                model.addRow(new Object[]{kode, nama});
             }
             rs.close();
             st.close();
             conn.close();
-        }
-        catch (Exception exception) {
-            JOptionPane.showMessageDialog(null,"Error");
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null,exception.getMessage());
         }
     }//GEN-LAST:event_tombolReloadActionPerformed
 
     private void tabelBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelBarangMouseClicked
-        // TODO add your handling code here:
         Point p = evt.getPoint();
         int row = tabelBarang.rowAtPoint(p);
+        
         //JOptionPane.showMessageDialog(null, tabelBarang.getModel().getValueAt(row, 0));
         DetailBarang f = new DetailBarang();
         f.setVisible(true);
-        f.baca(tabelBarang.getModel().getValueAt(row, 0).toString());
+        
+        // ambil kode barang dari baris yang di klik
+        String kode = tabelBarang.getModel().getValueAt(row, 0).toString();
+        
+        // kirim 'kode' lewat fungsi 'baca'
+        f.baca(kode);
     }//GEN-LAST:event_tabelBarangMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+        tombolReload.doClick();
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -228,7 +225,6 @@ public class MasterBarang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabelBarang;
     private javax.swing.JButton tombolReload;

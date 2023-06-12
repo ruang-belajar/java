@@ -1,4 +1,4 @@
-# Java GUI Referensi
+# Java Referensi: GUI
 
 Berikut beberapa _referensi cepat_ yang bisa Anda gunakan dalam pemubuatan GUI di Java.
 
@@ -14,13 +14,14 @@ Catatan:
 Referensi:
 - https://www.javatpoint.com/java-joptionpane
 
-## Membaca dan menulis text pada _jTextField_
-**Membaca _jTextField_**
+
+## _TextField_
+### Membaca text di _jTextField_
 ```java
 String nama = jTextField1.getText();
 ```
 
-**Menulis ke _jTextField_**
+### Menulis ke _jTextField_**
 ```java
 jTextField1.setText("Budi");
 ```
