@@ -12,12 +12,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author En Tay
  */
-public class MasterBarang extends javax.swing.JFrame {
+public class FormBarang extends javax.swing.JFrame {
 
     /**
      * Creates new form MasterBarang
      */
-    public MasterBarang() {
+    public FormBarang() {
         initComponents();
     }
 
@@ -135,7 +135,7 @@ public class MasterBarang extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolSelesaiActionPerformed
 
     private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTambahActionPerformed
-        new DetailBarang().baru();
+        new FormDetailBarang().baru();
     }//GEN-LAST:event_tombolTambahActionPerformed
 
     private void tombolReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolReloadActionPerformed
@@ -170,18 +170,22 @@ public class MasterBarang extends javax.swing.JFrame {
     }//GEN-LAST:event_tombolReloadActionPerformed
 
     private void tabelBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelBarangMouseClicked
+        // membaca nomor baris yang diklik
         Point p = evt.getPoint();
         int row = tabelBarang.rowAtPoint(p);
         
         //JOptionPane.showMessageDialog(null, tabelBarang.getModel().getValueAt(row, 0));
-        DetailBarang f = new DetailBarang();
-        f.setVisible(true);
+        //FormDetailBarang f = new FormDetailBarang();
+        //f.setVisible(true);
         
         // ambil kode barang dari baris yang di klik
         String kode = tabelBarang.getModel().getValueAt(row, 0).toString();
         
         // kirim 'kode' lewat fungsi 'baca'
-        f.baca(kode);
+        //f.baca(kode);
+        
+        // tampilkan kode
+        JOptionPane.showMessageDialog(null, kode);
     }//GEN-LAST:event_tabelBarangMouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -206,20 +210,21 @@ public class MasterBarang extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MasterBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MasterBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MasterBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MasterBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormBarang.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MasterBarang().setVisible(true);
+                new FormBarang().setVisible(true);
             }
         });
     }

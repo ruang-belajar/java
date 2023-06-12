@@ -146,7 +146,7 @@ public class FormUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_menuAboutActionPerformed
 
     private void menuFileMasterBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFileMasterBarangActionPerformed
-        new MasterBarang().setVisible(true);
+        new FormBarang().setVisible(true);
     }//GEN-LAST:event_menuFileMasterBarangActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

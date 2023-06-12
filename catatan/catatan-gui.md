@@ -56,6 +56,8 @@
 
 ## Pertemuan 8
 1. Buat `FormDetailBarang`
+   
+   ![](images/7-formbarang-1.jpg)
    * imports:
      ```java
      import javax.swing.JOptionPane;
@@ -66,6 +68,7 @@
    * _jComboBox_: `comboJenis`
      * model: _ATK, Buku, Snack_
    * _jTextField_: `textHarga`
+     * horizontalAlignment: _RIGHT_
    * Buat label untuk masing-masing objek diatas: _Kode, Nama, Jenis, Harga_
    * _jButton_: `tombolBatal`
      ```java
@@ -105,32 +108,9 @@
          // tampilkan pesan
          JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
      } catch(Exception e) {
-         //JOptionPane.showMessageDialog(null,e.getMessage().toString());
          JOptionPane.showMessageDialog(null,e.getMessage().toString());
      } 
      ```
-   * tambah fungsi
-     ```java
-     Connection conn;
-     try {
-         // below two lines are used for connectivity.
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root", ""); 
-         Statement st;
-         st = conn.createStatement();
-         ResultSet rs;
-         rs = st.executeQuery("select * from barang where kode='"+kode+"'");
-         if(rs.next()) {
-             textKode.setText(rs.getString("kode"));
-             textNama.setText(rs.getString("nama"));
-         }
-         st.close();
-         rs.close();
-         conn.close();
-     } catch(Exception e) {
-         JOptionPane.showMessageDialog(null,"gagal baca");
-     } 
-     ``` 
 2. Edit `FormBarang`
    * _jButton_: `tombolTambah`
      ```java
@@ -140,16 +120,13 @@
    * _jTable_: `tabelBarang`
      * Event: _mouseClicked_
        ```java
+       // membaca nomor baris yang diklik
        Point p = evt.getPoint();
        int row = tabelBarang.rowAtPoint(p);
-        
-       //JOptionPane.showMessageDialog(null, tabelBarang.getModel().getValueAt(row, 0));
-       FormDetailBarang f = new FormDetailBarang();
-       f.setVisible(true);
         
        // ambil kode barang dari baris yang di klik
        String kode = tabelBarang.getModel().getValueAt(row, 0).toString();
         
-       // kirim 'kode' lewat fungsi 'baca'
-       f.baca(kode);
+       // tampilkan kode
+       JOptionPane.showMessageDialog(null, kode);
        ```
