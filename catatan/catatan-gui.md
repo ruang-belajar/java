@@ -57,7 +57,7 @@
 ## Pertemuan 8
 1. Buat `FormDetailBarang`
    
-   ![](images/7-formbarang-1.jpg)
+   ![](images/8-formdetailbarang-1.jpg)
    * imports:
      ```java
      import javax.swing.JOptionPane;
