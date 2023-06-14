@@ -18,47 +18,56 @@
 * Setup _Mysql Connector J_ (lihat [Java - Koneksi ke Database](https://pujangga123.github.io/ruang-belajar-java/22-koneksi-database.html))
 * Menu _File - Master - Barang_: Menampilkan `FormBarang`
 * Buat _jFrame_: `FormBarang`
+  
+  ![](images/7-formbarang-1.jpg)  
+  * imports
+    ```java
+    import javax.swing.table.DefaultTableModel;
+    ```
   * _jTable_: `tabelBarang`
     * Kolom: _Kode (String)_, _Nama (String)_
   * _jButton_: `tombolSelesai`
-    * Menutup window
+    * on action perform:
+        ```java
+        setVisible(false);
+        ```
   * _jButton_: `tombolReload`
-    ```java
-    Connection conn;
-    try {
-        // below two lines are used for connectivity.
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root","");
+    * on action perform:
+        ```java
+        Connection conn;
+        try {
+            // below two lines are used for connectivity.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root","");
 
-        Statement st;
-        st = conn.createStatement();
-        ResultSet rs;
-        rs = st.executeQuery("select * from barang");
-        
-        DefaultTableModel model = (DefaultTableModel)tabelBarang.getModel();
-        while(model.getRowCount()>0) { model.removeRow(0); }
-        
-        String kode;
-        String nama;
-        while (rs.next()) {
-            kode = rs.getString("kode");
-            nama = rs.getString("nama");
-            model.addRow(new Object[]{kode, nama});
+            Statement st;
+            st = conn.createStatement();
+            ResultSet rs;
+            rs = st.executeQuery("select * from barang");
+            
+            DefaultTableModel model = (DefaultTableModel)tabelBarang.getModel();
+            while(model.getRowCount()>0) { model.removeRow(0); }
+            
+            String kode;
+            String nama;
+            while (rs.next()) {
+                kode = rs.getString("kode");
+                nama = rs.getString("nama");
+                model.addRow(new Object[]{kode, nama});
+            }
+            rs.close();
+            st.close();
+            conn.close();
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null,"Error");
         }
-        rs.close();
-        st.close();
-        conn.close();
-    } catch (Exception exception) {
-        JOptionPane.showMessageDialog(null,"Error");
-    }
-    ```
-    ![](images/7-formbarang-1.jpg)
+        ```
 
 ## Pertemuan 8
-1. Buat `FormDetailBarang`
+1.  Buat `FormDetailBarang`
    
-   ![](images/8-formdetailbarang-1.jpg)
-   * imports:
+    ![](images/8-formdetailbarang-1.jpg)
+    * imports:
      ```java
      import javax.swing.JOptionPane;
      import java.sql.*;
@@ -66,59 +75,68 @@
    * _jTextField_: `textKode`
    * _jTextFiled_: `textNama`
    * _jComboBox_: `comboJenis`
-     * model: _ATK, Buku, Snack_
+     * Property:
+       * model: _ATK, Buku, Snack_
    * _jTextField_: `textHarga`
-     * horizontalAlignment: _RIGHT_
+     * Property:
+       * horizontalAlignment: _RIGHT_
    * Buat label untuk masing-masing objek diatas: _Kode, Nama, Jenis, Harga_
    * _jButton_: `tombolBatal`
-     ```java
-     setVisible(false);
-     ```  
+     * on action perform:
+        ```java
+        setVisible(false);
+        ```  
    * _jButton_: `tombolTambah`
-     ```java
-     Connection conn;
-     try {
-         // below two lines are used for connectivity.
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root", "");
-         
-         // baca data
-         String kode = textKode.getText();
-         String nama = textNama.getText();
-         String jenis = comboJenis.getSelectedItem().toString();
-         int harga = Integer.parseInt(textHarga.getText());
-         
-         // SQL
-         String sql = "insert into barang (kode, nama, jenis, harga) values (?,?,?,?)";
-         
-         // siapkan statement untuk INSERT
-         PreparedStatement pst = conn.prepareStatement(sql);
-         pst.setString(1, kode);
-         pst.setString(2, nama);
-         pst.setString(3, jenis);
-         pst.setInt(4, harga);
-         
-         // eksekusi SQL
-         pst.execute(); 
-         
-         // hapus objek 
-         pst.close();
-         conn.close();
-         
-         // tampilkan pesan
-         JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
-     } catch(Exception e) {
-         JOptionPane.showMessageDialog(null,e.getMessage().toString());
-     } 
-     ```
+     * on action perform:
+        ```java
+        Connection conn;
+        try {
+            // below two lines are used for connectivity.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root", "");
+            
+            // baca data
+            String kode = textKode.getText();
+            String nama = textNama.getText();
+            String jenis = comboJenis.getSelectedItem().toString();
+            int harga = Integer.parseInt(textHarga.getText());
+            
+            // SQL
+            String sql = "insert into barang (kode, nama, jenis, harga) values (?,?,?,?)";
+            
+            // siapkan statement untuk INSERT
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, kode);
+            pst.setString(2, nama);
+            pst.setString(3, jenis);
+            pst.setInt(4, harga);
+            
+            // eksekusi SQL
+            pst.execute(); 
+            
+            // hapus objek 
+            pst.close();
+            conn.close();
+            
+            // tampilkan pesan
+            JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+        } catch(Exception e) {
+            JOptionPane.showMessageDialog(null,e.getMessage().toString());
+        } 
+        ```
 2. Edit `FormBarang`
+   * on window opened:
+        ```java
+        tombolReload.doClick();
+        ```
    * _jButton_: `tombolTambah`
-     ```java
-     FormDetailBarang f = new FormDetailBarang();
-     f.setVisible(true);
-     ```
+     * on action perform:
+        ```java
+        FormDetailBarang f = new FormDetailBarang();
+        f.setVisible(true);
+        ```
    * _jTable_: `tabelBarang`
-     * Event: _mouseClicked_
+     * on _mouseClicked_:
        ```java
        // membaca nomor baris yang diklik
        Point p = evt.getPoint();

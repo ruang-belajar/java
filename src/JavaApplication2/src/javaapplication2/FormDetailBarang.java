@@ -42,7 +42,7 @@ public class FormDetailBarang extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         textKode = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        tombolSimpan = new javax.swing.JButton();
+        tombolTambah = new javax.swing.JButton();
         tombolBatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,10 +57,10 @@ public class FormDetailBarang extends javax.swing.JFrame {
 
         jLabel4.setText("Kode");
 
-        tombolSimpan.setText("Simpan");
-        tombolSimpan.addActionListener(new java.awt.event.ActionListener() {
+        tombolTambah.setText("Tambah");
+        tombolTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tombolSimpanActionPerformed(evt);
+                tombolTambahActionPerformed(evt);
             }
         });
 
@@ -80,7 +80,7 @@ public class FormDetailBarang extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(tombolSimpan)
+                        .addComponent(tombolTambah)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tombolBatal))
                     .addGroup(layout.createSequentialGroup()
@@ -96,11 +96,11 @@ public class FormDetailBarang extends javax.swing.JFrame {
                                 .addComponent(textNama, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
                                 .addComponent(textKode, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(textHarga, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 134, Short.MAX_VALUE)))
+                        .addGap(0, 98, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {tombolBatal, tombolSimpan});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {tombolBatal, tombolTambah});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +123,7 @@ public class FormDetailBarang extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tombolSimpan)
+                    .addComponent(tombolTambah)
                     .addComponent(tombolBatal))
                 .addContainerGap())
         );
@@ -137,7 +137,7 @@ public class FormDetailBarang extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_tombolBatalActionPerformed
 
-    private void tombolSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolSimpanActionPerformed
+    private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTambahActionPerformed
         Connection conn;
         try {
             // below two lines are used for connectivity.
@@ -174,7 +174,7 @@ public class FormDetailBarang extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,e.getMessage().toString());
         } 
         
-    }//GEN-LAST:event_tombolSimpanActionPerformed
+    }//GEN-LAST:event_tombolTambahActionPerformed
 
     public void baca(String kode) {
         Connection conn;
@@ -255,6 +255,6 @@ public class FormDetailBarang extends javax.swing.JFrame {
     private javax.swing.JTextField textKode;
     private javax.swing.JTextField textNama;
     private javax.swing.JButton tombolBatal;
-    private javax.swing.JButton tombolSimpan;
+    private javax.swing.JButton tombolTambah;
     // End of variables declaration//GEN-END:variables
 }

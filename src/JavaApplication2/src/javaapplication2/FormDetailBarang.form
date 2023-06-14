@@ -28,7 +28,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="tombolSimpan" linkSize="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="tombolTambah" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tombolBatal" linkSize="1" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -48,7 +48,7 @@
                           </Group>
                           <Component id="textHarga" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="134" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="98" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -80,7 +80,7 @@
               </Group>
               <EmptySpace pref="37" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tombolSimpan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tombolTambah" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tombolBatal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -132,12 +132,12 @@
         <Property name="text" type="java.lang.String" value="Kode"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="tombolSimpan">
+    <Component class="javax.swing.JButton" name="tombolTambah">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Simpan"/>
+        <Property name="text" type="java.lang.String" value="Tambah"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombolSimpanActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombolTambahActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="tombolBatal">
