@@ -27,7 +27,7 @@
   * _jTable_: `tabelBarang`
     * Kolom: _Kode (String)_, _Nama (String)_
   * _jButton_: `tombolSelesai`
-    * on action perform:
+    * Event on action perform:
         ```java
         setVisible(false);
         ```
@@ -82,12 +82,12 @@
        * horizontalAlignment: _RIGHT_
    * Buat label untuk masing-masing objek diatas: _Kode, Nama, Jenis, Harga_
    * _jButton_: `tombolBatal`
-     * on action perform:
+     * Event on action perform:
         ```java
         setVisible(false);
         ```  
    * _jButton_: `tombolTambah`
-     * on action perform:
+     * Event on action perform:
         ```java
         Connection conn;
         try {
@@ -130,13 +130,13 @@
         tombolReload.doClick();
         ```
    * _jButton_: `tombolTambah`
-     * on action perform:
+     * Event on action perform:
         ```java
         FormDetailBarang f = new FormDetailBarang();
         f.setVisible(true);
         ```
    * _jTable_: `tabelBarang`
-     * on _mouseClicked_:
+     * Event on _mouseClicked_:
        ```java
        // membaca nomor baris yang diklik
        Point p = evt.getPoint();
