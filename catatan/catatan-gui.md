@@ -221,7 +221,7 @@
                 JOptionPane.showMessageDialog(null,e.getMessage().toString());
             } 
             ```
-    *   Tambahkan fungsi
+    *   Tambahkan fungsi ke source `FormDetailBarang`
         ```java
         public void baca(String kode) {
             tombolUpdate.setVisible(true);
@@ -261,7 +261,7 @@
     
 5.  Edit `FormBarang`
     *   _jTable_: `tabelBarang`
-        *    Edit event on _mouseClicked_:
+        *   Edit event on _mouseClicked_:
             ```java
             // membaca nomor baris yang diklik
             Point p = evt.getPoint();
