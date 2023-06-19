@@ -148,3 +148,135 @@
        // tampilkan kode
        JOptionPane.showMessageDialog(null, kode);
        ```
+
+## Pertemuan 9
+1.  Buat file class _Global_ (ganti kata _Global_ jadi _nama Anda_), kode:
+    ```java
+    package TokoBuku;
+
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+
+    public class Global { // Ganti 'Global' jadi nama Anda
+        public static final String NAMA = "En Tay";  // ganti jadi nama Anda
+        public static final String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+        public static final String DBCONNECTION = "jdbc:mysql://localhost:3306/tokobuku"; // sesuaikan
+        public static final String DBUSER = "root"; // sesuaikan
+        public static final String DBPASS = ""; // sesuaikan
+        
+        // fungsi untuk menyederhanakan perintah untuk koneksi ke database.
+        // perintah:
+        //      Connection conn;
+        //      Class.forName(DBDRIVER);
+        //      conn = DriverManager.getConnection(DBCONNECTION,DBUSER,DBPASS);
+        // menjadi:
+        //      Connection conn;
+        //      conn = Global.db();
+        public static Connection db() {
+            try {
+                Class.forName(DBDRIVER);
+                return DriverManager.getConnection(DBCONNECTION,DBUSER,DBPASS);
+            }catch(Exception e) {
+                return null;
+            }
+        }
+
+    }
+
+    ```
+4.  Edit `FormDetailBarang`
+    *   buat _jButton_: `tombolUpdate`
+        *   event on _action perform_:
+            ```java
+            Connection conn;
+            try {                
+                conn = Global.db();
+                
+                // baca data
+                String kode = textKode.getText();
+                String nama = textNama.getText();
+                String jenis = comboJenis.getSelectedItem().toString();
+                int harga = Integer.parseInt(textHarga.getText());
+                
+                // SQL
+                String sql = "update barang set nama=?, jenis=?, harga=? where kode=?";
+                
+                // siapkan statement untuk INSERT
+                PreparedStatement pst = conn.prepareStatement(sql);
+                pst.setString(1, nama);
+                pst.setString(2, jenis);
+                pst.setInt(3, harga);
+                pst.setString(4, kode);
+                
+                // eksekusi SQL
+                pst.execute(); 
+                
+                // hapus objek 
+                pst.close();
+                conn.close();
+                
+                // tampilkan pesan
+                JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+            } catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e.getMessage().toString());
+            } 
+            ```
+    *   Tambahkan fungsi
+        ```java
+        public void baca(String kode) {
+            tombolUpdate.setVisible(true);
+            tombolTambah.setVisible(false);
+            Connection conn;
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/tokobuku","root", "");
+
+                Statement st;
+                st = conn.createStatement();
+                ResultSet rs;
+                rs = st.executeQuery("select * from barang where kode='"+kode+"'");
+                if(rs.next()) {
+                    textKode.setText(rs.getString("kode"));
+                    textNama.setText(rs.getString("nama"));
+                }
+                st.close();
+                rs.close();
+                conn.close();
+            } catch(Exception e) {
+                JOptionPane.showMessageDialog(null,"gagal baca");
+            } 
+        }    
+
+        public void baru() {
+            textKode.setText("");
+            textNama.setText("");
+            comboJenis.setSelectedIndex(0);
+            textHarga.setText("0");
+            setVisible(true);
+            
+            tombolUpdate.setVisible(false);
+            tombolTambah.setVisible(true);
+        }    
+        ```
+    
+5.  Edit `FormBarang`
+    *   _jTable_: `tabelBarang`
+        *    Edit event on _mouseClicked_:
+            ```java
+            // membaca nomor baris yang diklik
+            Point p = evt.getPoint();
+            int row = tabelBarang.rowAtPoint(p);
+                
+            // ambil kode barang dari baris yang di klik
+            String kode = tabelBarang.getModel().getValueAt(row, 0).toString();
+                
+            // panggil fungsi kode di FormDetailBarang
+            FormDetailBarang f = new FormDetailBarang();
+            f.baca(kode);
+            ```
+        *   _jButton_: `tombolTambah`
+            *   Edit event on _action perform_:
+                ```java
+                FormDetailBarang f = new FormBarangDetail();
+                f.baru();
+                ```
