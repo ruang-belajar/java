@@ -2,21 +2,24 @@
 ## Pertemuan 6
 *   Buat project baru: `TokoBuku`
 *   Buat _jFrame_: `FormUtama`
-*   Buat _Menu Bar_:
-    *   File
-        *   Master
-            *   Barang
-    *   Exit
-        *   on action perform:
-            ```java
-            System.exit(0);
-            ```
-    *   Help
-        *   About
+    *   Buat _Menu Bar_, lakukan _Change Variabel Name_ untuk masing-masing _menu item_.     
+        *   File
+            *   Master
+                *   Barang
+        *   Exit
             *   on action perform:
                 ```java
-                JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
+                System.exit(0);
                 ```
+        *   Help
+            *   About
+                *   on action perform:
+                    ```java
+                    JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
+                    ```
+
+        ![](images/6-formutama-1.jpg)
+
 *   Program utama (_void main_), tambahkan:
     ```java
     new FormUtama().setVisible(true);
@@ -199,7 +202,9 @@
             ```java
             Connection conn;
             try {                
-                conn = Global.db();
+                // pada bagian ini kita menggunakan Global.db(), untuk menggantikan perintah:
+                // Class.forName dan DriverManager.getConnection
+                conn = Global.db();  // ingat, ganti kata Global dengan nama Anda.
                 
                 // baca data
                 String kode = textKode.getText();
@@ -244,6 +249,7 @@
                 st = conn.createStatement();
                 ResultSet rs;
                 rs = st.executeQuery("select * from barang where kode='"+kode+"'");
+
                 if(rs.next()) {
                     textKode.setText(rs.getString("kode"));
                     textNama.setText(rs.getString("nama"));
