@@ -1,17 +1,26 @@
 # 2023 Kelas Pemrograman Java: Catatan
 ## Pertemuan 6
-* Buat _jFrame_: `FormUtama`
-* Buat _Menu Bar_:
-  * File
-    * Master
-      * Barang
-    * Exit: Menutup Program
-  * Help
-    * About: Menampilkan Message Dialog dengan pesan _Dibuat oleh [nama]_.
-* Menampilkan _Message Dialog_:
-  ```java
-  JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
-  ```
+*   Buat project baru: `TokoBuku`
+*   Buat _jFrame_: `FormUtama`
+*   Buat _Menu Bar_:
+    *   File
+        *   Master
+            *   Barang
+    *   Exit
+        *   on action perform:
+            ```java
+            System.exit(0);
+            ```
+    *   Help
+        *   About
+            *   on action perform:
+                ```java
+                JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
+                ```
+*   Program utama (_void main_), tambahkan:
+    ```java
+    new FormUtama().setVisible(true);
+    ```
 
 ## Pertemuan 7
 * Download & restore database [tokobuku.sql](https://github.com/pujangga123/ruang-belajar-java/raw/main/src/tokobuku.sql)
