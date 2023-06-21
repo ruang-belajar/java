@@ -260,6 +260,7 @@
             } catch(Exception e) {
                 JOptionPane.showMessageDialog(null,"gagal baca");
             } 
+            setVisible(true);
         }    
 
         public void baru() {
