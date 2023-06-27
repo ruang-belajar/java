@@ -296,3 +296,90 @@
                 FormDetailBarang f = new FormBarangDetail();
                 f.baru();
                 ```
+
+## Pertemuan 10
+1.  Tambahkan _jMenu_:`menuTransaksi`
+2.  _jMenuItem_:`menuTransaksiInput`
+   *    on action perform:
+        ```java
+        new FormTransaksi().setVisible(true);
+        ```
+    ![](images/10-formutama.jpg)
+3.  Buat _jFrame_: `FormTransaksi`
+    
+    ![](images/10-formtransaksi.jpg)
+    
+    | komponen / label | class | variable name |
+    | --- | --- | --- | 
+    | Tanggal | jTextField | textTanggal |
+    | Kode Konsumen | jTextField | textKodeKonsumen |
+    | Tabel Detail | jTable | tabelDetail |
+    | Kode | jTextField | textKode |
+    | Qty | jTextField | textQty |
+    | Diskon | jTextField | textDiskon |
+    | Tambah | jButton | tombolTambah |
+    | Total | jTextField | textTotal |
+    | Simpan | jButton | tombolSimpan |
+
+    *   edit _Table Contents_ untuk `tabelDetail`, set _Title_ dan _Type_ untuk masing-masing kolom.
+
+        ![](images/10-formtransaksi-tabeldetail.jpg)
+
+        Pada tab _Rows_, set Count menjadi `0`
+
+        ![](images/10-formtransaksi-tabeldetail-row.jpg)
+
+    *   siapkan _import_ yang diperlukan
+        ```java
+        import java.sql.*;
+        import javax.swing.JOptionPane;
+        import javax.swing.table.DefaultTableModel;
+        ```
+        
+4.  tambahkan fungsi `totalHitung()` di `FormTransaksi`
+    ```java
+    public void totalHitung() {
+        
+        int total = 0;
+        for(int n=0; n<tabelDetail.getModel().getRowCount(); n++) {
+            total += (int)tabelDetail.getModel().getValueAt(n,5);
+        }
+        textTotal.setText(Integer.toString(total));
+    }
+    ```
+    cara menambahkan fungsi ini sama dengan cara menambahkan fungsi `baca()` pada `FormDetailBarang`
+
+5.  edit `tombolTambah`
+    *   on action perform
+        ```java
+        DefaultTableModel model = (DefaultTableModel)tabelDetail.getModel();
+        Connection conn;
+        
+        try {
+            String kode = textKodeBarang.getText();
+
+            conn = Global.db();   // ganti "Global" sesuai dengan nama Anda, (class sesuai nama Anda)
+                                  // lihat _Pertemuan 9_ poin 1
+            PreparedStatement pst = conn.prepareStatement("select * from barang where kode=?");
+            pst.setString(1, kode);
+            
+            ResultSet rs;
+            rs = pst.executeQuery();  
+            
+            if(rs.next()) {
+                String nama = rs.getString("nama");
+                int harga = rs.getInt("harga");
+                int qty = Integer.valueOf(textQty.getText());
+                int diskon = Integer.valueOf(textDiskon.getText());
+                int subtotal = (harga * qty) - diskon;
+                model.addRow(new Object[]{kode, nama, harga, qty, diskon, subtotal });
+                totalHitung();
+            }
+        
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,e.getMessage().toString()); // opsionals
+        }
+        ```
+
+
+    
