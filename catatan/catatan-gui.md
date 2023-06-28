@@ -304,7 +304,9 @@
         ```java
         new FormTransaksi().setVisible(true);
         ```
-    ![](images/10-formutama.jpg)
+
+        ![](images/10-formutama.jpg)
+
 3.  Buat _jFrame_: `FormTransaksi`
     
     ![](images/10-formtransaksi.jpg)
@@ -349,7 +351,7 @@
     ```
     cara menambahkan fungsi ini sama dengan cara menambahkan fungsi `baca()` pada `FormDetailBarang`
 
-5.  edit `tombolTambah`
+5.  edit `tombolTambah` di `FormTransaksi`
     *   on action perform
         ```java
         DefaultTableModel model = (DefaultTableModel)tabelDetail.getModel();
