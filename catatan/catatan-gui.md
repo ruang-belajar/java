@@ -361,7 +361,7 @@
             String kode = textKodeBarang.getText();
 
             conn = Global.db();   // ganti "Global" sesuai dengan nama Anda, (class sesuai nama Anda)
-                                  // lihat _Pertemuan 9_ poin 1
+                                  // lihat Pertemuan 9 poin 1
             PreparedStatement pst = conn.prepareStatement("select * from barang where kode=?");
             pst.setString(1, kode);
             
@@ -383,5 +383,62 @@
         }
         ```
 
-
-    
+## Pertemuan 11
+1.  Pada `FormTransaksi`, edit `tombolSimpan`
+    *   on action perform:
+        ```java
+        Connection conn;
+        try {
+            conn = Global.db();  // ganti "Global" sesuai dengan nama Anda, (class sesuai nama Anda)
+                                 // lihat Pertemuan 9 poin 1
+            
+            String tanggal = textTanggal.getText(); // tanggal hanya ditulis dalam format yyyy-mm-dd
+            String konsumenId = textKodeKonsumen.getText();
+                                   
+            // SQL untuk input ke tabel jualmaster
+            String sql = "insert into jualmaster (tanggal, konsumenId) values (?,?)";
+            
+            // siapkan statement untuk INSERT
+            PreparedStatement pst = conn.prepareStatement(sql,  Statement.RETURN_GENERATED_KEYS);
+            pst.setString(1, tanggal);
+            pst.setString(2, konsumenId);
+            
+            // baca ID AUTO INCREMENT yang terakhir dibuat
+            pst.execute(); 
+            ResultSet rs = pst.getGeneratedKeys();
+            rs.next();
+            int id = rs.getInt(1);
+            
+            sql = "insert into jualdetail (jualNomor, barangKode, qty, harga, diskon) values (?,?,?,?,?)";
+            pst = conn.prepareStatement(sql);
+            int row=0;
+            while(row<tabelDetail.getModel().getRowCount()){
+                String kode = tabelDetail.getModel().getValueAt(row, 0).toString();
+                int harga = (int)tabelDetail.getModel().getValueAt(row, 2);
+                int qty = (int)tabelDetail.getModel().getValueAt(row, 3);
+                int diskon = (int)tabelDetail.getModel().getValueAt(row, 4);
+                
+                pst.setInt(1,id);
+                pst.setString(2, kode);
+                pst.setInt(3, qty);
+                pst.setInt(4, harga);
+                pst.setInt(5,diskon);
+                pst.execute();
+                row++;
+            }
+            
+            // hapus objek 
+            pst.close();
+            conn.close();
+            
+            // tampilkan pesan
+            JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
+        } catch(Exception e) {
+            //JOptionPane.showMessageDialog(null,e.getMessage().toString());
+            JOptionPane.showMessageDialog(null,e.getMessage().toString());
+        }
+        ```
+2.  Tambahkan beberapa fitur berikut pada `FormTransaksi`
+    *   Setelah klik memasukan data ke `tabelDetail` lewat `tombolTambah`, kosongkan _kode barang, qty dan diskon_.
+    *   Buat tampilan angka pada _textTotal_ rata kanan.
+    *   Tambahkan validasi pada `tombolTambah` _on action perform_: Jika _kode, qty_ atau _diskon_ kosong, maka hentikan proses, tampilkan pesan: _Kode, Qty dan Diskon harus diisi_.
