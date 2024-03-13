@@ -26,7 +26,7 @@
     ```
 
 ## Pertemuan 7
-* Download & restore database [tokobuku.sql](https://github.com/pujangga123/ruang-belajar-java/raw/main/src/tokobuku.sql)
+* Download & restore database [tokobuku.sql](https://github.com/ruang-belajar/java/raw/main/src/tokobuku.sql)
 * Setup _Mysql Connector J_ (lihat [Java - Koneksi ke Database](https://pujangga123.github.io/ruang-belajar-java/22-koneksi-database.html))
 * Menu _File - Master - Barang_: Menampilkan `FormBarang`
 * Buat _jFrame_: `FormBarang`

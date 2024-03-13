@@ -25,9 +25,9 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 18. [Java - Koneksi ke Database](22-koneksi-database.md)
 
 ---
-[**✍ Catatan Kuliah**](https://github.com/pujangga123/ruang-belajar-java/blob/main/catatan/catatan-gui.md)
+[**✍ Catatan Kuliah**](https://github.com/ruang-belajar/java/blob/main/catatan/catatan.md)
 
-[**📑 Folder latihan @ Github**](https://github.com/pujangga123/ruang-belajar-java/tree/main/docs/latihan)
+[**📑 Folder latihan @ Github**](https://github.com/ruang-belajar/java/tree/main/docs/latihan)
 
 ---
 
