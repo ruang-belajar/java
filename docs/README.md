@@ -12,7 +12,7 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 4. [Standard Input & Output](04-input-output.md)
 5. [Tipe Data](05-tipe-data.md)
 6. [Operator](06-operator.md)
-7. [Pengambilan Keputusan](07-pengabilan-keputusan.md)
+7. [Pengambilan Keputusan](07-pengambilan-keputusan.md)
 8. [Pengulangan (Loop)](08-pengulangan.md)
 9.  [Prosedur dan Fungsi](09-fungsi.md)
 10. [Array](10-array.md)
