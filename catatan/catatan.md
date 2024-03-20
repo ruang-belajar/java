@@ -20,3 +20,17 @@
 ## Pertemuan 3
 - IF
 - Looping
+
+## Pertemuan 4
+- Java Standard Class
+
+## Pertemuan 5
+
+## Pertemuan 6
+
+## Pertemuan 7
+
+## Pertemuan 8
+**UTS**
+
+## Pertemuan 9
