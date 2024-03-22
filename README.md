@@ -2,6 +2,6 @@
 
 Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
 
-<p align="center">
-  <a href="docs/README.md"><b>📚  MULAI BELAJAR 📚 </b></a>
-</p>
+1. [Modul Belajar](docs/)
+2. [Catatan Kuliah](catatan/)
+3. [Folder contoh program](src/) 
