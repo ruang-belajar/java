@@ -10,8 +10,24 @@
     - https://www.apache.org/dyn/closer.lua/netbeans/netbeans-installers/21/Apache-NetBeans-21-bin-windows-x64.exe 
   - Akun Github + Github Desktop
     - https://github.com
-- Program "Hello World"
-- Tugas 1:
+- Dasar yang dipelajari ketika mempelajari program baru:
+  - penggunaan variabel
+  - operasi aritmatika
+  - input output
+  - IF
+  - LOOPING
+  - Fungsi standar
+  - Fungsi buatan
+- Istilah penting:
+  - Java Runtime --> supaya kita bisa menjalankan program yang dibuat.
+  - Java EE --> untuk membuat web menggunakan java
+  - JDK --> _Java Development Kit_ --> supaya kita bisa membuat program java 
+  - Java SE --> untuk membuat program di desktop/windows
+- Github, menyediakan layanan _Source Code Management_.
+  1. Backup
+  2. Version Management
+  3. Team work
+- **Tugas 1:**
   Pelajari bab [Syntax](../docs/03-syntax.md) dan [Standard Input & Output](../docs/04-input-output.md), kemudian buat program yang  meminta input _nama_ dan _nilai_. Jika _nilai_ > 60 maka tampilkan informasi "lulus", _nilai_ <=60, tampilkan informasi "tidak lulus"\
     contoh 1:
     ```
@@ -55,43 +71,3 @@
 ## Pertemuan 9
 
 
-===========================================
-
-penggunaan variabel
-int a = 1;
-
-operasi aritmatika
-a = 3 + b;
-
-input output
-cout << "Halo";
-
-IF
-if(x>0) {
-}
-
-LOOPING
-Fungsi standar
-Fungsi buatan
-
-=====================================
-
-Java Runtime --> supaya kita bisa menjalankan program yang dibuat.
-Java EE --> untuk membuat web menggunakan java
-
-JDK --> Java Development Kit --> supaya kita bisa membuat program java 
-Java SE --> untuk membuat program di desktop/windows
-
-JDK -->
-Java SE --> kumpulan modul untuk membuat aplikasi windows
-Java EE --> kumpulan modul untuk membuat web java
-
-Java Runtime: program untuk menjalankan file java (yang kita buat)
-Untuk ngetik program, IDE:
-Notepad, Notepad++, VC Code, Eclipse, InteliJ, Netbeans.
-
-
-Github, menyediakan layanan Source Code Management.R
-1. Backup
-2. Version Management
-3. Team work
