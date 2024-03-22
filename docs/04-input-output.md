@@ -72,24 +72,17 @@ public class DataKaryawan {
 
 Perlu diperhatikan, penggunakan fungsi untuk mengambil data bergantung dari tipe data yang digunakan.
 
-Misal, tipe datanya adalah _String_, maka fungsi atau method yang dipakai adalah `nextLine()`.
+Misal, tipe datanya adalah _String_, maka fungsi atau method yang dipakai adalah `nextLine()`. Begitu juga dengan tipe data lain, Integer menggunakan `nextInt()`, Double menggunakan `nextDouble()`.
 
-Begitu juga dengan tipe data lain, Integer menggunakan `nextInt()`, Double menggunakan n`extDouble()`, dsb.
+Khusus untuk `nextLine()`, input menggunakan method ini tidak bisa menerima data dengan spasi. Ini salah satu keterbatasan/ketentuan dari perintah `nextLine()`. Jika perlu membaca input text dengan spasi, kita bisa menggunakan class `BufferReader` atau `Console`.
 
 ### 2. Class BufferReader
 
-Class `BufferReader` sebenarnya tidak hanya untuk mengambil input dari keyboard saja.
+Untuk membaca input dari keyboard, class `BufferReader` perlu bekerja perpasangan dengan class `InputStreamReader` dan class `IOException`.
 
-Class ini juga dapat digunakan untuk membaca input dari file dan jaringan.
+Class ini terletak di dalam paket `java.io`. Dengan demikian, kita perlu import class `BufferReader`.
 
-Class ini terletak di dalam paket `java.io`.
-
-Silahkan diimpor untuk dapat menggunakan class `BufferReader`.
-```java
-import java.io.BufferedReader;
-```
-
-Cobalah siapkan program berikut:
+Cobalah program berikut:
 
 ```java
 
@@ -118,28 +111,22 @@ public class ContohBufferReader {
     }
 }
 ```
-Ternyata class `BufferReader` tidak bisa bekerja sendirian. Dia juga butuh teman yaitu: class `InputStreamReader` dan class `IOException`.
 
-Sekarang mari kita coba jalankan programnya:
+Output:
 
 ```
 Inputkan nama: Budi Raharjo
 Nama kamu adalah Budi Raharjo
 ```
+
+Class `BufferReader` sebenarnya tidak hanya untuk mengambil input dari keyboard saja. Class ini juga dapat digunakan untuk membaca input dari file dan jaringan.
+
+
 ### 3. Class Console
 
 Class `Console` hampir sama dengan `BufferReader`. Dia juga menggunakan fungsi `readLine()` untuk mengambil input. Hanya saja, class ini hanya bisa digunakan di lingkungan console saja, seperti Terminal dan CMD.
 
-Class Console tidak bisa digunakan langsung di Netbeans.
-
-Maka dari itu, kita harus kompilasi secara manual.
-
-Untuk menggunakan class ini, kita perlu mengimpornya terlebih dahulu.
-```java
-import java.io.Console;
-```
-
-Cobalah siapkan program berikut:
+Cobalah program berikut:
 
 ```java
 import java.io.Console;

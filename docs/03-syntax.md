@@ -1,14 +1,6 @@
-Setiap bahasa pemrograman memiliki struktur dan aturan penulisan sintaks yang berbeda-beda.
+Setiap bahasa pemrograman memiliki struktur dan aturan penulisan sintaks yang berbeda-beda. Java merupakan bahasa pemrograman yang dikembangkan dari bahasa C dan tentunya akan banyak mengikuti gaya penulisan C.
 
-Java merupakan bahasa pemrograman yang dikembangkan dari bahasa C dan tentunya akan banyak mengikuti gaya penulisan C.
-
-Saat baru pertama kali melihat program Java, mungkin kamu akan bertanya-tanya.
-
-Ini apa? itu apa?
-
-Contoh:
-
-Coba perhatikan program berikut:
+Contoh, coba perhatikan program berikut:
 
 ```java
 package com.ruangbelajar.java;
@@ -86,16 +78,14 @@ Contoh impor library:
 import java.util.Scanner;
 ```
 
-Pada contoh tersebut, kita mengimpor class Scanner dari package java.util.
+Pada contoh tersebut, kita mengimpor class `Scanner` dari package `java.util`.
 
 ### 3. Bagian Class
 Java merupakan bahasa pemrograman yang menggunakan paradigma OOP (Object Oriented Programming).
 
-Setiap program harus dibungkus di dalam class agar nanti bisa dibuat menjadi objek.
+Setiap program harus dibungkus di dalam _class_ agar nanti bisa dibuat menjadi objek.
 
-Kalau kamu belum paham apa itu OOP?
-
-Cukup pahami class sebagai deklarasi nama program.
+Kalau kamu belum paham apa itu OOP, cukup pahami class sebagai deklarasi nama program.
 
 ```java
 class HelloWorld {
@@ -325,9 +315,7 @@ Untuk penulisan dua suku kata atau lebih, ALL UPPER dipisah dengan garus bawah a
 
 Apakah boleh saya menulis sembarangan?
 
-Misal untuk nama class menggunakan ALL UPPER?
-
-Boleh-boleh saja, programnya tidak akan error. Tetapi kode program yang kamu tulis akan terlihat kotor dan keluar dari garis pandu yang sudah ditetapkan.
+Misal untuk nama class menggunakan ALL UPPER? Tentu boleh, programnya tidak akan error. Tetapi kode program yang kamu tulis akan terlihat _kotor_ dan keluar dari garis pandu yang sudah ditetapkan.
 
 ---
 **Referensi:**

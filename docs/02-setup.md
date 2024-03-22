@@ -1,28 +1,17 @@
 # Instalasi dan Setup
+Berikut beberapa program yang perlu dipersiapkan yang akan digunakan dalam perkuliahan.
 
 ## Download
-### JDK
-- https://www.oracle.com/id/java/technologies/downloads/
+- [JDK](https://www.oracle.com/id/java/technologies/downloads/)
+- [Netbean](https://netbeans.apache.org/download/index.html)
+- [Github Desktop](https://desktop.github.com/)
 
-### IDE
-
-**Netbean**
-_Netbean_ adalah IDE yang cukup populer digunakan untuk pemrograman _Java_.
-- https://netbeans.apache.org/download/index.html
-
-**Eclipse**
-_Eclipse_ adalah IDE alternatif digunakan untuk pemrograman _Java_.
-- https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers
-
-**Notepad++**
-_Notepad++_ adalah editor sederhana yang biasa digunakan untuk program-program Java yang relatif sederhana.
-- https://notepad-plus-plus.org/downloads/
-
-
-## Online
-- https://www.programiz.com/java-programming/online-compiler/
-- https://www.online-java.com/
-- https://www.tutorialspoint.com/online_java_compiler.php
+## Online Service
+- Online Compiler:
+  - https://www.programiz.com/java-programming/online-compiler/
+  - https://www.online-java.com/
+  - https://www.tutorialspoint.com/online_java_compiler.php
+- [Github](https://github.com): Buat akun github untuk pengiriman tugas.
 
 ## Menjalankan Program Java Pertama Anda
 
@@ -55,7 +44,7 @@ Hello, World!
 
 Beberapa project Java yang dibuat menggunakan editor seperti (misalnya) _Netbean_ atau _Eclipse_ menggunakan folder untuk mengelompokan file-filenya. Tentu project ini lebih mudah untuk dijalankan menggunakan IDE sesuai yang digunakan oleh programmer, tapi ada kalanya kita juga perlu melakukan kompilasi lewat CLI.
 
-Sebagai contoh, download dan extract project berikut: https://github.com/hexadeciman/Snake/archive/refs/heads/master.zip
+Sebagai contoh, download dan extract project berikut: https://github.com/hexadeciman/Snake/archive/refs/heads/master.zip atau lewat https://github.com/hexadeciman/Snake/
 
 Setelah Anda extract file tersebut, Anda akan mendapati bahwa file _.java_ pada project tersebut terdiri lebih dari berapa file dan disimpan dalam folder _src_, dan bagian program utamanya (file yang menyimpan `void main`), adalah `Main.java`.
 
