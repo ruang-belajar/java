@@ -53,3 +53,45 @@
 **UTS**
 
 ## Pertemuan 9
+
+
+===========================================
+
+penggunaan variabel
+int a = 1;
+
+operasi aritmatika
+a = 3 + b;
+
+input output
+cout << "Halo";
+
+IF
+if(x>0) {
+}
+
+LOOPING
+Fungsi standar
+Fungsi buatan
+
+=====================================
+
+Java Runtime --> supaya kita bisa menjalankan program yang dibuat.
+Java EE --> untuk membuat web menggunakan java
+
+JDK --> Java Development Kit --> supaya kita bisa membuat program java 
+Java SE --> untuk membuat program di desktop/windows
+
+JDK -->
+Java SE --> kumpulan modul untuk membuat aplikasi windows
+Java EE --> kumpulan modul untuk membuat web java
+
+Java Runtime: program untuk menjalankan file java (yang kita buat)
+Untuk ngetik program, IDE:
+Notepad, Notepad++, VC Code, Eclipse, InteliJ, Netbeans.
+
+
+Github, menyediakan layanan Source Code Management.R
+1. Backup
+2. Version Management
+3. Team work
