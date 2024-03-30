@@ -44,14 +44,17 @@
     Untuk membaca input, gunakan class `Scanner` dan `BufferReader`, buat menjadi 2 file terpisah.
 
 ## Pertemuan 2
-- Program sederhana
-- Input & Output
-- Variable
-- Class & Object
+- Buat akun Github + install Github Desktop
+- Review Tugas: Input & Output
+- Variable, Class & Object
+- Naming Convension (aturan penamaan objek)
+  - variabel, object: camelCase
+  - Class, tipe data: PascalCase
+  - constant: UPPERCASE
 - IF
+- Program sederhana
 
 ## Pertemuan 3
-- Github
 - IF
 - Looping
 
