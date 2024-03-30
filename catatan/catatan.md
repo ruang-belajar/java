@@ -41,15 +41,15 @@
     Nilai: 40
     Halo Budi, kamu TIDAK LULUS
     ```
-    Untuk membaca input, gunakan class `Scanner` dan `BufferReader`, buat menjadi 2 file terpisah.
+    Untuk membaca input, gunakan class `Scanner`, simpan dan kirim menggunakan nama `ProgramScanner.java`.
 
 ## Pertemuan 2
 - Buat akun Github + install Github Desktop
 - Review Tugas: Input & Output
 - Variable, Class & Object
 - Naming Convension (aturan penamaan objek)
-  - variabel, object: camelCase
-  - Class, tipe data: PascalCase
+  - variabel, object, method: camelCase
+  - Class: PascalCase
   - constant: UPPERCASE
 - IF
 - Program sederhana
