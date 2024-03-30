@@ -45,13 +45,13 @@
 
 ## Pertemuan 2
 - Buat akun Github + install Github Desktop
-- Review Tugas: Input & Output
-- Variable, Class & Object
+- Review Tugas: [Input & Output](../docs/04-input-output.md)
+- [Variable](../docs/05-tipe-data.md), [Operasi data](../docs/06-operator.md), Class & Object
 - Naming Convension (aturan penamaan objek)
-  - variabel, object, method: camelCase
-  - Class: PascalCase
-  - constant: UPPERCASE
-- IF
+  - variabel, object, method: _camelCase_
+  - Class: _PascalCase_
+  - constant: _UPPERCASE_
+- [IF](../docs/07-pengambilan-keputusan.md)
 - Program sederhana
 
 ## Pertemuan 3
