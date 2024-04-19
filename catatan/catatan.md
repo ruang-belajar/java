@@ -41,14 +41,18 @@
     Nilai: 40
     Halo Budi, kamu TIDAK LULUS
     ```
-    Untuk membaca input, gunakan class `Scanner` dan `BufferReader`, buat menjadi 2 file terpisah.
+    Untuk membaca input, gunakan class `Scanner`, simpan dan kirim menggunakan nama `ProgramScanner.java`.
 
 ## Pertemuan 2
+- Buat akun Github + install Github Desktop
+- Review Tugas: [Input & Output](../docs/04-input-output.md)
+- [Variable](../docs/05-tipe-data.md), [Operasi data](../docs/06-operator.md), Class & Object
+- Naming Convension (aturan penamaan objek)
+  - variabel, object, method: _camelCase_
+  - Class: _PascalCase_
+  - constant: _UPPERCASE_
+- [IF](../docs/07-pengambilan-keputusan.md)
 - Program sederhana
-- Input & Output
-- Variable
-- Class & Object
-- IF
 
 ## Pertemuan 3
 - Setup Visual Studio Code (VSC)
