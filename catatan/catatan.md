@@ -51,9 +51,16 @@
 - IF
 
 ## Pertemuan 3
-- Github
-- IF
-- Looping
+- Setup Visual Studio Code (VSC)
+  - Install extension Java untuk VSC
+    - Set: _Settings - Text Editor - Inlay Hints_: `off`
+  - Bukan folder github classroom: https://classroom.github.com/a/2Rwy0I99
+- Check [Jumlah1.java](../src/Jumlah1.java), coba jalankan
+- Materi [Pengambilan Keputusan - IF](../docs/07-pengambilan-keputusan.md)
+- Latihan: kerjakan [Latihan IF](../docs/latihan/03-if-1.md)
+- Tugas:
+  - [latihan-1](../docs/latihan/02-if.md)
+  - [latihan loop](../docs/latihan/04-loop.md)
 
 ## Pertemuan 4
 - Java Standard Class

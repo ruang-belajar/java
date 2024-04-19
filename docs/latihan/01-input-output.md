@@ -30,5 +30,6 @@ Total= 800000
 
 ## Petunjuk
 Pelajari penggunaan `if` pada link berikut:
+- [Ruang Belajar Java - Pengambilan Keputusan](../07-pengambilan-keputusan.md)
 - https://www.petanikode.com/java-percabangan/
 - https://www.duniailkom.com/tutorial-belajar-java-percabangan-kondisi-if-else-if-bahasa-java/

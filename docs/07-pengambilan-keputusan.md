@@ -140,6 +140,35 @@ Selamat Budi Raharjo, Anda lulus!
 
 Cobalah untuk merubah nilai yang dimasukkan dan perhatikan apa yang akan terjadi.
 
+### Membandingkan _String_
+
+Untuk membandingkan data berupa _String_, kita tidak bisa melakukannya langsung menggunakan `==` (seperti di Python atau PHP), tapi kita harus menggunakan method `equals()` yang merupakan salah satu method dari class `String`.
+
+Perhatikan program berikut:
+
+```java
+import java.util.Scanner; 
+public class StringCompare1 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Anda mau (y/t)?");
+        String jawaban =  scan.nextLine();
+
+        // memeriksa apakah jawaban == "y"
+        if(jawaban.equals("y")) { // kalau jawaban "y" ...
+            System.out.println("OK, Anda mau");
+        } else { // kalau jawaban bukan "y" ...
+            if(jawaban.equals("t")) { // periksa apakah jawaban == "y'?
+                System.out.println("Anda tidak mau");
+            } else { // kalau jawaban bukan "y" atau "t", berarti jawaban tidak dimengerti.
+                System.out.println("Saya tidak mengerti jawaban Anda");
+            }
+        }
+    }
+}
+```
+
 ### Percabangan IF/ELSE dengan Operator Ternary
 
 Selain menggunakan struktur seperti di atas, percahangan ini juga dapat menggunakan operator ternary.
