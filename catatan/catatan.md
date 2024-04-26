@@ -71,9 +71,10 @@
 - Dari kedua contoh program diatas, buat contoh program seperti berikut:
   - mencetak angka 1-20
   - mencetak angka 1-20, tapi angka 10 dan 20 diganti 'X'
+  - mencetak angka 1-20, tapi angka 10 dan 20 tidak dicetak
   - mencetak angka 1-20, tapi setiap angka ganjil diganti 'X'
   - mencetak angka 1-20, tapi setiap angka kelipatan 3 diganti 'X'
-  - mencetak angka 1-20, tapi setiap angka kelipatan 3 atau 5 diganti 'X'
+  - mencetak angka 1-20, tapi setiap angka kelipatan 3 dan 5 diganti 'X'
 
 ## Pertemuan 5
 
