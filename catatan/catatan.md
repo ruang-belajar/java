@@ -75,6 +75,37 @@
   - mencetak angka 1-20, tapi setiap angka ganjil diganti 'X'
   - mencetak angka 1-20, tapi setiap angka kelipatan 3 diganti 'X'
   - mencetak angka 1-20, tapi setiap angka kelipatan 3 dan 5 diganti 'X'
+- Program:
+  ```java
+  import java.util.Scanner;
+  public class Loop2 {
+      public static void main(String[] args) {
+
+          Scanner scan = new Scanner(System.in);
+          int nilai = 1;
+          int total = 0;
+          int banyak = 0;
+
+          while(nilai!=0) {
+              System.out.print("Angka?");
+              nilai = scan.nextInt();        
+              total = total + nilai;
+              if(banyak>0) {
+                  banyak = banyak + 1;
+              }
+          }
+
+          System.out.print("Total = ");
+          System.out.println(total);
+
+          System.out.print("Banyak Data = ");
+          System.out.println(banyak);
+          
+          scan.close();
+      }
+  }
+  ```
+- pastikan sudah tersambung ke classroom assignment https://classroom.github.com/a/2Rwy0I99
 
 ## Pertemuan 5
 
