@@ -1,3 +1,3 @@
 # Catatan Pertemuan
 
-1. [Catatan Kuliah (GUI)](catatan-gui.md)
+1. [Catatan Pertemuan](catatan.md)
