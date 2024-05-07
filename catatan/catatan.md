@@ -108,6 +108,12 @@
 - pastikan sudah tersambung ke classroom assignment https://classroom.github.com/a/2Rwy0I99
 
 ## Pertemuan 5
+- Modul [Fungsi](../docs/09-fungsi.md)
+  - Latihan: Program _mencetak bintang_
+- Fungsi standar
+  - Random
+  - Math
+
 
 ## Pertemuan 6
 
