@@ -10,3 +10,6 @@ Dibuat oleh En Tay
 
 ```
 
+Referensi:
+- [Java Standard Class - Ruang Belajar Java](../11-standard-class.md)
+

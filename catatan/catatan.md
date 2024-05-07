@@ -110,18 +110,24 @@
 ## Pertemuan 5
 - Modul [Fungsi](../docs/09-fungsi.md)
   - Latihan: Program _mencetak bintang_
-- Fungsi standar
+- [Fungsi standar](../docs/11-standard-class.md)
   - Random
   - Math
-
+- Tugas: [Menghitung jumlah hari](../docs/latihan/07-fungsi-1.md)
 
 ## Pertemuan 6
+- Review fungsi
+  - Membaca dokumentasi
+  - [Latihan Math](../docs/latihan/06-class-3.md)
+  - [Latihan LocalTime](../docs/latihan/06-class-4.md)
+  - [Latihan String](../docs/latihan/06-class-2.md)
+- [List/Array](../docs/10-array.md)
+- [Class](../docs/12-class.md)
 
 ## Pertemuan 7
-- Simulasi UTS
+- UTS
 
 ## Pertemuan 8
-**UTS**
 
 ## Pertemuan 9
 
