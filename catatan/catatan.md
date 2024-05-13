@@ -121,11 +121,17 @@
   - [Latihan Math](../docs/latihan/06-class-3.md)
   - [Latihan LocalTime](../docs/latihan/06-class-4.md)
   - [Latihan String](../docs/latihan/06-class-2.md)
-- [List/Array](../docs/10-array.md)
-- [Class](../docs/12-class.md)
+
 
 ## Pertemuan 7
-- UTS
+- [List/Array](../docs/10-array.md)
+- [Class](../docs/12-class.md)
+- [Cheatsheet](../docs/00-cheatsheet-1.md)
+  - Latihan:
+    - [Jumlah1.java](../src/Jumlah1.java)
+    - [Scanner1.java](../src/Scanner1.java)
+    - [Hitung1.java](../src/Hitung1.java)
+    - [StringCompare1.java](../src/StringCompare1.java)
 
 ## Pertemuan 8
 

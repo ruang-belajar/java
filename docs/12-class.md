@@ -47,3 +47,47 @@ class Mahasiswa {
 * `Mahasiswa peserta = new Mahasiswa()` adalah cara menyiapkan objek dari class `Mahasiswa`. Hal ini diperlukan sebelum objek `peserta` digunakan.
 * Dalam OOP, `nama` dan `peserta` disebut _properti_ atau _atribut_ bagi class `Mahasiswa`. 
 * `peserta.nama = "Budi"` berarti mengisi _properti_ `nama` dengan nilai _string_ `Budi`.
+
+## Class & Loop
+Kita bisa menggunakan class sebagai elemen array. Kita bisa loop array class menggunakan `for`.
+
+```java
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class Mahasiswa {
+    public String nim;
+    public String nama;
+}
+
+public class CobaList2 {
+    public static void main(String[] args) {
+        // deklarasi array
+        ArrayList<Mahasiswa> daftar = new ArrayList<Mahasiswa>();
+
+        Scanner scan = new Scanner(System.in);
+
+        for(int i=0; i<=3; i++) {
+            // siapkan elemen array            
+            Mahasiswa data = new Mahasiswa();
+
+            System.out.println("NIM: ");
+            data.nim = scan.nextLine();
+            System.out.println("Nama: ");
+            data.nama = scan.nextLine();
+
+            daftar.add(data);
+            System.out.println();
+        }
+
+        System.out.prinln("=========================");
+        // loop setiap elemen pada ArrayList
+        for(Mahasiswa baris:daftar) {
+            System.out.println(baris.nim+" "+baris.nama);
+        }
+
+        scan.close();
+    }
+}
+
+```
