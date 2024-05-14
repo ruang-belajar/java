@@ -219,9 +219,9 @@ Array yang kita bahas di atas sebenarnya memiliki beberapa kekurangan, seperti:
 * Ukurannya tidak dinamis.
 * Maka dari itu, ada Array List yang menutupi kekurangan tersebut.
 
-Array list merupakan sebuah class yang memungkinkan kita membuat sebuah objek untuk menampung apapun.
+`ArrayList` merupakan sebuah class yang memungkinkan kita membuat sebuah objek untuk menampung apapun.
 
-Untuk menggunakan Array List, kita harus mengimpornya terlebih dahulu.
+Untuk menggunakan `ArrayList`, kita harus mengimpornya terlebih dahulu.
 
 ```java
 import java.util.ArrayList;
@@ -277,7 +277,69 @@ Karena array list (`kantongAjaib`) merupakan sebuah objek yang terbuat dari clas
 * Fungsi `get(index)` untuk mengambil item dalam Array List berdasarkan id atau indeks tertentu. Jadi pada array membaca elemen dilakukan dengan cara `nama[n]`, pada `ArrayList` dilakukan dengan `nama.get(index)`.
 * dan masih banyak fungsi yang lainnya. Daftar lengkapnya Anda bisa cek di [dokumentasi resmi Java Class ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
 
+**ArrayList dengan Tipe Data**
+
+Kita juga bisa membatasi suatu ArrayList menggunakan class tertentu. Contoh:
+```java
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    // mendefinisikan bahsa ArrayList ini bertipe string
+    ArrayList<String> cars = new ArrayList<String>();
+
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+
+```
+Hasil output:
+```
+[Volvo, BMW, Ford, Mazda]
+```
+
+### Loop ArrayList
+
+Untuk me-loop/traversing setiap element ada `ArrayList` kita bisa melakukannya dengan beberapa cara:
+
+**Cara 1:**
+```java
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    for (String i : cars) {
+      System.out.println(i);
+    }
+  }
+}```
+
+
+**Cara 2:**
+```java
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    for (int i = 0; i < cars.size(); i++) {
+      System.out.println(cars.get(i));
+    }
+  }
+}
+```
+
 ---
 **Referensi:**
 * https://www.petanikode.com/java-array/
 * https://www.w3schools.com/java/java_arraylist.asp
+* 

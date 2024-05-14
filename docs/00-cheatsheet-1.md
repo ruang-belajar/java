@@ -88,8 +88,12 @@ _kondisi_ adalah formula yang selalu memberikan hasil `true` atau `false` (boole
 Perintah pengulangan di Java adalah `while` dan `for`. Format penulisan:
 ```java
 while(kondisi) {
-    // statemnt
+    // statement
 }
+
+do {
+    // statement
+} while(kondisi);
 
 for(int i<=0; i<=10; i++) {
     // statement
