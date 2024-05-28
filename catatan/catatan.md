@@ -133,8 +133,38 @@
     - [Hitung1.java](../src/Hitung1.java)
     - [StringCompare1.java](../src/StringCompare1.java)
 
-## Pertemuan 8
+## Pertemuan 8: UTS
 
 ## Pertemuan 9
+- Pengenalan GUI
+- Buat project baru: `TokoBuku`
+- Buat _jFrame_: `FormUtama`
+    - Buat _Menu Bar_, lakukan _Change Variabel Name_ dan _Edit Text_ untuk masing-masing _menu item_.     
+        *   File
+            *   Master
+                *   Barang
+        *   Exit
+            *   on action perform:
+                ```java
+                System.exit(0);
+                ```
+        *   Help
+            *   About
+                *   on action perform:
+                    ```java
+                    JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
+                    ```
+
+        ![](images/6-formutama-1.jpg)
+
+- Program utama (_void main_), tambahkan:
+  ```java
+  new FormUtama().setVisible(true);
+  ```
+- Perhatikan:
+  - nama yang diawali _huruf besar_ (Contoh: `FormUtama`) adalah _class_
+  - objek dibuat dari _class_
+  - perintah yang diawali _huruf kecil_ adalah _objek_.
+  - perintah dengan akhiran `()` adalah fungsi. Fungsi bisa diperlakukan seperti objek
 
 
