@@ -137,26 +137,6 @@
 
 ## Pertemuan 9
 - Pengenalan GUI
-- Buat project baru: `TokoBuku`
-- Buat _jFrame_: `FormUtama`
-    - Buat _Menu Bar_, lakukan _Change Variabel Name_ dan _Edit Text_ untuk masing-masing _menu item_.     
-        *   File
-            *   Master
-                *   Barang
-        *   Exit
-            *   on action perform:
-                ```java
-                System.exit(0);
-                ```
-        *   Help
-            *   About
-                *   on action perform:
-                    ```java
-                    JOptionPane.showMessageDialog(null, "Dibuat oleh En Tay");
-                    ```
-
-        ![](images/6-formutama-1.jpg)
-
 - Program utama (_void main_), tambahkan:
   ```java
   new FormUtama().setVisible(true);
@@ -167,4 +147,28 @@
   - perintah yang diawali _huruf kecil_ adalah _objek_.
   - perintah dengan akhiran `()` adalah fungsi. Fungsi bisa diperlakukan seperti objek
 
+## Pertemuan 10
+- Membuat project `KuliahJava1`
+- Membuat Menu:
+  - File
+    - About
+    - Exit
+  - Latihan
+    - Pembuat
+- Latihan: 
+  - di menu Latihan, buat menu item: "Pembuat" (beri nama menuLatihanPembuat)
+  - buat jFrame: FormPembuat
+  - pada FormPembuat, tambahkan 1 label, 1 tombol
+  - tambahkan perintah untuk membuka FormPembuat pada menuLatihanPembuat
+- Latihan:
+    - Buat FormHitungLuas
+    - tambahkan label: "Panjang"
+    - tambahkan label: "Lebar"
+    - tambahkan Text Field: (nama: textPanjang)
+    - tambahkan Text Field: (nama: textLebar)
+    - tambahkan tombol: "Hitung" (nama: tombolHitung)
+      - action perfomed: buat program menghitung panjang x lebar. Hasilnya ditampilkan menggunakan message box.
+    - edit FormUtama
+      - tambahkan menu dibawah "Latihan": "Hitung Luas" (menu: menuHitungLuas)
+        - action performed: buka FormHitungLuas
 
