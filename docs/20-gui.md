@@ -78,7 +78,28 @@ Untuk penjalankan program yang kita buat di atas, klik tombol "play" pada toolba
 _Catatan:_
 * Jika Anda mendapati _TextField/Button/Label_ terpotong, coba edit form, rubah ukuran komponen _TextField/Button/Label_ tersebut, kemudian coba jalankan kembali programnya.
 
-## Latihan
+## Menampilkan Form jFrame
+
+Menampilkan form yang sudah kita buat bisa dilakukan lewat 2 cara. Misal kita memiliki form yang diberi nama `FormUtama`, maka cara menampilkannya:
+
+**Cara 1:**
+```java
+new FormUtama().setVisible(true);
+```
+
+**Cara 2:**
+```java
+FormUtama form = new FormUtama();
+form.setVisible(true);
+```
+## Menampilkan kotak pesan (_Message Box_)
+
+_Message box_ adalah cara paling mudah untuk menampilkan _pop up_ pesan kepada user. Cara cepat menampilkan _message box_ adalah seperti berikut:
+
+```java
+JOptionPane.showMessageDialog(null, "Hallo");
+```
+Dalam menggunakan `showMessageDialog()`, parameter pertama kita bisa gunakan `null`. Parameter kedua adalah pesan yang mau ditulisan dalam bentuk _String_.
 
 
 

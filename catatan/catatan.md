@@ -171,4 +171,5 @@
     - edit FormUtama
       - tambahkan menu dibawah "Latihan": "Hitung Luas" (menu: menuHitungLuas)
         - action performed: buka FormHitungLuas
-
+- Tugas: 
+  - Selesaikan program menghitung "Luas Persegi"
