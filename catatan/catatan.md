@@ -173,3 +173,23 @@
         - action performed: buka FormHitungLuas
 - Tugas: 
   - Selesaikan program menghitung "Luas Persegi"
+
+## Pertemuan 11
+- Periksa latihan minggu lalu `FormHitungLuas`
+- Membuat catatan komponen
+  - Nama Class
+  - deskripsi
+  - property/atribut
+    - nama atribut
+    - tipe data
+    - deskripsi
+  - method
+    - nama method
+    - parameter (tipe data, nama parameter, berapa banyak)
+    - return value (tipe data/void)
+  - action
+- Buat catatan komponen untuk `JTextField`, `JLabel`, `JButton`, `JSpinner`
+- Tugas:
+  - Buat catatan komponen untuk `JComboBox`
+  - Bagaimana cara merubah opsi
+  - Bagaimana cara membaca nilai yang dipilih
