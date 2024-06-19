@@ -188,8 +188,24 @@
     - parameter (tipe data, nama parameter, berapa banyak)
     - return value (tipe data/void)
   - action
-- Buat catatan komponen untuk `JTextField`, `JLabel`, `JButton`, `JSpinner`
+- Buat catatan komponen untuk `JTextField`, `JLabel`, `JButton`
+- Latihan: Buat `FormPesanan`
+  - JSpinner qty
+  - JComboBox jenis
+    - model: Katun, Poliester, Sifon
+  - JSlider warnaR
+    - maximum: 255
+  - JSlider warnaG
+    - maximum: 255
+  - JSlider warnaB
+    - maximum: 255
+  - JButton estimasiHarga
+  - JLabel textHasil
 - Tugas:
-  - Buat catatan komponen untuk `JComboBox`
-  - Bagaimana cara merubah opsi
-  - Bagaimana cara membaca nilai yang dipilih
+  - Buat program menghitung harga satuan
+    - Katun: 100.000
+    - Poliester: 80.000
+    - Sifon: 120.000
+  - Harga warna R: 30/poin
+  - Harga warna G: 40/poin
+  - Harga warna B: 70/poin
