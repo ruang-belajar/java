@@ -209,3 +209,17 @@
   - Harga warna R: 30/poin
   - Harga warna G: 40/poin
   - Harga warna B: 70/poin
+
+## Pertemuan 12:
+- Periksa Tugas
+- Menambahkan komponen (`JLabel`) untuk menampilkan warna
+- buat method `setWarna()`, gunakan event `stateChange` untuk mengeksekusi `setWarna()`
+- Menampilkan hasil perhitungan pada `textHasil` menjadi 2 baris
+- Menampilkan gambar
+  - coba di `FormUtama`
+- Tugas:
+  - Buat `FormModel1`
+    - Tambahkan JComboBox modelBaju
+      - model: TShirt, Jeans, Jaket, Kameja
+    - 4 JLabel untuk 4 gambar
+      - Buat gambar berubah setiap kali modelBaju berubah
