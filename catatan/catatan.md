@@ -223,3 +223,61 @@
       - model: TShirt, Jeans, Jaket, Kameja
     - 4 JLabel untuk 4 gambar
       - Buat gambar berubah setiap kali modelBaju berubah
+
+## Pertemuan 13:
+- Periksa Tugas
+- Tambahkan modifikasi pada `FormWaitingListDetail` seperti berikut
+
+  ![](images/13-waitinglistdetail.png)
+  - Event:
+    ```java
+    private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        Connection conn;
+        
+        try {
+            // 1. Persiapan Koneksi
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/restoran","root","");
+            ResultSet rs;  // diperlukan jika mau mengeksekusi SELECT
+            
+            // 2. siapkan Query
+            String sql = "INSERT INTO waitinglist (nama,jumlah) values (?,?)";
+            PreparedStatement st = conn.prepareStatement(sql);
+            st.setString(1, textNama.getText());
+            st.setInt(2, (Integer)spinJumlah.getValue());
+            
+            // 3. eksekusi query
+            st.executeUpdate();
+            
+            // informasi untuk user
+            JOptionPane.showMessageDialog(null,"Data berhasil ditambahkan");
+            
+            // tutup objek koneksi
+            st.close();
+            conn.close();
+            dispose(); // kalau sudah berhasil, tutup form
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null,exception.getMessage());
+        }
+    }
+    ```
+  - tambahkan function
+    ```java
+    public void tambah() {
+        textId.setText("");
+        textNama.setText("");
+        spinJumlah.setValue(1);
+        setVisible(true);
+    }
+    ```
+
+    ![](images/13-tambah.png)
+    
+- Tambahkan modifikasi pada `FormWaitingList` seperti berikut:
+  - `tombolTambah`
+    - Event:
+      ```java
+      private void tombolTambahActionPerformed(java.awt.event.ActionEvent evt) {                                             
+            new FormWaitingListDetail().tambah();
+      }    
+      ```
