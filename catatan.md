@@ -1,12 +1,11 @@
-# Catatan Kuliah (Kelas Java 2024)
+# Catatan Kuliah (Kelas Java 2025)
 
 ## Pertemuan 1
-- Pengenalan Java
-- Pengenalan konsep OOP
+- [Pengenalan Java](docs/01-intro.md)
 - Persiapan
-  - JDK
-  - Netbeans
-  - Akun Github + Github Desktop
+  - [JDK 23](https://download.oracle.com/java/23/latest/jdk-23_windows-x64_bin.exe)
+  - [Netbeans 25](https://downloads.apache.org/netbeans/netbeans-installers/25/Apache-NetBeans-25-bin-windows-x64.exe.sha512)
+- [Setup & membuat program sederhana](docs/02-setup.md)
 - Dasar yang dipelajari ketika mempelajari program baru:
   - penggunaan variabel
   - operasi aritmatika
@@ -20,10 +19,6 @@
   - Java EE --> untuk membuat web menggunakan java
   - JDK --> _Java Development Kit_ --> supaya kita bisa membuat program java 
   - Java SE --> untuk membuat program di desktop/windows
-- Github, menyediakan layanan _Source Code Management_.
-  1. Backup
-  2. Version Management
-  3. Team work
 - **Tugas 1:**
   Pelajari bab [Syntax](../docs/03-syntax.md) dan [Standard Input & Output](../docs/04-input-output.md), kemudian buat program yang  meminta input _nama_ dan _nilai_. Jika _nilai_ > 60 maka tampilkan informasi "lulus", _nilai_ <=60, tampilkan informasi "tidak lulus"\
     contoh 1:
