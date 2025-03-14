@@ -19,7 +19,7 @@
   - Java EE --> untuk membuat web menggunakan java
   - JDK --> _Java Development Kit_ --> supaya kita bisa membuat program java 
   - Java SE --> untuk membuat program di desktop/windows
-- **Tugas 1:**
+- **Tugas 1:**\
   Pelajari bab [Syntax](docs/03-syntax.md) dan [Standard Input & Output](docs/04-input-output.md), kemudian buat program yang  meminta input _nama_ dan _nilai_. Jika _nilai_ > 60 maka tampilkan informasi "lulus", _nilai_ <=60, tampilkan informasi "tidak lulus"\
     contoh 1:
     ```
