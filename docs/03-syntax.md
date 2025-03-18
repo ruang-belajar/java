@@ -273,14 +273,16 @@ System.out.println(jeniskelamin);
 Perhatikan, huruf K adalah huruf kapital.
 
 ## Gaya Penulisan Case (_Naming Convension_)
-Gaya penulisan case (case style) yang digunakan oleh Java adalah: camelCase, PascalCase, dan ALL UPPER.
+Gaya penulisan case (case style) yang digunakan oleh Java adalah: _camelCase_, _PascalCase_, dan _UPPERCASE_.
 
 Gaya penulisan _camelCase_ digunakan pada nama variabel, nama objek, dan nama method.
 
 Contoh:
 
 ```java
-String namaSaya = "Dian";
+namaSaya = "Dian";
+nama = "Ayu";
+namaPanggilanSaya = "De";
 ```
 
 Lalu untuk _PascalCase_ digunakan pada penulisan nama class.
@@ -294,7 +296,7 @@ class HelloWOrld {
 ```
 Perhatikan nama class-nya, kita menggunakan huruf kapital di awal, dan huruf kapital pada huruf W untuk memisahkan dua suku kata.
 
-Sedangkan camelCase huruf depannya menggunakan huruf kecil, dan awalan suku kata berikutnya menggunakan huruf besar.
+Sedangkan _camelCase_ huruf depannya menggunakan huruf kecil, dan awalan suku kata berikutnya menggunakan huruf besar.
 
 ```java
 // ini camelCase
@@ -311,7 +313,7 @@ Contoh:
 public final String DB_NAME = "ruangbelajar";
 ```
 
-Untuk penulisan dua suku kata atau lebih, ALL UPPER dipisah dengan garus bawah atau underscore (_).
+Untuk penulisan dua suku kata atau lebih, UPPERCASE dipisah dengan garus bawah atau underscore (_).
 
 _Apakah boleh saya menulis sembarangan?_
 
