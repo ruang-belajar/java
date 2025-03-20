@@ -45,7 +45,7 @@ class Mahasiswa {
 **Penjelasan:**
 * Idealnya, definisi `class Mahasiswa` dibuat di file terpisah. Itu akan kita pelajari nanti, tapi untuk kesederhanaan penjelasan, saat ini definisi class akan dibuat pada file yang sama.
 * `Mahasiswa peserta = new Mahasiswa()` adalah cara menyiapkan objek dari class `Mahasiswa`. Hal ini diperlukan sebelum objek `peserta` digunakan.
-* Dalam OOP, `nama` dan `peserta` disebut _properti_ atau _atribut_ bagi class `Mahasiswa`. 
+* Dalam OOP, `nama` dan `jurusan` disebut _properti_ atau _atribut_ bagi class `Mahasiswa`. 
 * `peserta.nama = "Budi"` berarti mengisi _properti_ `nama` dengan nilai _string_ `Budi`.
 
 ## Class & Loop
