@@ -34,3 +34,16 @@
     Halo Budi, kamu TIDAK LULUS
     ```
     Untuk membaca input, gunakan class `Scanner`, simpan dan kirim menggunakan nama `ProgramScanner.java`.
+
+## Pertemuan 2
+- Review Tugas
+- [Syntax dasar](docs/03-syntax.md)
+- [Input & Output](docs/04-input-output.md)
+- [Data Type](docs/05-tipe-data.md)
+- [Operator](docs/06-operator.md)
+- Hal yang perlu diperhatikan
+  - Java adalah bahasa pemrograman yang _case sensitive_
+  - aturan penulisan
+  - Nama class selalu sama dengan nama file
+  - nama _package_ harus sama dengan _nama folder_    
+- [IF](https://github.com/ruang-belajar/java/blob/main/docs/07-pengambilan-keputusan.md)
