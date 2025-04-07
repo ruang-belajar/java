@@ -95,11 +95,11 @@ class HelloWorld {
 }
 ```
 
-Ini adalah blok class.
+Ini adalah blok _class_.
 
-Blok class dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
+Blok _class_ dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
 
-Di dalam blok class, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
+Di dalam blok _class_, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
 
 Pada contoh di atas, terdapat method `main()`.
 
@@ -275,7 +275,7 @@ Perhatikan, huruf K adalah huruf kapital.
 ## Gaya Penulisan Case (_Naming Convension_)
 Gaya penulisan case (case style) yang digunakan oleh Java adalah: _camelCase_, _PascalCase_, dan _UPPERCASE_.
 
-**Penulisan variabel, nama objek, dan nama method menggunakan _camelCase_**
+**Penulisan nama variabel, nama objek, dan nama method menggunakan _camelCase_**
 
 Contoh:
 
