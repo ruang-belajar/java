@@ -1,0 +1,1 @@
+# Latihan Output 1
