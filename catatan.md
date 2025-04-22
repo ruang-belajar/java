@@ -46,4 +46,30 @@
   - aturan penulisan
   - Nama class selalu sama dengan nama file
   - nama _package_ harus sama dengan _nama folder_    
-- [IF](https://github.com/ruang-belajar/java/blob/main/docs/07-pengambilan-keputusan.md)
+- [IF](docs/07-pengambilan-keputusan.md)
+- [Pengulangan/looping](docs/08-pengulangan.md)
+
+## Pertemuan 3
+- Review looping
+- [Pengulangan/looping](docs/08-pengulangan.md)
+- Latihan loop:
+  - Mencetak angka
+  - Mencetak bintang
+- Pelajari
+  - [ReadFile.java](src/ReadFile.java)
+  - [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
+- Latihan:
+  - Buat program untuk membaca
+
+## Pertemuan 4
+- Standard class
+- Date
+- Scanner
+- [Array](docs/09-array.md)
+
+## Pertemuan 5
+
+
+## Pertemuan 6
+- User defined class
+- User defined function
