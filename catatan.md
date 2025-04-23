@@ -52,20 +52,17 @@
 ## Pertemuan 3
 - Review looping
 - [Pengulangan/looping](docs/08-pengulangan.md)
-- Latihan loop:
-  - Mencetak angka
-  - Mencetak bintang
+- [Array](docs/10-array.md)
 - Pelajari
+  - [RandomNumberWriter.java](src/RandomNumberWriter.java)
   - [ReadFile.java](src/ReadFile.java)
   - [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
+
 - Latihan:
   - Buat program untuk membaca
 
 ## Pertemuan 4
 - Standard class
-- Date
-- Scanner
-- [Array](docs/09-array.md)
 
 ## Pertemuan 5
 
