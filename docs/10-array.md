@@ -56,8 +56,8 @@ Seperti yang sudah kita ketahui, array memiliki indeks untuk memudahkan kita men
 String[] nama = {"Linda", "Santi", "Susan", "Mila", "Ayu"};
 
 // mengambil data array
-System.out.println(teman[0]);
-System.out.println(teman[2]);
+System.out.println(nama[0]);
+System.out.println(nama[2]);
 ```
 
 Output:

@@ -50,19 +50,19 @@
 - [Pengulangan/looping](docs/08-pengulangan.md)
 
 ## Pertemuan 3
-- Review looping
-- [Pengulangan/looping](docs/08-pengulangan.md)
+- Review [Pengulangan/looping](docs/08-pengulangan.md)
 - [Array](docs/10-array.md)
 - Pelajari
-  - [RandomNumberWriter.java](src/RandomNumberWriter.java)
-  - [ReadFile.java](src/ReadFile.java)
-  - [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
-
+  - Pelajari [RandomNumberWriter.java](src/RandomNumberWriter.java)
+  - Pelajari [ReadFile.java](src/ReadFile.java)
 - Latihan:
-  - Buat program untuk membaca
+  - Rubah `ReadFile.java` sehingga bukan loop untuk menampilkan data dari file, tapi memasukannya ke dalam array kemudian menampilkannya kembali pada bagian akhir
+- Tugas:
+  - Lengkapi file `ReadFile.java` sehingga sebelum array ditampilkan, array diurutkan terlebih dahulu secara _ascending_.
+  - Referensi: [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
 
 ## Pertemuan 4
-- Standard class
+
 
 ## Pertemuan 5
 
