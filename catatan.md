@@ -61,13 +61,17 @@
   - Lengkapi file `ReadFile.java` sehingga sebelum array ditampilkan, array diurutkan terlebih dahulu secara _ascending_.
   - Referensi: [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
 
----
 
 ## Pertemuan 4
+- Class ArrayList
+  - [Array](docs/10-array.md)
+  - [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
+- Review tugas
 
 
 ## Pertemuan 5
 
+---
 
 ## Pertemuan 6
 - User defined class
