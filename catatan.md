@@ -64,9 +64,10 @@
 
 ## Pertemuan 4
 - Class ArrayList
-  - [Array](docs/10-array.md)
+  - [Ruang Belajar - ArrayList](docs/10-array.md#array-list)
   - [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
 - Review tugas
+  - Tambahkan: Menampilkan nilai terkecil dan terbesar
 
 
 ## Pertemuan 5

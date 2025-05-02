@@ -260,6 +260,12 @@ public class Doraemon {
 
         // menampilkan banyak isi kantong ajaib
         System.out.println("Kantong ajaib berisi "+ kantongAjaib.size() +" item");
+
+        // Menampilkan elemen pertama
+        System.out.println("Elemen pertama : "+kantongAjaib.get(0));
+
+        // Menampilkan elemen terakhir
+        System.out.println("Elemen terakhir : "+kantongAjaib.get(kantongAjaib.size() - 1));
     }
 }
 ```
@@ -268,6 +274,9 @@ Hasil outputnya:
 ```
 [Senter Pembesar, 532, 1231234.132, true]
 Kantong ajaib berisi 4 item
+Elemen pertama : Senter Pembesar
+Elemen terakhir : true
+
 ```
 
 Karena array list (`kantongAjaib`) merupakan sebuah objek yang terbuat dari class `ArrayList`, maka dia punya _method_ (fungsi) untuk melakukan sesuatu.
@@ -297,6 +306,7 @@ public class Main {
 }
 
 ```
+
 Hasil output:
 ```
 [Volvo, BMW, Ford, Mazda]
@@ -341,5 +351,4 @@ public class Main {
 ---
 **Referensi:**
 * https://www.petanikode.com/java-array/
-* https://www.w3schools.com/java/java_arraylist.asp
-* 
+* https://www.w3schools.com/java/java_arraylist.asp* 
