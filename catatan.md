@@ -67,7 +67,13 @@
   - [Ruang Belajar - ArrayList](docs/10-array.md#array-list)
   - [Java ArrayList sort() Method](https://www.w3schools.com/java/ref_arraylist_sort.asp)
 - Review tugas
-  - Tambahkan: Menampilkan nilai terkecil dan terbesar
+  - [try .. cath](https://www.w3schools.com/java/java_try_catch.asp)
+  - [String to Integer](https://www.geeksforgeeks.org/how-to-convert-string-to-int-in-java/)
+  - Tambahkan:
+    - Menampilkan nilai terkecil dan terbesar
+    - Menampilkan nilai rata-rata
+    - Menampilkan banyak bilangan ganjil dan genap
+
 
 
 ## Pertemuan 5
