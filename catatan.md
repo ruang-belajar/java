@@ -69,17 +69,32 @@
 - Review tugas
   - [try .. cath](https://www.w3schools.com/java/java_try_catch.asp)
   - [String to Integer](https://www.geeksforgeeks.org/how-to-convert-string-to-int-in-java/)
-  - Tambahkan:
+- Tugas:
+  - Simpan `ReadFile.java` menjadi `ReadFile3.java`, tambahkan:
     - Menampilkan nilai terkecil dan terbesar
     - Menampilkan nilai rata-rata
     - Menampilkan banyak bilangan ganjil dan genap
 
-
-
 ## Pertemuan 5
-
----
+- Review tugas
+- Latihan: Berikut ini adalah program untuk generate data simulasi suhu terendah dan tertinggi setiap harinya. Angka pertama adalah tanggal, angka kedua adalah suhu terendah, angka ketiga adalah suhu tertinggi.
+  - Buat program untuk mencetak file text berisi 30 baris angka seperti berikut:
+    ```
+    1,20,30
+    2,18,27
+    3,17,26
+    4,16,24
+    5,15,23
+    6,14,22
+    ...
+    ```
+    Angka pertama adalah nomor yang berurut\
+    Angka kedua adalah bilang acak antara 10-25\
+    Angka ketiga adalah bilangan acak antara 10-30, tapi bilangan ketika selalu lebih besar dari bilangan kedua
+  - Data digenerate tersimpan dengan nama file `data1.txt`
+  - Simpan file dengan nama `GeneratorData1.java`  
+- Latihan: Buat untuk membaca file `data1.txt`.\
+  Tampilkan tanggal dan suhu pada kondisi suhu terendah dan suhu tertinggi.\
+  Simpan program dengan nama file `PeriksaData1.java`
 
 ## Pertemuan 6
-- User defined class
-- User defined function
