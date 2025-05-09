@@ -73,7 +73,6 @@
   - Simpan `ReadFile.java` menjadi `ReadFile3.java`, tambahkan:
     - Menampilkan nilai terkecil dan terbesar
     - Menampilkan nilai rata-rata
-    - Menampilkan banyak bilangan ganjil dan genap
 
 ## Pertemuan 5
 - Review tugas
@@ -90,7 +89,7 @@
     ```
     Angka pertama adalah nomor yang berurut\
     Angka kedua adalah bilang acak antara 10-25\
-    Angka ketiga adalah bilangan acak antara 10-30, tapi bilangan ketika selalu lebih besar dari bilangan kedua
+    Angka ketiga adalah bilangan acak antara 10-30, tapi bilangan ketiga selalu lebih besar dari bilangan kedua
   - Data digenerate tersimpan dengan nama file `data1.txt`
   - Simpan file dengan nama `GeneratorData1.java`  
 - Latihan: Buat untuk membaca file `data1.txt`.\
