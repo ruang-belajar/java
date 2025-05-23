@@ -84,15 +84,27 @@ Contoh:
 | FileNotFoundException | 	File yang diminta tidak ditemukan |
 | ClassNotFoundException | 	Kelas tidak ditemukan saat load class |
 
+
+![](images/13-exception-1.JPG)
+
+Pada contoh di atas, beberapa perintah (contoh diatas `FileReader file = new FileReader("data.txt");`) di check oleh compiler/IDE. Karena ditemukan bahwa perintah itu tidak di-handle oleh _try-catch_, maka compiler/IDE memberikan peringatan. Ini yang disebut dengan _checked exception_. Oleh sebab itu, perintah tersebut harus kita masukan ke dalam blok _try-catch_ menjadi seperti berikut:
+
 Contoh kode:
 ```java
-public void bacaFile(String namaFile) throws IOException {
-    FileReader fr = new FileReader(namaFile);
+public class ContohChecked {
+    public static void main(String[] args) {
+        try {
+            FileReader file = new FileReader("data.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
 ```
 
+
 ### Unchecked Exception (Runtime Exception)
-Tidak diperiksa saat compile-time. Terjadi akibat kesalahan logika dalam program.
+Tidak diperiksa saat compile-time. Error akan muncul pada saat program dijalankan.
 
 Contoh:
 | Exception | 	Deskripsi |
@@ -105,12 +117,19 @@ Contoh:
 
 Contoh kode:
 ```java
-int[] arr = new int[3];
-System.out.println(arr[5]); // ArrayIndexOutOfBoundsException
+public class UncheckedExceptionNoCatch {
+    public static void main(String[] args) {
+        int[] angka = {1, 2, 3};
 
-String angka = "abc";
-int x = Integer.parseInt(angka); // NumberFormatException
+        // Akses indeks yang tidak ada tanpa try-catch
+        System.out.println("Nilai pada indeks ke-5: " + angka[5]);
+
+        System.out.println("Baris ini tidak akan dieksekusi.");
+    }
+}
 ```
+
+Pada contoh program di atas, IDE (Netbeans) tidak memperingatan error. Ketika di compile pun program tersebut tidak akan terlihat error. Hanya ketika program itu dijalankan, maka error akan muncul. Inilah contoh _unchecked exception_
 
 ### Error
 Menunjukkan kondisi serius yang biasanya tidak bisa ditangani program.
@@ -277,7 +296,31 @@ public class UsernameKosongException extends RuntimeException {
 
 **Contoh Penggunaan Custom Exception**;
 
-**Contoh Program 1:**
+**Contoh Program 1: tanpa menggunakan custom exception**
+```java
+public class DemoCustomException {
+    public static void main(String[] args) {
+        try {
+            cekUmur(-5);
+        } catch (UmurTidakValidException e) {
+            throw new RuntimeException("Terjadi exception: " + e.getMessage(), e);
+        }
+    }
+
+    public static void cekUmur(int umur) {
+        if (umur < 0) {
+            throw new In("Umur tidak boleh negatif!");
+        } else {
+            System.out.println("Umur valid: " + umur);
+        }
+    }
+}
+```
+**output error: perhatikan baris ke-3, bandingkan dengan output _Contoh Program 2_**\
+![](images/14-exception-2.JPG)
+
+
+**Contoh Program 2: menggunakan custom exception**
 ```java
 class UmurTidakValidException extends Exception {
     public UmurTidakValidException(String pesan) {
@@ -303,8 +346,10 @@ public class DemoCustomException {
     }
 }
 ```
+**output error: perhatikan baris ke-3, bandingkan dengan contoh output program sebelumnya**\
+![](images/15-exception-3.JPG)
 
-**Contoh Program 2:**
+**Contoh Program 3:**
 ```java
 // Custom Exceptions
 class InvalidNamaException extends Exception {
