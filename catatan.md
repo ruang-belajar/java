@@ -97,3 +97,8 @@
   Simpan program dengan nama file `PeriksaData1.java`
 
 ## Pertemuan 6
+
+## Pertemuan 9
+- Pelajari tentang bagaimana [membaca input dari user lewat keyboard](docs/04-input-output.md)
+- Pelajari tentang [Exception](docs/13-exception.md)
+- Latihan: [Soal Latihan (File)](docs/latihan/06-class-5.md)
