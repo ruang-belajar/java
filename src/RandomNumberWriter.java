@@ -1,5 +1,3 @@
-package latihan1;
-
 import java.io.FileWriter;
 import java.io.IOException;
 
