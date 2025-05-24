@@ -63,7 +63,51 @@ public class Bilangan2 {
         scan.close();
     }
 }
+```
+## `throw`
+`throw` adalah keyword dalam Java yang digunakan untuk melempar (`throw`) exception secara eksplisit dalam program. Dengan kata lain, `throw` digunakan saat kita secara manual ingin memunculkan exception dari dalam kode.
 
+```java
+throw new ExceptionType("Pesan error");
+```
+
+- `ExceptionType`: adalah kelas `Exception`.
+- `"Pesan error"`: pesan yang bisa dijelaskan ke pengguna atau log error
+
+**Contoh Penggunaan throw:**
+```java
+public void setUmur(int umur) {
+    if (umur < 0) {
+        throw new IllegalArgumentException("Umur tidak boleh negatif!");
+    }
+    System.out.println("Umur diset ke: " + umur);
+}
+```
+**Penjelasan:**
+- Jika umur < 0, maka program akan melempar exception `IllegalArgumentException` dengan pesan tertentu.
+
+### Perbedaan throw vs throws
+Perlu disadari bahasa ada selain `throw` ada juga `throws`. Perlu disadari bahwa walau mirip, keduanya ini punya fungsi yang berbeda
+
+| throw |	throws |
+| - | - |
+| Digunakan dalam tubuh method	| Digunakan pada deklarasi method |
+| Untuk melempar satu exception	 | Untuk menyatakan bahwa method bisa melempar exception |
+| Hanya satu exception per throw |	Bisa lebih dari satu exception |
+
+***Contoh Perbedaan:***
+```java
+// Menggunakan throws
+public void bacaFile(String nama) throws IOException {
+    FileReader fr = new FileReader(nama);
+}
+
+// Menggunakan throw
+public void validasiNama(String nama) {
+    if (nama == null) {
+        throw new NullPointerException("Nama tidak boleh null");
+    }
+}
 ```
 
 ## Jenis Exception
@@ -181,52 +225,6 @@ public class ContohMultipleCatch {
         }
 
         System.out.println("Program tetap berjalan setelah exception ditangani.");
-    }
-}
-```
-
-## `throw`
-`throw` adalah keyword dalam Java yang digunakan untuk melempar (`throw`) exception secara eksplisit dalam program. Dengan kata lain, `throw` digunakan saat kita secara manual ingin memunculkan exception dari dalam kode.
-
-```java
-throw new ExceptionType("Pesan error");
-```
-
-- `ExceptionType`: adalah kelas `Exception`.
-- `"Pesan error"`: pesan yang bisa dijelaskan ke pengguna atau log error
-
-**Contoh Penggunaan throw:**
-```java
-public void setUmur(int umur) {
-    if (umur < 0) {
-        throw new IllegalArgumentException("Umur tidak boleh negatif!");
-    }
-    System.out.println("Umur diset ke: " + umur);
-}
-```
-**Penjelasan:**
-- Jika umur < 0, maka program akan melempar exception `IllegalArgumentException` dengan pesan tertentu.
-
-### Perbedaan throw vs throws
-Perlu disadari bahasa ada selain `throw` ada juga `throws`. Perlu disadari bahwa walau mirip, keduanya ini punya fungsi yang berbeda
-
-| throw |	throws |
-| - | - |
-| Digunakan dalam tubuh method	| Digunakan pada deklarasi method |
-| Untuk melempar satu exception	 | Untuk menyatakan bahwa method bisa melempar exception |
-| Hanya satu exception per throw |	Bisa lebih dari satu exception |
-
-***Contoh Perbedaan:***
-```java
-// Menggunakan throws
-public void bacaFile(String nama) throws IOException {
-    FileReader fr = new FileReader(nama);
-}
-
-// Menggunakan throw
-public void validasiNama(String nama) {
-    if (nama == null) {
-        throw new NullPointerException("Nama tidak boleh null");
     }
 }
 ```
