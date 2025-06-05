@@ -76,39 +76,26 @@ throw new ExceptionType("Pesan error");
 
 **Contoh Penggunaan throw:**
 ```java
-public void setUmur(int umur) {
-    if (umur < 0) {
-        throw new IllegalArgumentException("Umur tidak boleh negatif!");
+import java.util.Scanner;
+
+public class Bilangan3 {
+    public static void main(String[] args) {
+        int pembagi = 0;
+        int angka;
+
+        try {
+            angka = 10/pembagi;
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Pembagi tidak boleh nol");
+        }
+
+        scan.close();
     }
-    System.out.println("Umur diset ke: " + umur);
 }
 ```
 **Penjelasan:**
-- Jika umur < 0, maka program akan melempar exception `IllegalArgumentException` dengan pesan tertentu.
-
-### Perbedaan throw vs throws
-Perlu disadari bahasa ada selain `throw` ada juga `throws`. Perlu disadari bahwa walau mirip, keduanya ini punya fungsi yang berbeda
-
-| throw |	throws |
-| - | - |
-| Digunakan dalam tubuh method	| Digunakan pada deklarasi method |
-| Untuk melempar satu exception	 | Untuk menyatakan bahwa method bisa melempar exception |
-| Hanya satu exception per throw |	Bisa lebih dari satu exception |
-
-***Contoh Perbedaan:***
-```java
-// Menggunakan throws
-public void bacaFile(String nama) throws IOException {
-    FileReader fr = new FileReader(nama);
-}
-
-// Menggunakan throw
-public void validasiNama(String nama) {
-    if (nama == null) {
-        throw new NullPointerException("Nama tidak boleh null");
-    }
-}
-```
+- Karena `pembagi` < 0, maka program akan melempar exception `IllegalArgumentException` dengan pesan "Pembagi tidak boleh nol".
+- `throw new` akan menampilkan informasi teknis kesalahan, `throw new` ini lebih bermanfaat gunakan dalam proses _debuging_, tapi tidak dalam produksi.
 
 ## Jenis Exception
 _Exception_ di Java dibagi ke dalam dua kategori besar:
