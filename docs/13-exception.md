@@ -262,7 +262,7 @@ _Custom exception_ berguna ketika kita ingin:
 Berikut contoh _custom exception_ turunan dari class `Exception`.
 
 ```java
-public class UmurTidakValidException extends Exception {
+class UmurTidakValidException extends Exception {
     public UmurTidakValidException(String pesan) {
         super(pesan);
     }
@@ -272,7 +272,7 @@ public class UmurTidakValidException extends Exception {
 Berikut contoh _custom exception_ turunan dari class `RuntimeException`.
 
 ```java
-public class UsernameKosongException extends RuntimeException {
+class UsernameKosongException extends RuntimeException {
     public UsernameKosongException(String pesan) {
         super(pesan);
     }
