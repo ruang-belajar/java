@@ -12,7 +12,7 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
 
 ## Test Koneksi
 1. Aktifkan MySQL Server secara lokal (misal lewat XAMPP)
-2. [Download & Restore database contoh](https://raw.githubusercontent.com/pujangga123/ruang-belajar-java/main/src/tokobuku.sql) ke server _MySQL_ Anda.
+2. [Download & Restore database contoh](../src/tokobuku.sql) ke server _MySQL_ Anda.
 3. Test koneksi menggunakan contoh program berikut:
     ```java
     import java.sql.*;
