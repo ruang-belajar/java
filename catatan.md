@@ -105,3 +105,72 @@
 
 ## Pertemuan 10
 - [Class](docs/12-class.md)
+- file: `DemoOrang1.java`
+  ```java
+  package class1;
+
+  import java.util.ArrayList;
+
+  public class DemoOrang1 {
+      public static void main(String[] args) {
+          // membuat objek list
+          // <Orang> menunjukan jenis data/class yang ditampung dalam list
+          ArrayList<Orang> list = new ArrayList<Orang>();
+          
+          // membuat objek orang
+          Orang data1 = new Orang();
+          data1.namaDepan = "Budi"; // mengisi properti
+          data1.namaBelakang = "Hendrawan";
+          list.add(data1); // menambahkan objek ke dalam list
+          
+          Orang data2 = new Orang();
+          data2.namaDepan = "Dyah";
+          data2.namaBelakang = "Ayu";
+          list.add(data2);
+          
+          // method get() digunakan untuk mengambil elemen dalam list
+          System.out.println(list.get(0).namaDepan);
+          System.out.println(list.get(1).namaDepan);
+          
+          System.out.println(list.get(0).namaDepan+" "+ list.get(0).namaBelakang);
+          System.out.println(list.get(1).namaDepan+" "+ list.get(1).namaBelakang);
+          
+          // menggunakan method yang tidak memberikan nilai balik
+          list.get(0).sensor();
+          list.get(1).sensor();
+          
+          // menampilkan nama lewat method
+          System.out.println(list.get(0).namaLengkap());
+          System.out.println(list.get(1).namaLengkap());
+      }
+  }
+- file: `Orang.java`
+  ```java
+  package class1;
+
+  // class Orang
+  // nama class selalu diawali huruf besar
+  public class Orang {
+      // deklarasi properti/atribut
+      public String namaDepan;
+      public String namaBelakang;
+      
+      // method yang menghasilkan nilai balik
+      // ciri: menyertakan jenis data yang akan dikembalikan
+      // oleh method, contoh: String, Integer, boolean,...
+      // terdapat juga perintah return untuk memberikan
+      // nilai balik
+      public String namaLengkap() {
+          return this.namaDepan + " " + this.namaBelakang;
+      }
+      
+      // method yang tidak menghasilkan nilai balik
+      // ciri: menggunakan kata kunci void
+      // tidak ada return
+      public void sensor() {
+          this.namaDepan = this.namaDepan.replace('a', '*');
+          this.namaBelakang = this.namaBelakang.replace('a', '*');
+      }
+      
+  }
+  ```
