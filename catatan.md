@@ -102,3 +102,6 @@
 - Pelajari tentang bagaimana [membaca input dari user lewat keyboard](docs/04-input-output.md)
 - Pelajari tentang [Exception](docs/13-exception.md)
 - Latihan: [Soal Latihan (File)](docs/latihan/06-class-5.md)
+
+## Pertemuan 10
+- [Class](docs/12-class.md)
