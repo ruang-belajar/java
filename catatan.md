@@ -174,3 +174,7 @@
       
   }
   ```
+
+## Pertemuan 11
+- [Static Property & Method](docs/12-static.md)
+- 
