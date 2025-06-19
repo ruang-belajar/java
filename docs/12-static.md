@@ -17,14 +17,10 @@ public class Produk {
         jumlahProduk++;
     }
 
-    public static void tampilkanJumlah() {
-        System.out.println("Jumlah produk: " + jumlahProduk);
-    }
-
     public static void main(String[] args) {
         new Produk();
         new Produk();
-        Produk.tampilkanJumlah(); // Output: 2
+        System.out.println(Produk.jumlahProduk); // Output: 2
     }
 }
 ```

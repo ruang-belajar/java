@@ -176,5 +176,65 @@
   ```
 
 ## Pertemuan 11
-- [Static Property & Method](docs/12-static.md)
-- 
+- [Koneksi Database](docs/22-koneksi-database.md)
+- Menggunakan phpMyAdmin, setup database `test`, import [test.sql](src/test.sql)
+- Siapkan package baru: `crud`
+- Buat file `Mahasiswa.java`:
+    ```java
+    package crud;
+
+    import java.sql.*;
+
+    public class Mahasiswa {
+
+        public String nim;
+        public String nama;
+        public Integer nilai;
+
+        public boolean tambah()  {
+            String DBDRIVER = "com.mysql.cj.jdbc.Driver";
+            String DBCONNECTION = "jdbc:mysql://localhost:3306/test";
+            String DBUSER = "root";
+            String DBPASS = "";
+            
+            Connection conn = null;
+            PreparedStatement st;
+
+            try {
+                Class.forName(DBDRIVER);
+                conn = DriverManager.getConnection(DBCONNECTION, DBUSER, DBPASS);
+
+                // prepare select statement
+                String sql = "INSERT INTO mahasiswa (nim,nama,nilai) values (?,?,?)";
+                st = conn.prepareStatement(sql);
+                st.setString(1, this.nim);
+                st.setString(2, this.nama);
+                st.setInt(3, this.nilai);
+                st.executeUpdate();
+                conn.close();
+                return true;
+            } catch (Exception ex) {
+                return false;
+            }
+
+        }
+    }
+    ```
+- Buat file `DemoMahasiswa1.java`
+    ```java
+    package crud;
+
+    public class DemoMahasiswa1 {
+        public static void main(String[] args) {
+            Mahasiswa mahasiswa = new Mahasiswa();
+            mahasiswa.nim="2000001";
+            mahasiswa.nama = "Budianto";
+            mahasiswa.nilai = 20;                        
+            mahasiswa.tambah();
+            System.out.println("Data berhasil ditambahkan");
+        }
+    }
+    ```
+- Eksekusi `DemoMahasiswa1.java`, lihat hasilnya di tabel _mahasiswa_ lewat phpMyAdmin
+- Latihan:
+  - Tambahkan method `baca()`, `hapus()` dan `update()`.
