@@ -62,7 +62,7 @@ Misalnya pada contoh form di atas, kita mau mau membuat program, dimana ketika p
 
 tambahkan kode program berikut pada fungsi `tombolPesanActionPerformed`
 ```java
-        pesan.setText("Hallo, "+namaUser.getText());
+pesan.setText("Hallo, "+namaUser.getText());
 ```
 
 Berikutnya, tambahkan program untuk menampilkan form, pada program utama.
