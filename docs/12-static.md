@@ -2,25 +2,23 @@
 
 ## Static Property
 
-Static property (atau static variable) adalah variabel yang nilainya dimiliki bersama oleh seluruh objek dari kelas tersebut.
+Static property (atau _static_ variable) adalah variabel yang nilainya dimiliki bersama oleh seluruh objek dari kelas tersebut.
 
-Hanya satu salinan dari variabel yang dibuat, tidak peduli berapa banyak objek yang dibuat dari kelas tersebut.
-
-Cocok untuk menyimpan data bersama/global seperti counter objek, konfigurasi kelas, dsb.
+Hanya satu salinan dari variabel yang dibuat, tidak peduli berapa banyak objek yang dibuat dari kelas tersebut. Dengan demikian, ini cocok untuk menyimpan data bersama/global seperti counter objek, konfigurasi kelas, dsb.
 
 **Contoh Penggunaan Static Property**
 ```java
 public class Produk {
-    static int jumlahProduk = 0; // static property
+    static int banyakBarang = 0; // static property
 
     public Produk() {
-        jumlahProduk++;
+        banyakBarang++;
     }
 
     public static void main(String[] args) {
-        new Produk();
-        new Produk();
-        System.out.println(Produk.jumlahProduk); // Output: 2
+        Produk barang1 = new Produk();
+        Produk barang2 = new Produk();
+        System.out.println(Produk.banyakBarang); // Output: 2
     }
 }
 ```
@@ -88,6 +86,8 @@ public class Kalkulator {
 Hasil tambah: 8
 Hasil kurang: 2
 ```
+
+Contoh program di atas menunjukkan bahwa kita tidak perlu membuat _instance_ dari class `Kalkulator` dengan perintah `Kalkulator kalkulator = new Kalkulator`. Karena `tambah()` dan `kurang()` didefinisikan sebagai _static_, maka kita bisa langsung memanggil method tersebut dengan perintah `Kalkulator.tambah()` dan `Kalkulator.kurang()`.
 
 **Batasan Static Method**
 - Tidak bisa menggunakan keyword `this` atau `super`

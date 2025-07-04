@@ -42,7 +42,7 @@ nama[3] = "Mila";
 nama[4] = "Ayu";
 ```
 
-Atau, Anda juga bisa menggunakan cara berikut untuk melakukan inisialisasi sekaligus mengisi array.
+Anda juga bisa menggunakan cara berikut untuk melakukan inisialisasi sekaligus mengisi array.
 
 ```java
 String[] nama = {"Linda", "Santi", "Susan", "Mila", "Ayu"};
