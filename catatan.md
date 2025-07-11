@@ -240,6 +240,7 @@
   - Tambahkan method `baca()`, `hapus()` dan `update()`.
 
 ## Pertemuan 12
-- [Standard Input & Output](docs/04-input-output.md)
-- [Exception](https://github.com/ruang-belajar/java/blob/main/docs/13-exception.md)
-- [Static Method & Property](https://github.com/ruang-belajar/java/blob/main/docs/12-static.md)
+- [Exception](docs/13-exception.md)
+
+## Pertemuan 13
+- [Java GUI](docs/20-gui.md)
