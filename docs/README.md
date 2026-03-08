@@ -1,4 +1,3 @@
-![](images/cover.gif)
 
 # Ruang Belajar Java
 
@@ -24,13 +23,8 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 16. [Java Referensi](referensi/README.md)
 18. [Java - Koneksi ke Database](22-koneksi-database.md)
 
----
-[**✍ Catatan Kuliah**](../catatan/catatan.md)
 
 [**✍ Cheatsheet 1**](00-cheatsheet-1.md)
-
-[**📑 Folder latihan @ Github**](latihan/)
-
 
 ---
 

@@ -1,3 +1,6 @@
+
+![](docs/images/cover.gif)
+
 # Ruang Belajar Java
 
 Repositori ini berisikan materi pembelajaran _Pemrograman Java_.
