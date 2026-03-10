@@ -1,3 +1,5 @@
+# Syntax
+
 Setiap bahasa pemrograman memiliki struktur dan aturan penulisan sintaks yang berbeda-beda. Java merupakan bahasa pemrograman yang dikembangkan dari bahasa C dan tentunya akan banyak mengikuti gaya penulisan C.
 
 Contoh, coba perhatikan program berikut:
@@ -14,16 +16,16 @@ class HelloWorld {
 
 Banyak hal yang kita belum ketahui.
 
-Apa itu package?
+*Apa itu package?*
 
-Apa itu class?
+*Apa itu class?*
 
 …dan mengapa ditulis seperti itu?
 
 Oleh sebab itu, kita perlu belajar sintaks dasar dan struktur program Java.
 
-Mari kita mulai…
 
+---
 
 ## Struktur Dasar Program Java
 Struktur program Java secara umum dibagi menjadi 4 bagian:
@@ -51,9 +53,10 @@ class HelloWorld { //<- 3. Bagian class
 Mari kita bahas, satu-per-satu…
 
 ### 1. Deklarasi Package
-Package merupakan sebuah folder yang berisi sekumpulan program Java.
 
-Deklarasi package biasanya dilakukan saat membuat program atau aplikasi besar.
+> 👶 Untuk aplikasi CLI serderhana, bagian deklarasi *package* tidak diperlukan.
+
+Package merupakan sebuah folder yang berisi sekumpulan program Java. Deklarasi package biasanya dilakukan saat membuat program atau aplikasi besar.
 
 Contoh deklarasi package:
 
@@ -65,9 +68,9 @@ Biasanya nama package mengikuti nama domain dari sebuah vendor yang mengeluarkan
 
 Aturannya: nama domain dibalik, lalu diikuti nama programnya.
 
-Bagaimana kalau kita tidak mendeklarasikan package? Boleh-boleh saja dan programnya akan tetap bisa jalan. Tapi nanti saat produksi -- misalnya saat membuat aplikasi Android -- kita wajib mendeklarasikan package.
 
 ### 2. Bagian Impor
+
 Pada bagian ini, kita melakukan impor library yang dibutuhkan pada program.
 
 Library merupakan sekumpulan class dan fungsi yang bisa kita gunakan dalam membuat program.
@@ -80,7 +83,9 @@ import java.util.Scanner;
 
 Pada contoh tersebut, kita mengimpor class `Scanner` dari package `java.util`.
 
+
 ### 3. Bagian Class
+
 Java merupakan bahasa pemrograman yang menggunakan paradigma OOP (Object Oriented Programming).
 
 Setiap program harus dibungkus di dalam _class_ agar nanti bisa dibuat menjadi objek.
@@ -103,7 +108,9 @@ Di dalam blok _class_, kita dapat mengisinya dengan method atau fungsi-fungsi da
 
 Pada contoh di atas, terdapat method `main()`.
 
+
 ### 4. Method Main
+
 Method `main()` atau fungsi `main()` merupakan blok program yang akan dieksekusi pertama kali.
 
 Ini adalah entri point dari program.
@@ -132,7 +139,10 @@ System.out.println("Hello World");
 
 Ini adalah fungsi untuk menampilkan teks ke layar monitor.
 
+---
+
 ## Statement dan Ekspresi pada Java
+
 Statement dan eksrepsi adalah bagian terkecil dalam program. Setiap statement dan ekspresi di Java, harus diakhiri dengan titik koma (;).
 
 Contoh statemen dan ekspresi:
@@ -182,8 +192,9 @@ Blok program dapat juga berisi blok program yang lain (nested).
 
 Pada contoh di atas, blok program `main()` berisi blok if dan for.
 
+---
 
-## Penulisan Komentar pada Java
+## Penulisan Komentar
 Komentar merupakan bagian program yang tidak akan dieksekusi oleh komputer.
 
 Komentar biasanya digunakan untuk:
@@ -216,7 +227,10 @@ public static void main(String args[]){
 }
 ```
 
+---
+
 ## Penulisan String dan Karakter
+
 String merupakan kumpulan dari karakter. Kita sering mengenalnya dengan teks.
 
 Contoh string: "Hello world"
@@ -232,8 +246,10 @@ Jadi harap dibedakan:
 * Tanda petik ganda ("...") untuk membuat string;
 * Sedangkan tanda petik tunggal ('...') untuk membuat karakter.
 
+---
 
 ## Case Sensitive
+
 Java bersifat Case Sensitive, artinya huruf besar atau kapital dan huruf kecil dibedakan.
 
 Contoh:
@@ -272,7 +288,10 @@ System.out.println(jeniskelamin);
 
 Perhatikan, huruf K adalah huruf kapital.
 
+---
+
 ## Gaya Penulisan Case (_Naming Convension_)
+
 Gaya penulisan case (case style) yang digunakan oleh Java adalah: _camelCase_, _PascalCase_, dan _UPPERCASE_.
 
 **Penulisan nama variabel, nama objek, dan nama method menggunakan _camelCase_**
@@ -321,5 +340,7 @@ _Apakah boleh saya menulis sembarangan?_
 Secara konsensus, programmer Java di seluruh dunia menggunakan aturan ini tuntuk menulis kode program Java. Dengan melakukan penulian kode program diluar standar ini akan membuat program yang Anda buat terlihat _kotor_ dan lebih sulit untuk dibaca. Ingat, kode program yang kita buat itu bukan saja dibaca oleh komputer, tapi dibaca juga oleh manusia.
 
 ---
-**Referensi:**
+
+## 📚 Referensi:
+
 - https://www.petanikode.com/java-sintaks/

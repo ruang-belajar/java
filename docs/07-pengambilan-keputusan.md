@@ -29,8 +29,8 @@ Sebelumnya, kamu perlu tahu dulu tiga bentuk percabangan pada _Java_:
 2. Percabangan IF/ELSE
 3. Percabangan IF/ELSE/IF atau SWITCH/CASE
 
-Mari kita bahas satu per satu…
 
+---
 
 ## 1. Percabangan IF
 Percabangan ini hanya memiliki satu pilihan. Artinya, pilihan di dalam IF hanya akan dikerjakan kalau kondisinya benar.
@@ -43,14 +43,13 @@ Tapi kalau salah… tidak akan melakukan apa-apa. Alias lanjut eksekusi ke perin
 Contoh:
 > Pernahkah kalian belanja di toko, kemudian kalau belanja di atas sekian ribu dapat hadiah atau diskon.
 
-Nah! Contoh kasus seperti itu, dapat kita selesaikan dengan menggunakan percabangan ini.
-
-untuk lebih jelasnya…
+Contoh kasus seperti itu, dapat kita selesaikan dengan menggunakan percabangan ini. Perhatikan contoh berikut
 
 **Contoh: _Program Hadiah_**
-Misalkan ada sebuah toko buku. Mereka memberikan hadiah berupa perlengkapan sekolah kepada pembeli yang belanja di atas Rp 100.000.
 
-Maka programnya bisa kita buat seperti ini:
+> Misalkan ada sebuah toko buku. Mereka memberikan hadiah berupa perlengkapan sekolah kepada pembeli yang belanja di atas Rp 100.000.
+
+Maka programnya bisa kita buat sebagai berikut:
 
 ```java
 import java.util.Scanner;
@@ -82,7 +81,10 @@ Terima kasih...
 ```
 Anda bisa coba jalankan program dengan nilai input belanjaan dibawah `100000` dan perhatikan hasil outputnya.
 
+---
+
 ## 2. Percabangan IF/ELSE
+
 Sedangkan percabangan IF/ELSE memiliki pilihan alternatif kalau kondisinya salah.
 
 **IF**: "Jika kondisi benar maka kerjakan ini, kalau tidak silahkan lanjut"
@@ -195,6 +197,8 @@ public class OperatorTernary {
 }
 ```
 
+---
+
 ## 3. Percabangan IF/ELSE/IF dan SWITCH/CASE
 Jika percabangan IF/else hanya memiliki dua pilihan saja. Maka percahangan IF/ELSE/IF memiliki lebih dari dua pilihan.
 
@@ -276,8 +280,10 @@ Masukan nilai: 80
 Grade: B+
 ```
 
+---
 
 ## 4. Percabangan SWITCH/CASE
+
 Percabangan SWITCH/CASE sebenarnya adalah bentuk lain dari IF/ELSE/IF.
 
 Bedanya, percabangan ini menggunakan kata kunci `switch` dan `case`.
@@ -360,20 +366,24 @@ public class LampuLalulintas {
     }
 }
 ```
+
 Hasil outputnya:
 
 ```
 Warna? hijau
 Lampu hijau, silahkan jalan!
 ```
+
 Cobalah untuk menghilangkan `break` di salah satu case dan perhatikanlah hasilnya.
 
+---
+
 ## 5. Percabangan dalam Percabangan (Nested)
+
 Kita sudah tahu tiga bentuk dasar percabanganan di Java. Selanjutnya, kita coba bahas percabangan yang ada di dalam perbangan (percabangan bersarang).
 
 **Contoh kasus:**
-
-Misalnya ada model bisnis seperti ini di sebuah toko. Ketika orang membayar di kasir, biasanya ditanya ada kartu member untuk mendapatkan diskon dan sebagainya.
+> Sebuah toko memiliki model bisnis sebagai berikut: Ketika orang membayar di kasir, biasanya ditanya ada kartu member untuk mendapatkan diskon dan sebagainya.
 
 ```
 Apakah anda punya kartu member?
@@ -439,6 +449,7 @@ public class Kasir {
     }  
 }
 ```
+
 Hasil outputnya:
 
 ```
@@ -453,13 +464,12 @@ Cobalah untuk mengubah nilai yang dimasukkan dan perhatikan hasilnya.
 Mungkin di sana ada yang perlu diperhatikan:
 * Fungsi `equalsIgnoreCase("ya")` digunakan untuk membandingkan String dengan tidak memperdulikan huruf besar dan kecilnya.
 * Ada juga Fungsi `equals()`, fungsinya sama. Tapi `equals()` akan memperhatikan case hurufnya.
-Kenapa tidak menggunakan operator `==` atau `!=`?
 
-Di Java memang seperti itu.
+*Kenapa tidak menggunakan operator `==` atau `!=`?* 
 
-Kalau kita ingin membandingkan nilai String, ya… menggunakan fungsi yang dua tadi.
+Itu karena String termasuk tipe data kompleks/_non primitive_, sehingga proses perbandingan tidak bisa langsung menggunakan `==`  & `!=`.
 
-Tapi, kalau membandingkan selain String, maka bisa pakai operator `==` atau `!=`.
+---
 
 ## 6. Menggunakan Operator Logika dalam Percabangan
 Operator logika dalam percabangan sebenarnya bisa membuat percabangan menjadi lebih singkat.

@@ -1,41 +1,50 @@
-# Catatan Kuliah (Kelas Java 2025)
+# Catatan Kuliah (Kelas Java 2026)
 
 ## Pertemuan 1
+
 - [Pengenalan Java](docs/01-intro.md)
 - Persiapan
-  - [JDK 23](https://download.oracle.com/java/23/latest/jdk-23_windows-x64_bin.exe)
-  - [Netbeans 25](https://downloads.apache.org/netbeans/netbeans-installers/25/Apache-NetBeans-25-bin-windows-x64.exe.sha512)
+	- [JDK](https://www.oracle.com/asean/java/technologies/downloads/) (disarankan versi 21)
+	- [Visual Studio Code](https://code.visualstudio.com/download)
+		- [Extension Pack for Java](marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 - [Setup & membuat program sederhana](docs/02-setup.md)
 - Dasar yang dipelajari ketika mempelajari program baru:
-  - penggunaan variabel
-  - operasi aritmatika
-  - input output
-  - IF
-  - LOOPING
-  - Fungsi standar
-  - Fungsi buatan
+	- penggunaan variabel
+	- operasi aritmatika
+	- input output
+	- IF
+	- LOOPING
+	- Fungsi standar
+	- Fungsi buatan
 - Istilah penting:
-  - Java Runtime --> supaya kita bisa menjalankan program yang dibuat.
-  - Java EE --> untuk membuat web menggunakan java
-  - JDK --> _Java Development Kit_ --> supaya kita bisa membuat program java 
-  - Java SE --> untuk membuat program di desktop/windows
-- **Tugas 1:**\
+	  - Java Runtime --> supaya kita bisa menjalankan program yang dibuat.
+	  - Java EE --> untuk membuat web menggunakan java
+	  - JDK --> _Java Development Kit_ --> supaya kita bisa membuat program java 
+	  - Java SE --> untuk membuat program di desktop/windows
+- 💼 **Tugas 1:**\
   Pelajari bab [Syntax](docs/03-syntax.md) dan [Standard Input & Output](docs/04-input-output.md), kemudian buat program yang  meminta input _nama_ dan _nilai_. Jika _nilai_ > 60 maka tampilkan informasi "lulus", _nilai_ <=60, tampilkan informasi "tidak lulus"\
     contoh 1:
     ```
     Nama: Budi
     Nilai: 80
-    Halo Budi, kamu LULUS
+    Grade: A
+    
+    Halo Budi, kamu LULUS dengan grade A
     ```
     contoh 2:
     ```
     Nama: Budi
     Nilai: 40
-    Halo Budi, kamu TIDAK LULUS
+    Grade: B
+    
+    Halo Budi, kamu TIDAK LULUS dengan grade B
     ```
     Untuk membaca input, gunakan class `Scanner`, simpan dan kirim menggunakan nama `ProgramScanner.java`.
+* 💼 Download & Install **Github Desktop**.
+
 
 ## Pertemuan 2
+
 - Review Tugas
 - [Syntax dasar](docs/03-syntax.md)
 - [Input & Output](docs/04-input-output.md)

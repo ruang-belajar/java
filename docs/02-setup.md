@@ -3,7 +3,7 @@ Berikut beberapa program yang perlu dipersiapkan yang akan digunakan dalam perku
 
 ## Download
 - [JDK](https://www.oracle.com/id/java/technologies/downloads/)
-- [Netbean](https://netbeans.apache.org/download/index.html)
+- [Netbean](https://netbeans.apache.org/download/index.html) / [Visual Studio Code](https://code.visualstudio.com/download)
 - [Github Desktop](https://desktop.github.com/)
 
 ## Online Service
@@ -40,40 +40,12 @@ Hello, World!
 
 ```
 
-## Menjalankan _Java Project_
+## Menggunakan Visual Studio Code (VSC)
 
-Beberapa project Java yang dibuat menggunakan editor seperti (misalnya) _Netbean_ atau _Eclipse_ menggunakan folder untuk mengelompokan file-filenya. Tentu project ini lebih mudah untuk dijalankan menggunakan IDE sesuai yang digunakan oleh programmer, tapi ada kalanya kita juga perlu melakukan kompilasi lewat CLI.
+Kita bisa menggunakan VSC untuk membuat program Java sederhana. Ikuti langkah berikut:
 
-Sebagai contoh, download dan extract project berikut: https://github.com/hexadeciman/Snake/archive/refs/heads/master.zip atau lewat https://github.com/hexadeciman/Snake/
-
-Setelah Anda extract file tersebut, Anda akan mendapati bahwa file _.java_ pada project tersebut terdiri lebih dari berapa file dan disimpan dalam folder _src_, dan bagian program utamanya (file yang menyimpan `void main`), adalah `Main.java`.
-
-```
-DataOfSquare.java
-KeyboardListener.java
-Main.java
-SquarePanel.java
-ThreadsController.java
-Tuple.java
-Window.java
-```
-
-Dengan demikian untuk menjalankan program tersebut, langkap pertama: Compile semua file _.java_ dan menyimpan hasil _compile_ nya ke folder terpisah. Untuk melakukan ini, pastikan pada CLI/CMD, pastikan posisi folder aktif berada pada folder _Snake_. Eksekusi perintah berikut:
-
-```
-C:\latihan\Snake> javac -sourcepath src -d out src/Main.java
-```
-
-**Penjelasan:**
-* `src` pada `-sourcepath src` menunjuk pada lokasi file _.java_ disimpan
-* `out` pada `-d out` menunjuk pada lokasi folder dimana file hasil kompilasi (file _.class) akan disimpan. Setelah proses kompilasi selesai, maka folder `out` akan berikut file _.class_ hasil kompilasi.
-* `src/Main.java` menunjuk pada file program utama pada project.
-
-Setelah proses kompilasi selesai, untuk mengeksekusi program, gunakan perintah berikut:
-
-```
-C:\latihan\Snake> java -classpath out Main
-```
-
-Referensi:
-* https://www.baeldung.com/javac-compile-classes-directory
+1. Buka VSC
+2. Buat/buka folder kerja
+3. Buat file baru, simpan dengan nama `HelloWorld.java` (kode copy-paste dari contoh program di atas)
+4. Jalankan program dengan menekan tombol `F5`
+   ![546](02-setup-output-1.png)

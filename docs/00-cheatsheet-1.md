@@ -20,8 +20,8 @@ public class NamaClass { // NamaClass harus sama dengan nama file
 Statement di java hanya terdiri dari 5 pilihan:
 1. Deklarasi (Declaration)
 2. Penugasan (Assignment)
-3. Pengambilan keputusan (if)
-4. Pengulangan/loop (while/for)
+3. Pengambilan keputusan (`if`)
+4. Pengulangan/loop (`while`/`for`)
 5. Memanggil prosedur/Function call
 
 ## Deklarasi (Declaration)
@@ -83,6 +83,31 @@ if(kondisi) {
 ```
 
 _kondisi_ adalah formula yang selalu memberikan hasil `true` atau `false` (boolean). Ciri formula yang menghasilkan nilai boolean biasanya menggunakan operator logika, seperti `==` `!=` `>` `<` `=>` `<=` `||` `&&`.
+
+## Kondisi
+Kondisi selalu bernilai `true`/`false`. Kondisi digunakan dalam statement `if` dan `while`.
+
+```java
+if(usia > 40) {
+	// ...
+}
+
+// AND
+if((usia >= 40) && (usia <=60)) {
+	// ...
+}
+
+// OR
+if((usia<40) || (usia>60)) {
+	// ...
+}
+
+// OR
+if(nama.equals("Budi") || jeniskelamin=='L') {
+	// ...
+}
+
+```
 
 ## Pengulangan
 Perintah pengulangan di Java adalah `while` dan `for`. Format penulisan:

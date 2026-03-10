@@ -16,8 +16,11 @@ Tiga class tersebut untuk mengambil input pada program berbasis teks (console). 
 
 Sementara untuk outputnya, Java menyediakan fungsi `print()`, `println()`, dan `format()`.
 
+---
+
 ## Mengambil Input
 ### 1. Class Scanner
+
 Scanner merupakan class yang menyediakan fungsi-fungsi untuk mengambil input dari keyboard.
 
 Agar kita bisa menggunakan Scanner, kita perlu mengimpornya ke dalam kode:
@@ -45,19 +48,18 @@ public class DataKaryawan {
         // Tampilkan output ke user
         System.out.println("### Pendataan Karyawan PT. ABC ###");
         System.out.print("Nama karyawan: ");
+        
         // menggunakan scanner dan menyimpan apa yang diketik di variabel nama
         nama = keyboard.nextLine();
-        // Tampilkan outpu lagi
+        
+        // Tampilkan output lagi
         System.out.print("Alamat: ");
+        
         // menggunakan scanner lagi
         alamat = keyboard.nextLine();
 
-        System.out.print("Usia: ");
-        usia = keyboard.nextInt();
-
         System.out.print("Gaji: ");
         gaji = keyboard.nextInt();
-
 
         // Menampilkan apa yang sudah simpan di variabel
         System.out.println("--------------------");
@@ -72,9 +74,67 @@ public class DataKaryawan {
 
 Perlu diperhatikan, penggunakan fungsi untuk mengambil data bergantung dari tipe data yang digunakan.
 
-Misal, tipe datanya adalah _String_, maka fungsi atau method yang dipakai adalah `nextLine()`. Begitu juga dengan tipe data lain, Integer menggunakan `nextInt()`, Double menggunakan `nextDouble()`.
+Misal, tipe datanya adalah _String_, maka fungsi atau method yang dipakai adalah `nextLine()`. Begitu juga dengan tipe data lain, Integer menggunakan `nextInt()`, *Double* (bilangan desimal) menggunakan `nextDouble()`.
 
-Khusus untuk `nextLine()`, input menggunakan method ini tidak bisa menerima data dengan spasi. Ini salah satu keterbatasan/ketentuan dari perintah `nextLine()`. Jika perlu membaca input text dengan spasi, kita bisa menggunakan class `BufferReader` atau `Console`.
+### Special Case
+
+Perhatikan program berikut:
+```java
+import java.util.Scanner;
+
+public class ReadLine1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Usia:");
+        int age = scanner.nextInt();
+
+        System.out.println("Tulis kalimat:");
+        // nextLine() ini akan dilewati
+        String inputSentence = scanner.nextLine();
+
+        System.out.println();
+        System.out.print("Yang Anda tulis:");
+        System.out.println(inputSentence);
+
+        System.out.print("Usia:");
+        System.out.println(age);
+        scanner.close();
+    }
+}
+```
+
+Program di atas, akan melewati pertanyaan "Input kalimat:".
+
+Jika menggunakan `nextLine()`, setelah `nextInt()` (atau `nextDouble()`), program akan membaca `ENTER`  ketika input lewat `nextInt()`, sehingga perintah `nextLine()` seolah dilewati.  Untuk mengatasi hal tersebut, gunakan perintah `nextLine()` setelah `nextInt()`.
+
+**Solusi:**
+```java
+import java.util.Scanner;
+
+public class ReadLine1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Usia:");
+        int age = scanner.nextInt();
+        // nextLine untuk memastikan ENTER "dimakan" dulu
+        scanner.nextLine();
+
+        System.out.println("Tulis kalimat:");
+        String inputSentence = scanner.nextLine();
+
+        System.out.println();
+        System.out.print("Yang Anda tulis:");
+        System.out.println(inputSentence);
+
+        System.out.print("Usia:");
+        System.out.println(age);
+        scanner.close();
+    }
+}
+```
+
 
 ### 2. Class BufferReader
 
@@ -161,8 +221,9 @@ Naa kamu adalah: Budi Raharjo
 Saat ini berusia 22 tahun
 ```
 
-**Perhatikan:** dalam kode di atas, kita menggunakan fungsi `Integer.parseInt(con.readLine())` untuk tipe data integer. Artinya, kita merubah tipe data String ke Integer. Karena `Console` tidak memiliki nilai kembalian berupa integer untuk fungsi `read()`.
+**Perhatikan:** `readLine()` selalu membaca nilai yang diinput sebagai String. Oleh sebab itu, dalam kode di atas, kita menggunakan fungsi `Integer.parseInt(con.readLine())` untuk tipe data integer. Artinya, kita merubah tipe data String ke Integer. Karena `Console` tidak memiliki nilai kembalian berupa integer untuk fungsi `read()`.
 
+---
 
 ## Menampilkan Output
 
@@ -202,6 +263,8 @@ pake print() lagi
 
 ```
 
+---
+
 ## Menggabungkan String
 Ketika menggunakan fungsi `print()` maupun `println()`, kadang kita perlu mengambil teks dari variabel dan menggabungkannya dengan teks yang lain.
 
@@ -231,6 +294,8 @@ Agar ada spasi, tinggal ditambahkan saja spasi:
 System.out.print(namaDepan + " " + namaBelakang);
 ```
 
+---
+
 ## Format String
 Sedangkan untuk menggabungkan String yang lebih kompleks, kita bisa menggunakan fungsi format().
 
@@ -249,14 +314,13 @@ public class FormatString {
 
 }
 ```
-Perhatikan: di sana kita menggunakan simbol %s untuk mengambil nilai dari variabel di sampingnya. %s artinya string.
+**Perhatikan:** di sana kita menggunakan simbol `%s` untuk mengambil nilai dari variabel di sampingnya. `%s` artinya string.
 
-Selain %s, ada juga simbol lain:
-
-%d untuk desimal atau angka;
-%f untuk bilangan pecahan;
-%n untuk baris baru, bisa juga pakai \n;
-dan masih banyak lagi, [cek di dokumentasi java](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
+Selain `%s`, ada juga simbol lain:
+* `%d` untuk desimal atau angka (termasuk integer);
+* `%f` untuk bilangan pecahan;
+* `%n` atau `\n` untuk baris baru;
+* dan masih banyak lagi, [cek di dokumentasi java](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
 
 ![](images/04-contoh1.png)
 
