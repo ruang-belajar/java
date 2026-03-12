@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/01-intro.md",
+                "file": "docs/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-intro"
+              "title": "README"
             }
           }
         ],
@@ -198,10 +198,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "c0469d17e1ecf8e7",
+  "active": "ff8083cdca6a47ce",
   "lastOpenFiles": [
-    "docs/07-pengambilan-keputusan.md",
+    "docs/images/README-header.png",
     "docs/01-intro.md",
+    "docs/07-pengambilan-keputusan.md",
     "docs/02-setup.md",
     "docs/03-syntax.md",
     "docs/images/01-intro-2.png",
