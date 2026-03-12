@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/README.md",
+                "file": "docs/03-syntax.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "03-syntax"
             }
           }
         ],
@@ -200,14 +200,14 @@
   },
   "active": "ff8083cdca6a47ce",
   "lastOpenFiles": [
-    "docs/images/README-header.png",
-    "docs/01-intro.md",
-    "docs/07-pengambilan-keputusan.md",
     "docs/02-setup.md",
+    "docs/01-intro.md",
+    "docs/README.md",
+    "docs/images/README-header.png",
+    "docs/07-pengambilan-keputusan.md",
     "docs/03-syntax.md",
     "docs/images/01-intro-2.png",
     "docs/images/01-intro-1.png",
-    "docs/README.md",
     "arsip/studi-kasus-1.md",
     "docs/04-input-output.md",
     "docs/09-fungsi.md",

@@ -16,10 +16,8 @@ class HelloWorld {
 
 Banyak hal yang kita belum ketahui.
 
-*Apa itu package?*
-
-*Apa itu class?*
-
+*Apa itu package?*\
+*Apa itu class?*\
 …dan mengapa ditulis seperti itu?
 
 Oleh sebab itu, kita perlu belajar sintaks dasar dan struktur program Java.
@@ -54,7 +52,7 @@ Mari kita bahas, satu-per-satu…
 
 ### 1. Deklarasi Package
 
-> 👶 Untuk aplikasi CLI serderhana, bagian deklarasi *package* tidak diperlukan.
+> 👶 **Untuk aplikasi CLI serderhana, bagian deklarasi *package* tidak diperlukan.**
 
 Package merupakan sebuah folder yang berisi sekumpulan program Java. Deklarasi package biasanya dilakukan saat membuat program atau aplikasi besar.
 
