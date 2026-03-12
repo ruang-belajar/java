@@ -231,20 +231,16 @@ public static void main(String args[]){
 
 ## Penulisan String dan Karakter
 
-String merupakan kumpulan dari karakter. Kita sering mengenalnya dengan teks.
+*String* merupakan kumpulan dari karakter. Kita sering mengenalnya dengan teks.
 
 Contoh string: "Hello world"
 
-Aturan penulisan string pada Java, harus diapit dengan tanda petik ganda seperti pada contoh di atas.
+Aturan penulisan **string pada Java harus diapit dengan tanda *petik ganda*** seperti pada contoh di atas.
 
-Apabila diapit dengan tanda petik tunggal, maka akan menjadi sebuah karakter.
+Apabila diapit dengan tanda petik tunggal, maka diperlakukan sebagai *char*.
 
 Contoh: 'Hello world'.
 
-Jadi harap dibedakan:
-
-* Tanda petik ganda ("...") untuk membuat string;
-* Sedangkan tanda petik tunggal ('...') untuk membuat karakter.
 
 ---
 
@@ -278,21 +274,16 @@ Maka kita harus memanggilnya seperti ini:
 
 ```java
 System.out.println(jenisKelamin);
+System.out.println(jeniskelamin); // contoh yang salah
 ```
 
-Bukan seperti ini:
-
-```java
-System.out.println(jeniskelamin);
-```
-
-Perhatikan, huruf K adalah huruf kapital.
+Perhatikan, huruf K pada "jenisKelamin" menggunakan huruf kapital.
 
 ---
 
-## Gaya Penulisan Case (_Naming Convension_)
+## Gaya Penulisan (_Naming Convension_)
 
-Gaya penulisan case (case style) yang digunakan oleh Java adalah: _camelCase_, _PascalCase_, dan _UPPERCASE_.
+Penulisan nama variabel/method/class yang digunakan dalam Java adalah: _camelCase_, _PascalCase_, dan _UPPERCASE_.
 
 **Penulisan nama variabel, nama objek, dan nama method menggunakan _camelCase_**
 
@@ -335,9 +326,37 @@ public final String DB_NAME = "ruangbelajar";
 
 Untuk penulisan dua suku kata atau lebih, UPPERCASE dipisah dengan garus bawah atau underscore (_).
 
-_Apakah boleh saya menulis sembarangan?_
+🤔 _Apakah boleh saya tidak mengikuti aturan penulisan ini?_
 
 Secara konsensus, programmer Java di seluruh dunia menggunakan aturan ini tuntuk menulis kode program Java. Dengan melakukan penulian kode program diluar standar ini akan membuat program yang Anda buat terlihat _kotor_ dan lebih sulit untuk dibaca. Ingat, kode program yang kita buat itu bukan saja dibaca oleh komputer, tapi dibaca juga oleh manusia.
+
+---
+
+## Kesalahan Umum Pemula
+
+Bagi pemula yang baru dengan pemrograman, terutama dalam Java, berikut beberapa kesalahan umum yang biasanya terjadi untuk bisa diberikan perhatian khusus:
+
+- Lupa titik koma `;`
+```java
+int x = 1
+```
+    
+- Salah penulisan huruf besar-kecil
+```java
+system.out.println("Halo"); 
+// seharusnya System.out.println("Halo");
+```
+    
+- Kurung kurawal `{}` tidak berpasangan
+```java
+if (umur > 30){
+	System.out.println("Halo");
+
+```
+ 
+- Nama class tidak sama dengan nama file
+
+
 
 ---
 

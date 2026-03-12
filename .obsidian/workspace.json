@@ -27,26 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "catatan.md",
+                "file": "docs/01-intro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "catatan"
-            }
-          },
-          {
-            "id": "6de5174a9f093886",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/07-pengambilan-keputusan.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "07-pengambilan-keputusan"
+              "title": "01-intro"
             }
           }
         ],
@@ -214,18 +200,22 @@
   },
   "active": "c0469d17e1ecf8e7",
   "lastOpenFiles": [
-    "README.md",
-    "catatan.md",
+    "docs/07-pengambilan-keputusan.md",
+    "docs/01-intro.md",
+    "docs/02-setup.md",
+    "docs/03-syntax.md",
+    "docs/images/01-intro-2.png",
+    "docs/images/01-intro-1.png",
     "docs/README.md",
+    "arsip/studi-kasus-1.md",
     "docs/04-input-output.md",
+    "docs/09-fungsi.md",
+    "catatan.md",
+    "README.md",
     "docs/05-tipe-data.md",
     "docs/00-cheatsheet-1.md",
-    "docs/07-pengambilan-keputusan.md",
     "docs/06-operator.md",
-    "docs/03-syntax.md",
     "docs/images/04-contoh1.png",
-    "docs/images/02-setup-output-1.png",
-    "docs/02-setup.md",
-    "docs/01-intro.md"
+    "docs/images/02-setup-output-1.png"
   ]
 }

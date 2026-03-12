@@ -18,6 +18,109 @@ Sementara untuk outputnya, Java menyediakan fungsi `print()`, `println()`, dan `
 
 ---
 
+## Menampilkan Output
+
+Kita sudah mengenal beberapa cara mengambil input dari keyboard untuk program berbasis teks.
+
+Sekarang bagaimana dengan outputnya?
+
+Ada beberapa fungsi yang sudah disediakan oleh Java:
+1. Fungsi `System.out.print()`
+2. Fungsi `System.out.println()`
+3. Fungsi `System.out.format()`
+
+Apa saja perbedaan dari fungsi-fungsi tersebut?
+
+### Fungsi print() vs println()
+Fungsi `print()` dan `println()` sama-sama digunakan untuk menampilkan teks. Perbedaannya adalah fungsi `print()` akan menampilkan teks apa adanya. Sedangkan `println()` akan menampilkan teks dengan ditambah baris baru.
+
+Mari kita coba dalam kode:
+
+```java
+public class PrintVsPrinln {
+
+    public static void main(String[] args) {
+
+        System.out.print("ini teks yang dicetak dengan print()");
+        System.out.println("sedangkan ini teks yang dicetak dengan println()");
+        System.out.print("pake print() lagi");
+
+    }
+
+}
+```
+Sekarang lihat hasil outputnya:
+```
+ini teks yang dicetak dengan print()sedangkan ini teks yang dicetak dengan println()
+pake print() lagi
+
+```
+
+---
+
+## Menggabungkan String
+Ketika menggunakan fungsi `print()` maupun `println()`, kadang kita perlu mengambil teks dari variabel dan menggabungkannya dengan teks yang lain.
+
+Misalnya seperti ini:
+
+Kita punya variabel namaDepan dan namaBelakang:
+```java
+String namaDepan = "Budi";
+String namaBelakang = "Raharjo";
+```
+Kemudian kita ingin menampilkannya dengan fungsi print(), maka kita hanya perlu memasukkannya ke sana.
+
+```java
+System.out.print(namaDepan);
+System.out.print(namaBelakang);
+```
+Kode tersebut akan menghasilkan: BudiRaharjo
+
+Sebenarnya kita tidak perlu menggunakan dua fungsi print(), karena kita bisa menggabungkannya dengan operator +.
+
+Contoh:
+```java
+System.out.print(namaDepan + namaBelakang);
+```
+Agar ada spasi, tinggal ditambahkan saja spasi:
+```java
+System.out.print(namaDepan + " " + namaBelakang);
+```
+
+---
+
+## Format String
+Sedangkan untuk menggabungkan String yang lebih kompleks, kita bisa menggunakan fungsi format().
+
+Contoh:
+```java
+public class FormatString {
+
+    public static void main(String[] args) {
+
+        String namaDepan = "Budi";
+        String namaBelakang = "Raharjo";
+
+        System.out.format("Nama saya %s %s %n", namaDepan, namaBelakang);
+
+    }
+
+}
+```
+**Perhatikan:** di sana kita menggunakan simbol `%s` untuk mengambil nilai dari variabel di sampingnya. `%s` artinya string.
+
+Selain `%s`, ada juga simbol lain:
+* `%d` untuk desimal atau angka (termasuk integer);
+* `%f` untuk bilangan pecahan;
+* `%n` atau `\n` untuk baris baru;
+* dan masih banyak lagi, [cek di dokumentasi java](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
+
+![](images/04-contoh1.png)
+
+Kode di atas akan menghasilkan: `Nama saya Budi Raharjo`
+
+---
+
 ## Mengambil Input
 ### 1. Class Scanner
 
@@ -223,108 +326,6 @@ Saat ini berusia 22 tahun
 
 **Perhatikan:** `readLine()` selalu membaca nilai yang diinput sebagai String. Oleh sebab itu, dalam kode di atas, kita menggunakan fungsi `Integer.parseInt(con.readLine())` untuk tipe data integer. Artinya, kita merubah tipe data String ke Integer. Karena `Console` tidak memiliki nilai kembalian berupa integer untuk fungsi `read()`.
 
----
-
-## Menampilkan Output
-
-Kita sudah mengenal beberapa cara mengambil input dari keyboard untuk program berbasis teks.
-
-Sekarang bagaimana dengan outputnya?
-
-Ada beberapa fungsi yang sudah disediakan oleh Java:
-1. Fungsi `System.out.print()`
-2. Fungsi `System.out.println()`
-3. Fungsi `System.out.format()`
-
-Apa saja perbedaan dari fungsi-fungsi tersebut?
-
-### Fungsi print() vs println()
-Fungsi `print()` dan `println()` sama-sama digunakan untuk menampilkan teks. Perbedaannya adalah fungsi `print()` akan menampilkan teks apa adanya. Sedangkan `println()` akan menampilkan teks dengan ditambah baris baru.
-
-Mari kita coba dalam kode:
-
-```java
-public class PrintVsPrinln {
-
-    public static void main(String[] args) {
-
-        System.out.print("ini teks yang dicetak dengan print()");
-        System.out.println("sedangkan ini teks yang dicetak dengan println()");
-        System.out.print("pake print() lagi");
-
-    }
-
-}
-```
-Sekarang lihat hasil outputnya:
-```
-ini teks yang dicetak dengan print()sedangkan ini teks yang dicetak dengan println()
-pake print() lagi
-
-```
-
----
-
-## Menggabungkan String
-Ketika menggunakan fungsi `print()` maupun `println()`, kadang kita perlu mengambil teks dari variabel dan menggabungkannya dengan teks yang lain.
-
-Misalnya seperti ini:
-
-Kita punya variabel namaDepan dan namaBelakang:
-```java
-String namaDepan = "Budi";
-String namaBelakang = "Raharjo";
-```
-Kemudian kita ingin menampilkannya dengan fungsi print(), maka kita hanya perlu memasukkannya ke sana.
-
-```java
-System.out.print(namaDepan);
-System.out.print(namaBelakang);
-```
-Kode tersebut akan menghasilkan: BudiRaharjo
-
-Sebenarnya kita tidak perlu menggunakan dua fungsi print(), karena kita bisa menggabungkannya dengan operator +.
-
-Contoh:
-```java
-System.out.print(namaDepan + namaBelakang);
-```
-Agar ada spasi, tinggal ditambahkan saja spasi:
-```java
-System.out.print(namaDepan + " " + namaBelakang);
-```
-
----
-
-## Format String
-Sedangkan untuk menggabungkan String yang lebih kompleks, kita bisa menggunakan fungsi format().
-
-Contoh:
-```java
-public class FormatString {
-
-    public static void main(String[] args) {
-
-        String namaDepan = "Budi";
-        String namaBelakang = "Raharjo";
-
-        System.out.format("Nama saya %s %s %n", namaDepan, namaBelakang);
-
-    }
-
-}
-```
-**Perhatikan:** di sana kita menggunakan simbol `%s` untuk mengambil nilai dari variabel di sampingnya. `%s` artinya string.
-
-Selain `%s`, ada juga simbol lain:
-* `%d` untuk desimal atau angka (termasuk integer);
-* `%f` untuk bilangan pecahan;
-* `%n` atau `\n` untuk baris baru;
-* dan masih banyak lagi, [cek di dokumentasi java](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html).
-
-![](images/04-contoh1.png)
-
-Kode di atas akan menghasilkan: `Nama saya Budi Raharjo`
 
 ---
 **Referensi:**
