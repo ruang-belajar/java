@@ -198,14 +198,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "ff8083cdca6a47ce",
+  "active": "c0469d17e1ecf8e7",
   "lastOpenFiles": [
-    "docs/02-setup.md",
     "docs/01-intro.md",
+    "docs/20-gui.md",
+    "docs/20-gui-referensi.md",
+    "docs/00-cheatsheet-1.md",
+    "docs/03-syntax.md",
+    "docs/02-setup.md",
     "docs/README.md",
     "docs/images/README-header.png",
     "docs/07-pengambilan-keputusan.md",
-    "docs/03-syntax.md",
     "docs/images/01-intro-2.png",
     "docs/images/01-intro-1.png",
     "arsip/studi-kasus-1.md",
@@ -214,7 +217,6 @@
     "catatan.md",
     "README.md",
     "docs/05-tipe-data.md",
-    "docs/00-cheatsheet-1.md",
     "docs/06-operator.md",
     "docs/images/04-contoh1.png",
     "docs/images/02-setup-output-1.png"

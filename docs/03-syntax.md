@@ -81,6 +81,8 @@ import java.util.Scanner;
 
 Pada contoh tersebut, kita mengimpor class `Scanner` dari package `java.util`.
 
+> Pada program sederhana yang hanya menampilkan output sederhana mungkin tidak perlu menggunakan perintah `import`
+
 
 ### 3. Bagian Class
 
@@ -88,7 +90,7 @@ Java merupakan bahasa pemrograman yang menggunakan paradigma OOP (Object Oriente
 
 Setiap program harus dibungkus di dalam _class_ agar nanti bisa dibuat menjadi objek.
 
-Kalau kamu belum paham apa itu OOP, cukup pahami class sebagai deklarasi nama program.
+Jika Anda belum paham apa itu OOP, pada saat ini cukup pahami *class* sebagai deklarasi nama program.
 
 ```java
 class HelloWorld {
@@ -98,9 +100,9 @@ class HelloWorld {
 }
 ```
 
-Ini adalah blok _class_.
+Ini adalah blok _class main_.
 
-Blok _class_ dibuka dengan tanda kurung kurawal { kemudian ditutup atau diakhiri dengan }.
+Blok _class_ dibuka dengan tanda *kurung kurawal* { kemudian ditutup atau diakhiri dengan }.
 
 Di dalam blok _class_, kita dapat mengisinya dengan method atau fungsi-fungsi dan juga variabel.
 
@@ -109,7 +111,7 @@ Pada contoh di atas, terdapat method `main()`.
 
 ### 4. Method Main
 
-Method `main()` atau fungsi `main()` merupakan blok program yang akan dieksekusi pertama kali.
+Method/fungsi `main()` pada bagian sebelumnya merupakan blok program yang akan dieksekusi pertama kali.
 
 Ini adalah entri point dari program.
 
@@ -126,8 +128,6 @@ public static void main(String args[]){
 Penulisannya harus seperti ini…
 
 Method `main()` memiliki parameter `args[]`. Parameter ini nanti akan menyimpan sebuah nilai dari argumen di command line.
-
-Silahkan baca: Apa Fungsi String[] args pada Pemrograman Java?
 
 Lalu di dalam method `main()`, terdapat statement atau fungsi:
 
@@ -231,13 +231,18 @@ public static void main(String args[]){
 
 *String* merupakan kumpulan dari karakter. Kita sering mengenalnya dengan teks.
 
-Contoh string: "Hello world"
+```java
+// contoh string
+String kalimat = "Hello world";
+```
 
 Aturan penulisan **string pada Java harus diapit dengan tanda *petik ganda*** seperti pada contoh di atas.
 
 Apabila diapit dengan tanda petik tunggal, maka diperlakukan sebagai *char*.
 
-Contoh: 'Hello world'.
+```java
+char huruf = 'a';
+```
 
 
 ---

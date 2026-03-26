@@ -88,21 +88,23 @@ _kondisi_ adalah formula yang selalu memberikan hasil `true` atau `false` (boole
 Kondisi selalu bernilai `true`/`false`. Kondisi digunakan dalam statement `if` dan `while`.
 
 ```java
+// usia > 40
 if(usia > 40) {
 	// ...
 }
 
-// AND
+// usia >= 40 DAN usia <= 60
+// usia antara 40 - 60
 if((usia >= 40) && (usia <=60)) {
 	// ...
 }
 
-// OR
+// usia < 40 ATAU usia > 60
 if((usia<40) || (usia>60)) {
 	// ...
 }
 
-// OR
+// nama = "Budi" ATAU jeniskelamin = 'L'
 if(nama.equals("Budi") || jeniskelamin=='L') {
 	// ...
 }
@@ -120,7 +122,9 @@ do {
     // statement
 } while(kondisi);
 
-for(int i<=0; i<=10; i++) {
+// buat pengulangan dengan variabel i 
+// mulai dari 0 sampai dengan 10 (11 pengulangan)
+for(int i=0; i<=10; i++) {
     // statement
 }
 

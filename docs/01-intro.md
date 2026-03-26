@@ -139,7 +139,6 @@ Java digunakan pada:
 Sejak Java 9, Java menerapkan **siklus rilis 6 bulan**. Artinya, Java berkembang secara berkelanjutan dengan pembaruan fitur yang lebih cepat dan stabil.
 
 Pihak pengelola utama:
-
 - **Oracle** (pengembang utama OpenJDK)
 - Komunitas OpenJDK global  
 
@@ -164,7 +163,6 @@ Hal ini membuat Java semakin kompetitif dibanding bahasa modern lainnya.
 ### a. Java di Era Cloud & Microservices
 
 Java tetap dominan pada pengembangan **backend modern**, khususnya:
-
 - Microservices architecture
 - RESTful API
 - Event-driven systems
@@ -182,7 +180,6 @@ Java kini lebih ringan, cepat _startup_, dan efisien untuk cloud-native environm
 ### b. Container dan Kubernetes
 
 Java telah beradaptasi dengan ekosistem container:
-
 - Optimasi JVM untuk Docker
 - Dukungan penuh pada Kubernetes
 - Native image (GraalVM) untuk startup super cepat
@@ -194,12 +191,10 @@ Java tidak lagi identik dengan “boros memori”.
 ### c. Reactive dan Asynchronous Programming
 
 Tren aplikasi modern membutuhkan:
-
 - High throughput
 - Non-blocking I/O
 
 Java mendukung ini melalui:
-
 - Reactive Streams
 - Project Reactor
 - CompletableFuture
@@ -210,13 +205,11 @@ Java mendukung ini melalui:
 ### d. Integrasi dengan Big Data dan AI
 
 Java tetap relevan di:
-
 - Big Data processing
 - Data pipeline
 - Distributed systems
 
 Contoh teknologi:
-
 - **Apache Hadoop**
 - **Apache Spark**
 
@@ -227,14 +220,12 @@ Contoh teknologi:
 ### a. Enterprise & Financial Systems
 
 Java masih menjadi standar pada:
-
 - Sistem perbankan
 - Core banking
 - Payment gateway
 - Sistem ERP dan CRM
 
 Alasan:
-
 - Stabilitas tinggi
 - Keamanan
 - Dukungan jangka panjang (LTS)
@@ -244,13 +235,11 @@ Alasan:
 ### b. Backend Web dan API
 
 Java digunakan luas untuk:
-
 - REST API
 - GraphQL backend
 - High-traffic web services
 
 Perusahaan besar yang menggunakan Java:
-
 - Netflix
 - Amazon
 - Google
@@ -302,4 +291,58 @@ Tren ke depan menunjukkan:
 - Fokus pada cloud, scalability, dan performance
 
 Java **tidak menurun**, melainkan **bertransformasi**.
+
+---
+
+## 5. OpenJDK?
+
+**OpenJDK (Open Java Development Kit)** adalah **implementasi Java resmi yang bersifat open-source**. OpenJDK menyediakan **platform Java lengkap** yang mencakup bahasa Java, JVM, dan library standar, serta menjadi **dasar (reference implementation)** bagi Java modern.
+
+OpenJDK dikembangkan secara kolaboratif oleh komunitas global, dengan **Oracle** sebagai kontributor utama.
+
+### Fungsi dan Peran OpenJDK
+
+OpenJDK berfungsi sebagai:
+- **Implementasi referensi Java SE** (Java Standard Edition)
+- Basis teknis untuk hampir semua distribusi Java saat ini
+- Fondasi pengembangan fitur-fitur Java modern
+
+Dengan kata lain:
+
+> **Jika Anda menggunakan Java hari ini, hampir pasti JVM dan library-nya berasal dari OpenJDK.**
+
+---
+
+### Apa Saja yang Ada di OpenJDK?
+
+OpenJDK mencakup:
+
+- **JVM (HotSpot JVM)**
+- **Java Compiler (`javac`)**
+- **Java Standard Library**
+- Tool dasar pengembangan Java
+
+Secara fungsional, OpenJDK setara dengan JDK komersial.
+
+---
+
+### Hubungan OpenJDK, Oracle JDK, dan JDK Lainnya
+
+Hubungan ini sering membingungkan, berikut penjelasan ringkasnya:
+
+1. **OpenJDK**
+	- Open-source
+	- Gratis
+	- Dikembangkan komunitas
+	- Menjadi **basis semua JDK modern**
+2. **Oracle JDK**
+	- Dibangun dari OpenJDK
+	- Mendapat update keamanan tambahan dan dukungan komersial
+	- Lisensi komersial untuk penggunaan enterprise tertentu
+3. **Distribusi JDK Lain**
+	Semua berikut juga berbasis OpenJDK:
+	- Amazon Corretto
+	- Eclipse Temurin
+	- Azul Zulu
+	- Red Hat OpenJDK
 
