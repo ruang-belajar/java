@@ -34,6 +34,16 @@ Mahasiswa mahasiswa;
 String[] daftar;
 ```
 
+
+## Menampilkan Text
+```java
+// Menampilkan text tanpa pindah baris di akhir text
+System.out.print("Kalimat 1");
+
+// Menampilkan text dan pindah baris di akhir text
+System.out.println("Kalimat 2");
+```
+
 ## Penugasan (Assignment)
 Mengisi variabel dengan nilai atau _formula_.
 Contoh:
