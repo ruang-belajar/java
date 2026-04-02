@@ -16,7 +16,7 @@ Pada bagian ini kita akan berkenalan dengan membuat GUI menggunakan Java. IDE ya
 
 ## Basic Interface
 
-## Membuat JFrame/Form
+### Membuat JFrame/Form
 Mari kita membuat form (dalam Java disebut JFrame) pertama kita. Caranya, _klik kanan_ pada nama _package_ (dalam _Source Packages_), pilih _New - JFrame Form..._.
 
 ![](images/20-new-4.jpg)

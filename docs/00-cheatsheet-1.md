@@ -16,13 +16,6 @@ public class NamaClass { // NamaClass harus sama dengan nama file
 
 ```
 
-## Statement
-Statement di java hanya terdiri dari 5 pilihan:
-1. Deklarasi (Declaration)
-2. Penugasan (Assignment)
-3. Pengambilan keputusan (`if`)
-4. Pengulangan/loop (`while`/`for`)
-5. Memanggil prosedur/Function call
 
 ## Deklarasi (Declaration)
 Menyiapkan variabel/objek yang akan digunakan.
@@ -42,6 +35,12 @@ System.out.print("Kalimat 1");
 
 // Menampilkan text dan pindah baris di akhir text
 System.out.println("Kalimat 2");
+
+// Menampilkan text dan variable
+int a = 10;
+int b = 20;
+System.out.printf("Nilai a = %d, b = %d", a, b);
+
 ```
 
 ## Penugasan (Assignment)
