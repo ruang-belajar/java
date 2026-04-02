@@ -8,14 +8,6 @@
 	- [Visual Studio Code](https://code.visualstudio.com/download)
 		- [Extension Pack for Java](marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 - [Setup & membuat program sederhana](docs/02-setup.md)
-- Dasar yang dipelajari ketika mempelajari program baru:
-	- penggunaan variabel
-	- operasi aritmatika
-	- input output
-	- IF
-	- LOOPING
-	- Fungsi standar
-	- Fungsi buatan
 - Istilah penting:
 	  - Java Runtime --> supaya kita bisa menjalankan program yang dibuat.
 	  - Java EE --> untuk membuat web menggunakan java
@@ -46,6 +38,14 @@
 ## Pertemuan 2
 
 - Review Tugas
+- Dasar yang dipelajari ketika mempelajari program baru:
+	- penggunaan variabel
+	- operasi aritmatika
+	- input output
+	- IF
+	- LOOPING
+	- Fungsi standar
+	- Fungsi buatan
 - [Syntax dasar](docs/03-syntax.md)
 - [Input & Output](docs/04-input-output.md)
 - [Data Type](docs/05-tipe-data.md)
