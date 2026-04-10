@@ -70,4 +70,6 @@
 			- Jika barang adalah **pensil**, dan `qty` > **10**, maka berikan diskon **5%**.
 			- Tidak ada diskon untuk pembelian **pen**.
 - [Pengulangan/looping](docs/08-pengulangan.md)
+	- Latihan: Loop1.java
+		- Buat program mencetak bilangan 1,2,3,..., 10
 
