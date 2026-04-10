@@ -56,5 +56,18 @@
   - Nama class selalu sama dengan nama file
   - nama _package_ harus sama dengan _nama folder_    
 - [IF](docs/07-pengambilan-keputusan.md)
+	- Latihan: **Pos1.java**
+		- Soal 1:
+			- Buat program menanyakan `namaBarang`, `qty` dan `harga`.
+			- Tampilkan `total` sebagai dengan rumus `qty * harga`
+		- Soal 2:
+			- Jika `qty` > **10**, maka berikan diskon **5%**
+	- Latihan: Pos2.java
+		- Soal 1:
+			- Buat program menanyakan `namaBarang` dan `qty`
+			- `harga` ditentukan dari `namaBarang`. Jika `namaBarang` adalah **pensil**, maka `harga` adalah **3000**. Jika **pen**, maka `harga` adalah **5000**. Selain 2 itu, maka tampilkan pesan *barang tidak dikenal*.
+		- Soal 2:
+			- Jika barang adalah **pensil**, dan `qty` > **10**, maka berikan diskon **5%**.
+			- Tidak ada diskon untuk pembelian **pen**.
 - [Pengulangan/looping](docs/08-pengulangan.md)
 
