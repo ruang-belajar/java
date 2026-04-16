@@ -1,4 +1,4 @@
-# Soal Latihan
+# Soal Latihan "Loop Bintang"
 
 # Soal 1
 Gunakan perintah While untuk mencetak `*` sebanyak 5x

@@ -1,4 +1,4 @@
-# Latihan Program
+# Latihan Program "Loop Kotak"
 
 Buat program menanyakan _panjang_ dan _lebar_. Setelah itu, program membuat "kotak" yang terdiri dari karakter "\*" dengan _panjang_ sebagai jumlah baris dan _lebar_ sebagai jumlah kolom.
 
@@ -23,3 +23,4 @@ lebar? 3
 ***
 ```
 
+Simpan file dengan nama `LoopKotak.java`

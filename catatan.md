@@ -56,5 +56,18 @@
   - Nama class selalu sama dengan nama file
   - nama _package_ harus sama dengan _nama folder_    
 - [IF](docs/07-pengambilan-keputusan.md)
-- [Pengulangan/looping](docs/08-pengulangan.md)
+- **Tugas:**
+	- Kerjakan [latihan IF 1](https://github.com/ruang-belajar/java/blob/main/docs/latihan/02-if.md)
+	- Simpan file program dengan nama `LatihanIf1.java` di repository.
+
+## Pertemuan 3
+
+* Review Tugas
+* [Pengulangan/looping](docs/08-pengulangan.md)
+* Latihan:
+	* [Latihan Loop](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop.md)
+	* [Latihan Loop Bintang](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop-bintang.md)
+* **Tugas:**
+	* Kerjakan latihan [Look Kotak](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop-kotak.md)
+	* Simpan file program dengan nama `LoopKotak.java` di repository
 
