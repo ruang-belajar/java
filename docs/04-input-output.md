@@ -1,16 +1,17 @@
 # Standard Input & Output
 
-Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: input, proses, dan output.
+Seperti yang kita ketahui, program komputer terdiri dari tiga komponen utama, yaitu: *input*, *proses*, dan *output*.
 
-Input: nilai yang kita masukan ke program
-Proses: langkah demi langkah yang dilakukan untuk mengelola input menjadi sesuatu yang berguna
-Output: hasil pengolahan
-Semua bahasa pemrograman telah menyediakan fungs-fungsi untuk melakukan input dan output.
+* **Input**: nilai yang kita masukan ke program
+* **Proses**: langkah demi langkah yang dilakukan untuk mengelola input menjadi sesuatu yang berguna
+* **Output**: hasil pengolahan
+
+Semua bahasa pemrograman telah menyediakan fungsi-fungsi untuk melakukan input dan output.
 
 Java sendiri sudah menyediakan tiga class untuk mengambil input:
-1. Class Scanner;
-2. Class BufferReader;
-3. Class Console.
+1. Class `Scanner`;
+2. Class `BufferReader`;
+3. Class `Console`.
  
 Tiga class tersebut untuk mengambil input pada program berbasis teks (console). Sedangkan untuk GUI menggunakan class yang lain seperti JOptionPane dan inputbox pada form.
 
