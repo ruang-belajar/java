@@ -63,19 +63,12 @@
 ## Pertemuan 3
 
 * Review Tugas
-	* Latihan: **Pos1.java**
-		- Soal 1:
-			- Buat program menanyakan `namaBarang`, `qty` dan `harga`.
-			- Tampilkan `total` sebagai dengan rumus `qty * harga`
-		- Soal 2:
-			- Jika `qty` > **10**, maka berikan diskon **5%**
-	- Latihan: **Pos2.java**
-		- Soal 1:
-			- Buat program menanyakan `namaBarang` dan `qty`
-			- `harga` ditentukan dari `namaBarang`. Jika `namaBarang` adalah **pensil**, maka `harga` adalah **3000**. Jika **pen**, maka `harga` adalah **5000**. Selain 2 itu, maka tampilkan pesan *barang tidak dikenal*.
-		- Soal 2:
-			- Jika barang adalah **pensil**, dan `qty` > **10**, maka berikan diskon **5%**.
-			- Tidak ada diskon untuk pembelian **pen**.
+* Latihan: **Pos1.java**
+	- Soal 1:
+		- Buat program menanyakan `namaBarang`, `qty` dan `harga`.
+		- Tampilkan `total` sebagai dengan rumus `qty * harga`
+	- Soal 2:
+		- Jika `qty` > **10**, maka berikan diskon **5%** 
 * [Pengulangan/looping](docs/08-pengulangan.md)
 	* [Latihan Loop](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop.md)
 	* [Latihan Loop Bintang](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop-bintang.md)
@@ -83,3 +76,8 @@
 	* Kerjakan latihan [Loop Kotak](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop-kotak.md)
 	* Simpan file program dengan nama `LoopKotak.java` di repository
 
+## Pertemuan 4
+
+* Review Tugas
+* Review Loop
+* [Fungsi](09-fungsi.md)
