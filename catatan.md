@@ -58,7 +58,7 @@
 - [IF](docs/07-pengambilan-keputusan.md)
 - **Tugas:**
 	- Kerjakan [latihan IF 1](https://github.com/ruang-belajar/java/blob/main/docs/latihan/02-if.md)
-	- Simpan file program dengan nama `LatihanIf1.java` di repository.
+	- Simpan file program dengan nama 💼 `LatihanIf1.java` di repository.
 
 ## Pertemuan 3
 
@@ -74,7 +74,7 @@
 	* [Latihan Loop Bintang](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop-bintang.md)
 * **Tugas:**
 	* Kerjakan latihan [Loop Kotak](https://github.com/ruang-belajar/java/blob/main/docs/latihan/04-loop-kotak.md)
-	* Simpan file program dengan nama `LoopKotak.java` di repository
+	* Simpan file program dengan nama 💼 `LoopKotak.java` di repository
 
 ## Pertemuan 4
 
@@ -83,5 +83,6 @@
 * [Fungsi](09-fungsi.md)
 * [Latihan Soal (Fungsi)](latihan/07-fungsi-1.md)
 * **Tugas:**
-	* Buat file `CheckBilanganPrima`, fungsi `bilanganPrima()`
+	* Buat file 💼 `CheckBilanganPrima`, fungsi `bilanganPrima()`
 	* fungsi `bilanganPrima()` menerima 1 parameter `int` dan memberikan `return true` jika bilangan yang diinput itu adalah bilangan prima.
+
