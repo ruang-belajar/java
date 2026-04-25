@@ -3,9 +3,7 @@
 Buat fungsi untuk menentukan jumlah hari dari satu bulan. Gunakan template berikut:
 
 ```java
-package test; //sesuaikan paket dengan project atau hapus baris ini.
-
-public class Kabisat1 {
+public class LatihanJumlahHari {
     public static void main(String[] args) {
         int bulan = 2;
         int tahun = 2022;
