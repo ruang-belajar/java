@@ -5,7 +5,7 @@ Buat fungsi untuk menentukan jumlah hari dari satu bulan. Gunakan template berik
 ```java
 public class LatihanJumlahHari {
     public static void main(String[] args) {
-        int bulan = 2;
+        int bulan = 1;
         int tahun = 2022;
 
         System.out.println("Jumlah hari "+jumlahHari(bulan, tahun));
@@ -19,3 +19,5 @@ public class LatihanJumlahHari {
 }
 
 ```
+
+Simpan program dengan nama `LatihanJumlahHari.java`
