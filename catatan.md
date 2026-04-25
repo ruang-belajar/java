@@ -86,6 +86,6 @@
 	* fungsi *namaLengkap*
 	* [Latihan Soal (Fungsi)](docs/latihan/07-fungsi-1.md)
 * **Tugas:**
-	* Buat file 💼 `LatihanBilanganPrima`, fungsi `bilanganPrima()`
+	* Buat file 💼 `LatihanBilanganPrima.java`, fungsi `bilanganPrima()`
 	* fungsi `bilanganPrima()` menerima 1 parameter `int` dan memberikan `return true` jika bilangan yang diinput itu adalah bilangan prima.
 
