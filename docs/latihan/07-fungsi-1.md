@@ -8,9 +8,7 @@ public class LatihanJumlahHari {
         int bulan = 2;
         int tahun = 2022;
 
-        int nHari = jumlahHari(bulan, tahun);
-        System.out.println("Jumlah hari "+String.valueOf(nHari));
-
+        System.out.println("Jumlah hari "+jumlahHari(bulan, tahun));
     }
 
     static int jumlahHari(int bulan, int tahun) {
