@@ -101,6 +101,7 @@
 	- [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
 	- [LocalDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)
 		- [java.time.LocalDateTime Class in Java](https://www.geeksforgeeks.org/java/java-time-localdatetime-class-in-java/)
+		- Check [InputTanggal.java](src/InputTanggal.java)
 	- [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
 		- [ArrayList in Java](https://www.geeksforgeeks.org/java/arraylist-in-java/)
 - Perhatikan:
