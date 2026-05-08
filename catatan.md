@@ -89,3 +89,25 @@
 	* Buat file 💼 `LatihanBilanganPrima.java`, fungsi `bilanganPrima()`
 	* fungsi `bilanganPrima()` menerima 1 parameter `int` dan memberikan `return true` jika bilangan yang diinput itu adalah bilangan prima.
 
+
+## Pertemuan 5 (🤔)
+
+
+## Pertemuan 6
+
+- Review tugas
+- Standard Class
+	- [Scanner](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
+	- [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
+	- [LocalDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)
+		- [java.time.LocalDateTime Class in Java](https://www.geeksforgeeks.org/java/java-time-localdatetime-class-in-java/)
+	- [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
+		- [ArrayList in Java](https://www.geeksforgeeks.org/java/arraylist-in-java/)
+- Perhatikan:
+	- Membaca dokumentasi: pelajari pola
+- Latihan:
+	- Buat program menghitung nilai *sinus* dan *cosinus* dari sudut (file: `HitungSudut.java`)
+	- Buat program menghitung jumlah hari hidup seseorang (file: `LamaHidup.java`)
+	- Buat program input daftar siswa. Data: `nip`, `nama` (file: `DaftarSiswa1.java`)
+- Tugas:
+	- Buat program input daftar siswa. Data: `nip`, `nama`,  `lahirTanggal`, `lahirTempat`. (file: 💼 `DaftarSiswa2.java`)
