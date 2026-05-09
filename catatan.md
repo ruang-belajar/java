@@ -101,14 +101,14 @@
 	- [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
 	- [LocalDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)
 		- [java.time.LocalDateTime Class in Java](https://www.geeksforgeeks.org/java/java-time-localdatetime-class-in-java/)
-		- Check [InputTanggal.java](src/InputTanggal.java)
 	- [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)
 		- [ArrayList in Java](https://www.geeksforgeeks.org/java/arraylist-in-java/)
 - Perhatikan:
 	- Membaca dokumentasi: pelajari pola
 - Latihan:
 	- Buat program menghitung nilai *sinus* dan *cosinus* dari sudut (file: `HitungSudut.java`)
-	- Buat program menghitung jumlah hari hidup seseorang (file: `LamaHidup.java`)
-	- Buat program input daftar siswa. Data: `nip`, `nama` (file: `DaftarSiswa1.java`)
-- Tugas:
-	- Buat program input daftar siswa. Data: `nip`, `nama`,  `lahirTanggal`, `lahirTempat`. (file: 💼 `DaftarSiswa2.java`)
+	- Buat program input daftar siswa.  (file: `DaftarSiswa1.java`)
+
+## Pertemuan 7
+
+- Array class
