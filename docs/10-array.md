@@ -348,6 +348,83 @@ public class Main {
 }
 ```
 
+
+### ArrayList dengan Class
+
+Kita bisa membuat array yang elemennya terdiri dari class buatan. Perhatikan contoh berikut:
+
+```java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Membuat class Siswa
+class Siswa {
+    private String nip;
+    private String nama;
+
+    // Constructor
+    public Siswa(String nip, String nama) {
+        this.nip = nip;
+        this.nama = nama;
+    }
+
+    // Getter untuk NIP
+    public String getNip() {
+        return nip;
+    }
+
+    // Getter untuk Nama
+    public String getNama() {
+        return nama;
+    }
+
+	// fungsi untuk mengambil info NIP + Nama
+    public String info() {
+        return "NIP: " + nip + " | Nama: " + nama;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Inisialisasi ArrayList untuk menyimpan objek Siswa
+        ArrayList<Siswa> daftarSiswa = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        String pilihan = "y";
+
+        System.out.println("=== Program Input Data Siswa ===");
+
+        // Looping untuk input data secara dinamis
+        while (pilihan.equalsIgnoreCase("y")) {
+            System.out.print("Masukkan NIP Siswa  : ");
+            String nip = scanner.nextLine();
+
+            System.out.print("Masukkan Nama Siswa : ");
+            String nama = scanner.nextLine();
+
+            // Membuat objek Siswa baru dan menambahkannya ke ArrayList
+            Siswa siswaBaru = new Siswa(nip, nama);
+            daftarSiswa.add(siswaBaru);
+
+            System.out.print("Apakah ingin menambah data lagi? (y/t): ");
+            pilihan = scanner.nextLine();
+            System.out.println("--------------------------------");
+        }
+
+        // Menampilkan semua data yang ada di dalam ArrayList
+        System.out.println("\n=== Daftar Data Siswa Tersimpan ===");
+        if (daftarSiswa.isEmpty()) {
+            System.out.println("Belum ada data siswa yang diinput.");
+        } else {
+            for (int i = 0; i < daftarSiswa.size(); i++) {
+                System.out.println((i + 1) + ". " + daftarSiswa.get(i).info());
+            }
+        }
+
+        scanner.close();
+    }
+}
+```
+
 ---
 **Referensi:**
 * https://www.petanikode.com/java-array/

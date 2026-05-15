@@ -111,4 +111,6 @@
 
 ## Pertemuan 7
 
-- Array class
+- Review Standard Class
+- [ArrayList class](https://github.com/ruang-belajar/java/blob/main/docs/10-array.md#array-list)
+- 
