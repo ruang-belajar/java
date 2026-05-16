@@ -1,4 +1,4 @@
-# Soal Latihan Array
+# Soal Latihan Array 1
 
 # Soal 1
 Dengan menggunakan array, buat program menanyakan 5 nama.

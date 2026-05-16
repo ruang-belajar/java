@@ -112,5 +112,11 @@
 ## Pertemuan 7
 
 - Review Standard Class
-- [ArrayList class](https://github.com/ruang-belajar/java/blob/main/docs/10-array.md#array-list)
-- 
+- [Java Online Compiler](https://www.programiz.com/java-programming/online-compiler/)
+- [Array](docs/10-array.md)
+	- [Soal Latihan Array 1](docs/latihan/05-array-1.md)
+- [ArrayList class](docs/10-array.md#array-list)
+- [Simulasi UTS](https://docs.google.com/forms/d/e/1FAIpQLSco9hkcFV78rdCKJF8MencuiiBPnjOrHIAqoMXdRy1hw60-oA/viewform?usp=header)
+- Tugas:
+	- Buat class `Member` (💼 `Member.java`) dengan properti `nama` (String) dan `score` (int).
+	- Buat program yang menanyakan nama dan score, input ke ArrayList. Setelah selesai input, tampilkan kembali ArrayList.

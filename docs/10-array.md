@@ -77,7 +77,7 @@ Kita bisa mengakses data yang tersimpan dalam bentuk array dengan menggunakan _p
 ```java
 String[] nama = {"Linda", "Santi", "Susan", "Mila", "Ayu"};
 
-for(int n=0; n<=nama.length; n++) {
+for(int n=0; n<nama.length; n++) {
     System.out.println("Index ke-"+n+": "+nama[n]);
 }
 
@@ -348,15 +348,14 @@ public class Main {
 }
 ```
 
+---
 
 ### ArrayList dengan Class
 
 Kita bisa membuat array yang elemennya terdiri dari class buatan. Perhatikan contoh berikut:
 
+**Siswa.java**
 ```java
-import java.util.ArrayList;
-import java.util.Scanner;
-
 // Membuat class Siswa
 class Siswa {
     private String nip;
@@ -383,8 +382,39 @@ class Siswa {
         return "NIP: " + nip + " | Nama: " + nama;
     }
 }
+```
 
-public class Main {
+**LatihanSiswa1.java**
+```java
+import java.util.ArrayList;
+
+public class LatihanSiswa2 {
+    public static void main(String[] args) {
+        // Inisialisasi ArrayList untuk menyimpan objek Siswa
+        ArrayList<Siswa> daftarSiswa = new ArrayList<>();
+		
+		// cara 1 menambahkan item ke ArrayList
+		Siswa siswaBaru = new Siswa("Budi", "Raharjo");
+		daftarSiswa.add(siswaBaru);
+		
+		// cara 2 menambahkan item ke ArrayList
+		daftarSiswa.add(new Siswa("Dyah", "Ayu"));
+		
+        // Menampilkan semua data yang ada di dalam ArrayList
+		for (int i = 0; i < daftarSiswa.size(); i++) {
+			System.out.println((i + 1) + ". " + daftarSiswa.get(i).info());
+		}
+    }
+}
+```
+
+
+**LatihanSiswa2.java**: Contoh input menggunakan `Scanner`
+```java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LatihanSiswa2 {
     public static void main(String[] args) {
         // Inisialisasi ArrayList untuk menyimpan objek Siswa
         ArrayList<Siswa> daftarSiswa = new ArrayList<>();
@@ -424,6 +454,7 @@ public class Main {
     }
 }
 ```
+
 
 ---
 **Referensi:**
