@@ -17,11 +17,12 @@ Alur pembahasan akan mengikuti susunan sebagai berikut:
 10. [Array](10-array.md)
 11. [Java Standard Class](11-standard-class.md)
 12. [Class & Object](12-class.md)
+	1. [Static function](12-static.md)
 13. [Exception - Try ... Catch](13-exception.md)
 14. [Hash Map](https://www.petanikode.com/java-hashmap/)
 15. [Membuat GUI](20-gui.md)
 16. [Java Referensi](referensi/README.md)
-18. [Java - Koneksi ke Database](22-koneksi-database.md)
+17. [Java - Koneksi ke Database](22-koneksi-database.md)
 
 
 [**✍ Cheatsheet 1**](00-cheatsheet-1.md)

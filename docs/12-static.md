@@ -27,7 +27,7 @@ public class Produk {
 
 Static method adalah method yang bisa dipanggil tanpa harus membuat objek (instance) dari class terlebih dahulu. 
 
-Ciri-ciri s tatic method
+Ciri-ciri static method
 - Dideklarasikan dengan kata kunci `static`
 - Dapat dipanggil langsung menggunakan nama class
 - Tidak bisa mengakses anggota non-static secara langsung

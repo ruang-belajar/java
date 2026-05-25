@@ -117,6 +117,21 @@
 	- [Soal Latihan Array 1](docs/latihan/05-array-1.md)
 - [ArrayList class](docs/10-array.md#array-list)
 - [Simulasi UTS](https://docs.google.com/forms/d/e/1FAIpQLSco9hkcFV78rdCKJF8MencuiiBPnjOrHIAqoMXdRy1hw60-oA/viewform?usp=header)
-- Tugas:
+- **Tugas:**
 	- Buat class `Member` (💼 `Member.java`) dengan properti `nama` (String) dan `score` (int).
 	- Buat program yang menanyakan nama dan score, input ke ArrayList. Setelah selesai input, tampilkan kembali ArrayList.
+
+---
+
+## UTS
+
+---
+
+## Pertemuan 9
+
+* [Class & Object](docs/12-class.md)
+* [Static Function](docs/12-static.md)
+* [Exception Handling](docs/13-exception.md)
+* **Tugas:**
+	* Kerjakan [Latihan GUI Hello World](docs/latihan/10-gui-hello-world.md)
+	* Pastikan project disimpan di repositori tugas (💼 Folder: **HelloWorld**)
