@@ -119,7 +119,8 @@
 - [Simulasi UTS](https://docs.google.com/forms/d/e/1FAIpQLSco9hkcFV78rdCKJF8MencuiiBPnjOrHIAqoMXdRy1hw60-oA/viewform?usp=header)
 - **Tugas:**
 	- Buat class `Member` (💼 `Member.java`) dengan properti `nama` (String) dan `score` (int).
-	- Buat program yang menanyakan nama dan score, input ke ArrayList. Setelah selesai input, tampilkan kembali ArrayList.
+	- Buat program yang menanyakan *nama* dan _score_ (💼 `LatihanMember.java`) kepada user, sampai user input "-" pada nama, sebagai tanda akhir proses menginputan. Data dimasukan ke  *ArrayList*. 
+	- Setelah selesai input, tampilkan kembali *ArrayList*.
 
 ---
 
@@ -129,9 +130,12 @@
 
 ## Pertemuan 9
 
-* [Class & Object](docs/12-class.md)
-* [Static Function](docs/12-static.md)
+* Review Tugas
+	* [Class & Object](docs/12-class.md) 
 * [Exception Handling](docs/13-exception.md)
+	* Tambahkan exception handling ke `LatihanMember.java`.
 * **Tugas:**
+	* Install Netbeans
+		* Download [Netbeans](https://netbeans.apache.org/download/index.html)
 	* Kerjakan [Latihan GUI Hello World](docs/latihan/10-gui-hello-world.md)
 	* Pastikan project disimpan di repositori tugas (💼 Folder: **HelloWorld**)

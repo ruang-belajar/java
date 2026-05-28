@@ -210,7 +210,7 @@ public class ReadLine1 {
 
 Program di atas, akan melewati pertanyaan "Input kalimat:".
 
-Jika menggunakan `nextLine()`, setelah `nextInt()` (atau `nextDouble()`), program akan membaca `ENTER`  ketika input lewat `nextInt()`, sehingga perintah `nextLine()` seolah dilewati.  Untuk mengatasi hal tersebut, gunakan perintah `nextLine()` setelah `nextInt()`.
+> 🚨 Jika menggunakan `nextLine()`, setelah `nextInt()` (atau `nextDouble()`), program akan membaca `ENTER`  ketika input lewat `nextInt()`, sehingga perintah `nextLine()` seolah dilewati.  Untuk mengatasi hal tersebut, gunakan perintah `nextLine()` setelah `nextInt()`.
 
 **Solusi:**
 ```java
