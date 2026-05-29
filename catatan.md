@@ -130,7 +130,7 @@
 
 ## Pertemuan 9
 
-* Review Tugas
+* Review Tugas [🗝](https://github.com/pujangga123/latihan-java/blob/main/Member.java) [🗝](https://github.com/pujangga123/latihan-java/blob/main/LatihanMember.java)
 	* [Class & Object](docs/12-class.md) 
 * [Exception Handling](docs/13-exception.md)
 	* Tambahkan exception handling ke `LatihanMember.java`.

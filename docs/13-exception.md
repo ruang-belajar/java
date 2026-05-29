@@ -107,7 +107,6 @@ Diperiksa oleh compiler pada saat _compile-time_. Harus ditangani menggunakan _t
 
 Biasanya terkait dengan masalah eksternal seperti I/O, akses database, dll.
 
-Contoh:
 | Exception | 	Deskripsi |
 | - | - |
 | IOException | 	Terjadi saat ada kesalahan I/O (baca/tulis file) |
@@ -389,7 +388,7 @@ public class PendaftaranMahasiswa {
 ---
 
 **Latihan:**
-* Pelajari file [Hitung1.java](../src/Hitung1.java), kemudian kerjakan [Latihan (File) - Soal 2](latihan/06-class-5.md)
+* Pelajari file [Hitung1.java](../src/Hitung1.java), kemudian kerjakan [Latihan (File) - Soal 2](docs/latihan/06-class-5.md)
 
 
 Referensi:
