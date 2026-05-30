@@ -6,11 +6,11 @@ Kerjakan latihan dengan mengikuti langkah-langkah berikut:
     
 👉  Klik menu **File** > **New Project...** (atau tekan `Ctrl + Shift + N`).
 
-	🔹 Pilih kategori _Java with Ant_, lalu pilih **Java Application**. Klik **Next**.
+🔹 Pilih kategori _Java with Ant_, lalu pilih **Java Application**. Klik **Next**.
 
-	🔹  Beri nama project Anda, misalnya `HelloWorld`.
+🔹  Beri nama project Anda, misalnya `HelloWorld`.
 
-	🔹 Tentukan lokasi penyimpanan, lalu klik **Finish**.
+🔹 Tentukan lokasi penyimpanan, lalu klik **Finish**.
 
 
 ## 2. Buat JFrame / Form Baru
