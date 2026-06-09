@@ -22,21 +22,49 @@
             }
           },
           {
-            "id": "c0469d17e1ecf8e7",
+            "id": "6de5174a9f093886",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/03-syntax.md",
+                "file": "docs/latihan/05-array-1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-syntax"
+              "title": "05-array-1"
+            }
+          },
+          {
+            "id": "60f890b36cdad43e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/10-array.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "10-array"
+            }
+          },
+          {
+            "id": "67ad8e1f1cff68af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "catatan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "catatan"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -198,27 +226,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "c0469d17e1ecf8e7",
+  "active": "67ad8e1f1cff68af",
   "lastOpenFiles": [
-    "docs/01-intro.md",
-    "docs/20-gui.md",
-    "docs/20-gui-referensi.md",
+    "docs/10-array.md",
     "docs/00-cheatsheet-1.md",
-    "docs/03-syntax.md",
-    "docs/02-setup.md",
-    "docs/README.md",
-    "docs/images/README-header.png",
+    "docs/latihan/05-array-1.md",
+    "catatan.md",
+    "docs/latihan/06-class-2.md",
+    "docs/latihan/05-array-2.md",
     "docs/07-pengambilan-keputusan.md",
+    "src/Test1.java",
+    "src/InputTanggal.java",
+    "arsip/2024.md",
+    "docs/images/README-header.png",
     "docs/images/01-intro-2.png",
     "docs/images/01-intro-1.png",
     "arsip/studi-kasus-1.md",
-    "docs/04-input-output.md",
-    "docs/09-fungsi.md",
-    "catatan.md",
     "README.md",
+    "docs/README.md",
+    "docs/04-input-output.md",
     "docs/05-tipe-data.md",
     "docs/06-operator.md",
+    "docs/03-syntax.md",
     "docs/images/04-contoh1.png",
-    "docs/images/02-setup-output-1.png"
+    "docs/images/02-setup-output-1.png",
+    "docs/02-setup.md",
+    "docs/01-intro.md"
   ]
 }

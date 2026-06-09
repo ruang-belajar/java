@@ -142,7 +142,13 @@
 
 ## Pertemuan 9
 
-- Pelajari tutorial berikut:
+* Membuat Project
+* Membuat JFrame dan menjalankan program
+- Komponen GUI
+	- JLabel
+	- JTextBox
+	- JButton
+- Referensi:
 	- [Kelas Tersembunyi - Tutorial GUI Java - Mengubah Nilai TextField Dan Jlabel Dengan Tombol](https://www.youtube.com/watch?v=28KrP9615DQ)
 	- [MDN Channel - hitung luas dan keliling persegi panjang menggunakan JFrame Netbeans](https://www.youtube.com/watch?v=2q8Xwh4Cu78)
 - **Tugas:** 
@@ -152,3 +158,6 @@
 	- 💼 folder: **Persegi1**
 		- buat form untuk menghitung luas dan keliling persegi panjang.
 		- Ketika tombol "Hitung" diklik, maka *Luas* dan *Keliling* akan muncul.
+
+## Pertemuan 10
+
