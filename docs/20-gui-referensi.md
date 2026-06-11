@@ -1,35 +1,49 @@
 # Referensi GUI
 
-## JTextField
-**Method**
-- **void setText(String text)** method untuk set tulisan pada text field
-- **String getText()** method untuk membaca text pada text field
+![](20-gui-referensi-1.png)
+## Visual Component
+### JTextField
+* ***Property**
+	- `Color foreground` : menentukan warna font
+	- `Font font` : jenis dan besar font
+	- `String text` : tulisan yang muncul
+- **Method**
+	- `void setText(String text)` method untuk set tulisan pada text field
+	- `String getText()` method untuk membaca text pada text field
 
-## JButton
-**Event**
- **Action**: program yang dijalankan ketika tombol di klik
+### JButton
+- **Event**
+	 - **Action**: program yang dijalankan ketika tombol di klik
 
-## JFrame
-**Method**
-- void setVisible(boolean mode) : menampilkan atau menyembunyikan JFrame
+### JFrame
+- **Method**
+	- `void setVisible(boolean mode)` : menampilkan atau menyembunyikan JFrame
 
-## JLabel
+### JLabel
 Komponen yang digunakan untuk menampilkan label
-**Property**
-- foreground : menentukan warna font
-- font : jenis dan besar font
-- text : tulisan yang muncul
-**Method**
-- void setText(String text): perubah tulisan yang muncul pada label
 
-## JOptionPane
-**Method**
-- void showMessageDialog(null, String pesan): menampilkan kotak pesan
+* ***Property**
+	- `foreground` : menentukan warna font
+	- `font` : jenis dan besar font
+	- `text` : tulisan yang muncul
+* ***Method**
+	- `void setText(String text)`: merubah tulisan yang muncul pada label
 
-## Integer
-**Method**
-- int valueOf(nilai): fungsi untuk mengubah nilai (berupa string) menjadi Integer
+### JOptionPane
+* ***Method**
+	- `void showMessageDialog(null, String pesan)`: menampilkan kotak pesan
 
-## String
-**Method**
-- String valueOf(nilai): fungsi untuk mengubah nilai (berupa angka) menjadi String
+
+---
+
+## Non Visual Component
+
+### Color
+- Contructor
+	- `Color(int r, int g, int b)` : `r`, `g`, `b` adalah kode warna untuk red/green/blue  berupa angka 0-255.
+### Font
+- Construtor
+	- `Font(String name, int style, int size)`
+		- `String name`: *Dialog, DialogInput, Monospaced, Serif, SansSerif*
+		- `int style`: `Font.PLAIN`/`Font.BOLD`/`Font.ITALIC`
+		- `int size`: ukuran font.

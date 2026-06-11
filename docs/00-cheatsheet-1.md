@@ -1,6 +1,6 @@
 # Cheatsheet 1
 
-## Struktur program
+## 🏗 Struktur program
 ```java
 // imports: loading package yang akan digunakan
 // import java.util.Scanner;
@@ -16,8 +16,7 @@ public class NamaClass { // NamaClass harus sama dengan nama file
 
 ```
 
-
-## Deklarasi (Declaration)
+## 🗣 Deklarasi (Declaration)
 Menyiapkan variabel/objek yang akan digunakan.
 Contoh:
 ```java
@@ -28,7 +27,7 @@ String[] daftar;
 ```
 
 
-## Menampilkan Text
+## 📺 Menampilkan Text
 ```java
 // Menampilkan text tanpa pindah baris di akhir text
 System.out.print("Kalimat 1");
@@ -43,7 +42,7 @@ System.out.printf("Nilai a = %d, b = %d", a, b);
 
 ```
 
-## Penugasan (Assignment)
+## 👉 Penugasan (Assignment)
 Mengisi variabel dengan nilai atau _formula_.
 Contoh:
 ```java
@@ -63,7 +62,7 @@ String[] daftar = {"Budi", "Ayu", "Yuda"};
 Scanner scan = new Scanner(System.in);
 ```
 
-## Pengambilan Keputusan (if)
+## 🤔 Pengambilan Keputusan (if)
 Pengambilan keputusan di java menggunakan `if`. Format penulisannya
 
 ```java
@@ -93,7 +92,7 @@ if(kondisi) {
 
 _kondisi_ adalah formula yang selalu memberikan hasil `true` atau `false` (boolean). Ciri formula yang menghasilkan nilai boolean biasanya menggunakan operator logika, seperti `==` `!=` `>` `<` `=>` `<=` `||` `&&`.
 
-## Kondisi
+## 🦕 Kondisi
 Kondisi selalu bernilai `true`/`false`. Kondisi digunakan dalam statement `if` dan `while`.
 
 ```java
@@ -120,7 +119,7 @@ if(nama.equals("Budi") || jeniskelamin=='L') {
 
 ```
 
-## Pengulangan
+## 🔁 Pengulangan
 Perintah pengulangan di Java adalah `while` dan `for`. Format penulisan:
 ```java
 while(kondisi) {
@@ -142,7 +141,7 @@ for(TipeDate i:array) {
 }
 ```
 
-## Memanggil prosedur/Function call
+## 👋 Memanggil prosedur/Function call
 Function call biasanya adalaha statement yang diakhiri `()`. Contoh:
 ```java
 System.out.println();
@@ -153,7 +152,7 @@ mahasiswa.setIpk(3.84, 3.39);
 ```
 variabel, nilai atau ekspresi yang berada dalam `()` disebut _parameter_.
 
-## Formula
+## 👩‍🔬 Formula
 _Formula_ dibentuk dari operasi data. Hasil dari operasi data tersebut bisa berupa angka (numerik), string, atau boolean. Contoh:
 
 ```
@@ -178,5 +177,17 @@ n>0 && n<10
 ```
 _formula boolean_ ini disebut juga dengan _kondisi_. _Kondisi_ ini adalah formula yang biasa kita gunakan dalam `if` atau `while`.
 
+---
 
+## 🧾 Object Reference
 
+### Integer
+* ***Static Method**
+	- `int valueOf(nilai)`: fungsi untuk mengubah nilai (berupa string) menjadi Integer
+
+### String
+- **Method**
+	- `String replace(char oldChar, char newChar)` :  fungsi mengembalikan string yang sudah diganti dari `oldChar` ke `newChar`.
+
+* ***Static Method**
+	- `String valueOf(nilai)`: fungsi untuk mengubah nilai (berupa angka) menjadi String
