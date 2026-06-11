@@ -1,6 +1,6 @@
 # Referensi GUI
 
-![](20-gui-referensi-1.png)
+![](images/20-gui-referensi-1.png)
 ## Visual Component
 ### JTextField
 * ***Property**

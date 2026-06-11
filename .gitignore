@@ -6,5 +6,4 @@ test/
 /src/JavaApplication1/nbproject/private/
 /src/JavaApplication1/build/
 *.class
-.obsidian/app.json
-.obsidian/workspace.json
+/.obsidian
