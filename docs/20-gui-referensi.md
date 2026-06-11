@@ -33,6 +33,10 @@ Komponen yang digunakan untuk menampilkan label
 * ***Method**
 	- `void showMessageDialog(null, String pesan)`: menampilkan kotak pesan
 
+### JComboBox
+- **Method**
+	- `Object getSelectedItem()`: Membaca opsi yang dipilih
+
 
 ---
 
