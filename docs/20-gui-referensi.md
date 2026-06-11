@@ -35,7 +35,14 @@ Komponen yang digunakan untuk menampilkan label
 
 ### JComboBox
 - **Method**
-	- `Object getSelectedItem()`: Membaca opsi yang dipilih
+	- `Object getSelectedItem()`: Membaca opsi yang dipilih. Contoh:
+		```java
+		// cari 1
+		String item1 = (String) jComboBox1.getSelectedItem();
+		
+		// cara 2
+		String item2 = jComboBox1.getSelectedItem().toString();
+		```
 
 
 ---
@@ -43,11 +50,18 @@ Komponen yang digunakan untuk menampilkan label
 ## Non Visual Component
 
 ### Color
-- Contructor
+- **Contructor**
 	- `Color(int r, int g, int b)` : `r`, `g`, `b` adalah kode warna untuk red/green/blue  berupa angka 0-255.
 ### Font
-- Construtor
+- **Construtor**
 	- `Font(String name, int style, int size)`
 		- `String name`: *Dialog, DialogInput, Monospaced, Serif, SansSerif*
 		- `int style`: `Font.PLAIN`/`Font.BOLD`/`Font.ITALIC`
 		- `int size`: ukuran font.
+
+### JOptionPane
+- **Static methods**
+	- `void showMessageDialog(Component parentComponent, Object message)`: menampilkan pop up kotak pesan berisi tulisan `message`. Contoh: 
+		```java
+		JOptionPane.showMessageDialog(null, "Pesan Message Box");
+		```
