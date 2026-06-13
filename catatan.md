@@ -163,6 +163,5 @@
 		- Ketika tombol *Hitung* diklik, maka *Luas* dan *Keliling* akan muncul.
 		- Buat tombol *About*, menampilkan message box (menggunakan `JOptionPane`) menampilkan tulisan "program ini dibuat oleh [nama kamu]"
 
-
 ## Pertemuan 10
 
