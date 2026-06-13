@@ -83,15 +83,26 @@ _Catatan:_
 Menampilkan form yang sudah kita buat bisa dilakukan lewat 2 cara. Misal kita memiliki form yang diberi nama `FormUtama`, maka cara menampilkannya:
 
 **Cara 1:**
+
+Pada `public static void main(String[] args)`, tambahkan kode berikut:
 ```java
 new FormUtama().setVisible(true);
 ```
 
-**Cara 2:**
+atau 
+
 ```java
 FormUtama form = new FormUtama();
 form.setVisible(true);
 ```
+
+**Cara 2:**
+- Klik kanan pada project Anda di panel **Projects** (sebelah kiri layar).
+- Pilih **Properties** dari context menu.
+- Klik kategori **Run**.
+- Pada **Main Class** klik tombol **Browse**.
+- Pilih **FormUtama** dan klik **Select Main Class**.
+- Klik **OK**
 ## Menampilkan kotak pesan (_Message Box_)
 
 _Message box_ adalah cara paling mudah untuk menampilkan _pop up_ pesan kepada user. Cara cepat menampilkan _message box_ adalah seperti berikut:
