@@ -142,10 +142,10 @@
 
 ## Pertemuan 9
 
-* [Java GUI](20-gui.md)
+* [Java GUI](docs/20-gui.md)
 	* Membuat Project
 	* Membuat JFrame dan menjalankan program
-- [Referensi GUI](20-gui-referensi.md)
+- [Referensi GUI](docs/20-gui-referensi.md)
 - Referensi:
 	- [Kelas Tersembunyi - Tutorial GUI Java - Mengubah Nilai TextField Dan Jlabel Dengan Tombol](https://www.youtube.com/watch?v=28KrP9615DQ)
 	- [MDN Channel - hitung luas dan keliling persegi panjang menggunakan JFrame Netbeans](https://www.youtube.com/watch?v=2q8Xwh4Cu78)
