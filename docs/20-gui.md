@@ -96,6 +96,7 @@ FormUtama form = new FormUtama();
 form.setVisible(true);
 ```
 
+
 **Cara 2:**
 - Klik kanan pada project Anda di panel **Projects** (sebelah kiri layar).
 - Pilih **Properties** dari context menu.

@@ -159,9 +159,37 @@
 		- Ketika tombol "Hitung" diklik, maka *Luas* dan *Keliling* akan muncul.
 - **Tugas:**
 	- 💼 folder: **Persegi2**
-		- buat form seperti di project Persegi1, gunakan JSpinner untuk input
+		- buat form seperti di project Persegi1, gunakan `JSpinner` untuk input
 		- Ketika tombol *Hitung* diklik, maka *Luas* dan *Keliling* akan muncul.
 		- Buat tombol *About*, menampilkan message box (menggunakan `JOptionPane`) menampilkan tulisan "program ini dibuat oleh [nama kamu]"
 
 ## Pertemuan 10
 
+- Review tugas
+- [Referensi GUI](docs/20-gui-referensi.md)
+- Multi form application
+	- Tambahkan menu
+		- File
+			- Exit: menutup program
+		- Utility
+			- Hitung Lingkaran
+			- Daftar Nama
+		- Help
+			- About: menampilkan message box "program ini dibuat oleh _[nama kamu]_"
+	- Buat `FormHitungLingkaran`
+- Catatan:
+	- Perintah untuk menampilkan `FormHitungLingkaran` adalah dengan menambahkan kode berikut pada menu _Hitung Lingkaran_ event `actionPerformed`:
+		```java
+		new FormHitungLingkaran().setVisible(true);
+		```
+	- Exit:
+		```java
+		System.exit(0);
+		```
+	- Menutup window (tanpa menutup program)
+		```java
+		this.dispose();
+		```
+	- Buat `FormDaftarNama`
+		- Tambahkan `daftar`: `JTable`
+		- Tombol _Selesai_
