@@ -56,3 +56,42 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
     } // class ends
     ```
 
+## Update Query
+
+Untuk eksekusi perintah SQL yang berhubungan dengan _data manipulation language_ seperti `UPDATE`, `DELETE`, `INSERT`, kita bisa mengunakan perintah `executeUpdate()`. Pelajari contoh program berikut:
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+
+public class MySqlTest {
+
+    public static void main(String[] args) {
+        Connection connection = null;
+        try {
+            // buat koneksi ke server mysql.
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/tokobuku", "root", "");
+
+            // siapkan objek statement untuk query
+            Statement statement;
+            statement = connection.createStatement();
+
+            // eksekusi query
+            statement.executeUpdate("update barang set nama='Pocky' where kode='003'");
+
+
+            // hapus objek dan koneksi
+            statement.close();
+            connection.close();
+        } catch (Exception exception) {
+            // tampilkan pesan error (jika terjadi kesalahan)
+            System.out.println(exception);
+            System.out.println(exception);
+        }
+    }
+    
+}
+```
