@@ -168,6 +168,7 @@
 - Review tugas
 - [Referensi GUI](docs/20-gui-referensi.md)
 - Multi form application
+	- Buat project 💼 `ProjectGUI`
 	- Tambahkan menu
 		- File
 			- Exit: menutup program
