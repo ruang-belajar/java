@@ -182,12 +182,18 @@ _formula boolean_ ini disebut juga dengan _kondisi_. _Kondisi_ ini adalah formul
 ## 🧾 Object Reference
 
 ### Integer
-* ***Static Method**
-	- `int valueOf(nilai)`: fungsi untuk mengubah nilai (berupa string) menjadi Integer
+* **Static Method**
+	- `int valueOf(nilai)`: fungsi untuk konversi nilai string menjadi Integer
 
 ### String
 - **Method**
 	- `String replace(char oldChar, char newChar)` :  fungsi mengembalikan string yang sudah diganti dari `oldChar` ke `newChar`.
 
-* ***Static Method**
-	- `String valueOf(nilai)`: fungsi untuk mengubah nilai (berupa angka) menjadi String
+* **Static Method**
+	- `String valueOf(nilai)`: fungsi untuk konversi nilai *integer/double/float* menjadi String
+
+### Math
+- **Constant**
+	- `double PI` : konstan berisi nilai PI (π)
+- **Static Method:**
+	- double random(): fungsi menghasilkan bilangan acak ≥ 0 dan < 1.
