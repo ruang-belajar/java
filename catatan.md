@@ -168,7 +168,7 @@
 - Review tugas
 - [Referensi GUI](docs/20-gui-referensi.md)
 - Multi form application
-	- Buat project 💼 `ProjectGUI`
+	- Buat project 💼 `ProjectLatihan1`
 	- Tambahkan menu
 		- File
 			- Exit: menutup program
@@ -191,6 +191,10 @@
 		```java
 		this.dispose();
 		```
+
+## Pertemuan 11
+
+- Lanjutan `ProjectLatihan1`
 	- Buat `FormDaftarNama`
 		- Tambahkan `daftar`: `JTable`
 		- Tombol _Selesai_

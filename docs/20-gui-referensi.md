@@ -50,6 +50,15 @@ Komponen yang digunakan untuk menampilkan label
 		```
 
 
+### JSlider
+
+- **Method**
+
+### JSpinner
+
+- **Method**
+
+
 ---
 
 ## Non Visual Component
