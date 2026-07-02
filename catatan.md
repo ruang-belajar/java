@@ -195,6 +195,24 @@
 ## Pertemuan 11
 
 - Lanjutan `ProjectLatihan1`
-	- Buat `FormDaftarNama`
-		- Tambahkan `daftar`: `JTable`
-		- Tombol _Selesai_
+	- Buat `FormTransaksi`
+	- Tambahkan *Harga* : `JLabel`
+	- Tambahkan *Jenis Kain* : `JComboBox`
+		- Model: 
+			- Sutra : Rp. 300.000
+			- Katun: Rp. 200.000
+			- Polyester: Rp. 150.000
+		- Setiap perubahan Jenis kain, tampilkan harga di label *Harga*.
+	- Tambahkan *Ukuran* : `JSlider`
+		- Set range minimum 1, maximum 10
+		- Setiap perubahan Ukuran, update harga dengan rumus **[Harga Kain] * [ukuran]**.
+
+## Pertemuan 12
+
+- Modifikasi `FormTransaksi`
+	- Tambahkan imgKain: `JImage`
+		- 
+- Buat `FormDaftarNama`
+	- Tambahkan `daftar`: `JTable`
+	- Tombol _Selesai_ : tambahkan kode untuk menutup form
+	- 
