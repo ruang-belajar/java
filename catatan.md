@@ -209,10 +209,11 @@
 
 ## Pertemuan 12
 
+- Check [GUI Referensi](docs/20-gui-referensi.md).
 - Modifikasi `FormTransaksi`
-	- Tambahkan imgKain: `JImage`
-		- 
+	- Tambahkan `imgKain`: `JImageView`
+	- Untuk setiap perubahan *jenis kain*, tampilkan gambar sesuai pilihan.
+	- Gunakan gambar berikut: [kain-katun.jpg](src/kain-katun.jpg), [kain-sutra.jpg](src/kain-sutra.jpg), [kain-polyester.jpg](src/kain-polyester.jpg)
 - Buat `FormDaftarNama`
 	- Tambahkan `daftar`: `JTable`
 	- Tombol _Selesai_ : tambahkan kode untuk menutup form
-	- 

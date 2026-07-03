@@ -32,11 +32,6 @@ Komponen yang digunakan untuk menampilkan label
 * **Method**
 	- `void setText(String text)`: merubah tulisan yang muncul pada label
 
-### JOptionPane
-
-* **Method**
-	- `void showMessageDialog(null, String pesan)`: menampilkan kotak pesan
-
 ### JComboBox
 
 - **Method**
@@ -48,15 +43,52 @@ Komponen yang digunakan untuk menampilkan label
 		// cara 2
 		String item2 = jComboBox1.getSelectedItem().toString();
 		```
-
+	- `void setSelectedItem(String item)` : set nilai pada `combo box`.
 
 ### JSlider
 
+- **Property**:
+	- `int minimum` : nilai minimum slider
+	- `int maximum` : nilai maximum slider
 - **Method**
+	- `int getValue()` : mengambil nilai *slider*
 
 ### JSpinner
 
 - **Method**
+	- `Object getValue()` :  mengambil nilai pada *spinner*. Karena `return value` berupa `Object`, maka membacaan value harus melalui proses `casting`.
+		```java
+		int nilai = (Integer) spinner.getValue();
+		```
+
+### JImageView
+
+- **Method**:
+	- `void setImage(Image image)` : Menampilkan gambar dari object `Image`
+		```java
+		// load dari file
+		File file = new File("C:/images/photo.jpg"); 
+		Image image = new Image(file.toURI().toString());
+		imageView.setImage(image);
+		```
+		```java
+		// load dari resource
+		Image image = new Image(getClass().getResourceAsStream("/myImage.png"));
+		imageView.setImage(image);
+		```
+
+### JTable
+
+- **Method:**
+	- `void addRow(Object[] row)` : menambahkan baris baru ke table.
+		```java
+		// 1. model tabel
+		DefaultTableModel model = (DefaultTableModel) myJTable.getModel(); 
+		// 2. siapkan data yang akan diinput
+		Object[] newRow = { "John Doe", 28, "Engineer" }; 
+		// 3. tambahkan data ke tabel
+		model.addRow(newRow);
+		```
 
 
 ---
@@ -78,7 +110,8 @@ Komponen yang digunakan untuk menampilkan label
 ### JOptionPane
 
 - **Static methods**
-	- `void showMessageDialog(Component parentComponent, Object message)`: menampilkan pop up kotak pesan berisi tulisan `message`. Contoh: 
+	- `void showMessageDialog(Component parentComponent, Object message)`: menampilkan pop up kotak pesan berisi tulisan `message`. Mengatur `parentComponent` dengan `null` berarti message dialog akan muncul di tengah layar. Contoh: 
 		```java
-		JOptionPane.showMessageDialog(null, "Pesan Message Box");
+		JOptionPane.showMessageDialog(null, "Pesan Message Box");		
 		```
+	
