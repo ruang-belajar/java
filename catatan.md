@@ -142,6 +142,8 @@
 
 ## Pertemuan 9
 
+* Buat folder 💼 `GUI`.
+	* ⚠️ Selanjutnya, semua project yang dibuat menggunakan Netbeans, simpan dalam folder `GUI`.
 * [Java GUI](docs/20-gui.md)
 	* Membuat Project
 	* Membuat JFrame dan menjalankan program
@@ -211,9 +213,32 @@
 
 - Check [GUI Referensi](docs/20-gui-referensi.md).
 - Modifikasi `FormTransaksi`
-	- Tambahkan `imgKain`: `JImageView`
+	- Tambahkan `gambarKain`: `JLabel`
+		- kosongkan property `text`
 	- Untuk setiap perubahan *jenis kain*, tampilkan gambar sesuai pilihan.
 	- Gunakan gambar berikut: [kain-katun.jpg](src/kain-katun.jpg), [kain-sutra.jpg](src/kain-sutra.jpg), [kain-polyester.jpg](src/kain-polyester.jpg)
-- Buat `FormDaftarNama`
-	- Tambahkan `daftar`: `JTable`
+- Buat `FormDaftar`
+	- Tambahkan `daftarDaftar`: `JTable`
 	- Tombol _Selesai_ : tambahkan kode untuk menutup form
+	- Tambahkan tombolReload : JButton
+		- text: Reload
+		- actionPerformed
+			```java
+			DefaultTableModel model = (DefaultTableModel) tabelDaftar.getModel();
+
+	        ArrayList<String[]> dataList = new ArrayList<>();
+	        dataList.add(new String[]{"SUTRA", "300000"});
+	        dataList.add(new String[]{"KATUN", "200000"});
+	        dataList.add(new String[]{"POLYESTER", "150000"});
+	
+	        for (String[] row : dataList) {
+	            model.addRow(row);
+	        }
+			```
+	- Tambahkan tombolHapus : JButton
+		- text: Hapus Semua
+		- actionPerformed:
+			```java
+			DefaultTableModel model = (DefaultTableModel) tabelDaftar.getModel();
+	        model.setRowCount(0);
+			```
