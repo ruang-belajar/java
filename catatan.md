@@ -217,12 +217,12 @@
 		- kosongkan property `text`
 	- Untuk setiap perubahan *jenis kain*, tampilkan gambar sesuai pilihan.
 	- Gunakan gambar berikut: [kain-katun.jpg](src/kain-katun.jpg), [kain-sutra.jpg](src/kain-sutra.jpg), [kain-polyester.jpg](src/kain-polyester.jpg)
-- Buat `FormDaftar`
+- Buat 💼 `FormDaftar`
 	- Tambahkan `daftarDaftar`: `JTable`
 	- Tombol _Selesai_ : tambahkan kode untuk menutup form
-	- Tambahkan tombolReload : JButton
-		- text: Reload
-		- actionPerformed
+	- Tambahkan `tombolReload` : `JButton`
+		- `text` : *Reload*
+		- `actionPerformed`
 			```java
 			DefaultTableModel model = (DefaultTableModel) tabelDaftar.getModel();
 
@@ -235,10 +235,37 @@
 	            model.addRow(row);
 	        }
 			```
-	- Tambahkan tombolHapus : JButton
-		- text: Hapus Semua
-		- actionPerformed:
+	- Tambahkan `tombolHapus` : `JButton`
+		- `text` : *Hapus Semua*
+		- `actionPerformed`:
 			```java
 			DefaultTableModel model = (DefaultTableModel) tabelDaftar.getModel();
 	        model.setRowCount(0);
 			```
+
+## Pertemuan 13
+
+Prep database `kampus`.
+	- Buat tabel `mahasiswa`
+		- `nik`: VARCHAR(20) PRIMARY
+		- `nama`: VARCHAR(50)
+		- `jeniskelamin`: CHAR(1)
+		- `lahirTahun`: INT
+	- Buat tabel `dosen`
+		- `nip`: VARCHAR(20) PRIMARY
+		- `nama`: VARCHAR(50)
+		- `masukTahun`: INT
+- [Koneksi ke database](https://github.com/ruang-belajar/java/blob/main/docs/22-koneksi-database.md)
+- Buat 💼 `FormMahasiswa1`
+	- Buat Text Field *NIM* & *Nama*
+	- Buat tombol **CARI**, **UPDATE**, **INSERT**
+	- Modifikasi `FormUtama`, 
+		- Menu *Utility*, tambah `menuFormMahasiswa1`: *Data Mahasiswa*
+			- tambahkan kode untuk menampilkan `FormMahasiswa1`
+- **Tugas:**
+	- Tambahkan text field *Tahun Lahir*
+		- text: *[kosong]*
+	- Tambahkan combo box *Jenis Kelamin*
+		- model: *L, P*
+	- Tambahkan tombol **DELETE**.
+		- text: *Hapus*

@@ -31,6 +31,11 @@ Komponen yang digunakan untuk menampilkan label
 	- `text` : tulisan yang muncul
 * **Method**
 	- `void setText(String text)`: merubah tulisan yang muncul pada label
+	- `void setIcon(ImageIcon icon)` : menampilkan gambar pada JLabel
+		```java
+		ImageIcon icon = new ImageIcon(getClass().getResource("gambar.jpg"));
+		labelGambar.setIcon(icon)
+		```
 
 ### JComboBox
 
@@ -61,21 +66,6 @@ Komponen yang digunakan untuk menampilkan label
 		int nilai = (Integer) spinner.getValue();
 		```
 
-### JImageView
-
-- **Method**:
-	- `void setImage(Image image)` : Menampilkan gambar dari object `Image`
-		```java
-		// load dari file
-		File file = new File("C:/images/photo.jpg"); 
-		Image image = new Image(file.toURI().toString());
-		imageView.setImage(image);
-		```
-		```java
-		// load dari resource
-		Image image = new Image(getClass().getResourceAsStream("/myImage.png"));
-		imageView.setImage(image);
-		```
 
 ### JTable
 
