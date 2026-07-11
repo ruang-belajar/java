@@ -15,6 +15,7 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
 2. [Download & Restore database contoh](../src/tokobuku.sql) ke server _MySQL_ Anda.
 3. Test koneksi menggunakan contoh program berikut:
     ```java
+    // JANGAN LUPA TAMBAHKAN IMPORT INI DI BAGIAN HEADER
     import java.sql.*;
     
     public class MySqlTest {
@@ -61,10 +62,8 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
 
 Untuk eksekusi perintah SQL yang berhubungan dengan _data manipulation language_ seperti `UPDATE`, `DELETE`, `INSERT`, kita bisa mengunakan perintah `executeUpdate()`. Pelajari contoh program berikut:
 ```java
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-
+// JANGAN LUPA TAMBAHKAN IMPORT INI DI BAGIAN HEADER
+import java.sql.*;
 
 public class MySqlTest {
 

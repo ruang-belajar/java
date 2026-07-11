@@ -247,14 +247,10 @@
 
 - Prep database `kampus`.
 	- Buat tabel `mahasiswa`
-		- `nik`: VARCHAR(20) PRIMARY
+		- `nim`: VARCHAR(20) PRIMARY
 		- `nama`: VARCHAR(50)
 		- `jeniskelamin`: CHAR(1)
 		- `lahirTahun`: INT
-	- Buat tabel `dosen`
-		- `nip`: VARCHAR(20) PRIMARY
-		- `nama`: VARCHAR(50)
-		- `masukTahun`: INT
 - [Koneksi ke database](docs/22-koneksi-database.md)
 - Buat 💼 `FormMahasiswa1`
 	- Buat Text Field *NIM* & *Nama*
