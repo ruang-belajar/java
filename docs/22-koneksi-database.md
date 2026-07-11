@@ -32,7 +32,8 @@ Dalam kuliah ini, kita akan menggunakan database MySQL sebagai DBMS yang untuk p
                 ResultSet resultSet;
 
                 // eksekusi query
-                resultSet = statement.executeQuery("select * from barang");
+                String sql = "select * from barang";
+                resultSet = statement.executeQuery(sql);
 
                 // baca dan tampilkan data dari query
                 String kode;
@@ -80,7 +81,8 @@ public class MySqlTest {
             statement = connection.createStatement();
 
             // eksekusi query
-            statement.executeUpdate("update barang set nama='Pocky' where kode='003'");
+            String sql = "update barang set nama='Pocky' where kode='003'";
+            statement.executeUpdate(sql);
 
 
             // hapus objek dan koneksi
@@ -95,3 +97,5 @@ public class MySqlTest {
     
 }
 ```
+
+> 💡 Untuk menghapus (DELETE), dan menambahkan data (INSERT) kode programnya sama. Ganti string pada variabel `sql` dengan perintah SQL `INSERT` atau `DELETE`, sesuai kebutuhan.

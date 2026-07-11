@@ -245,7 +245,7 @@
 
 ## Pertemuan 13
 
-Prep database `kampus`.
+- Prep database `kampus`.
 	- Buat tabel `mahasiswa`
 		- `nik`: VARCHAR(20) PRIMARY
 		- `nama`: VARCHAR(50)
@@ -255,17 +255,18 @@ Prep database `kampus`.
 		- `nip`: VARCHAR(20) PRIMARY
 		- `nama`: VARCHAR(50)
 		- `masukTahun`: INT
-- [Koneksi ke database](https://github.com/ruang-belajar/java/blob/main/docs/22-koneksi-database.md)
+- [Koneksi ke database](docs/22-koneksi-database.md)
 - Buat 💼 `FormMahasiswa1`
 	- Buat Text Field *NIM* & *Nama*
-	- Buat tombol **CARI**, **UPDATE**, **INSERT**
+	- Buat tombol **CARI**, **UPDATE**, **TAMBAH**
+		- actionPerformed: tambahkan kode untuk *SELECT, UPDATE, INSERT*
 	- Modifikasi `FormUtama`, 
 		- Menu *Utility*, tambah `menuFormMahasiswa1`: *Data Mahasiswa*
 			- tambahkan kode untuk menampilkan `FormMahasiswa1`
-- **Tugas:**
-	- Tambahkan text field *Tahun Lahir*
+- **Tugas & kehadiran pertemuan 14:**
+	- Tambahkan text field *Tahun Lahir* dan *Jenis Kelamin*
 		- text: *[kosong]*
-	- Tambahkan combo box *Jenis Kelamin*
-		- model: *L, P*
+	- Update tombol **CARI, UPDATE, INSERT** sehingga membaca *Tahun Lahir* dan *Jenis Kelamin*
 	- Tambahkan tombol **DELETE**.
 		- text: *Hapus*
+		- actionPerformed: tambahkan code untuk menghapus data dari database
